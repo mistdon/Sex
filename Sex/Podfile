@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your projec
+ platform :ios, '9.0'
+
+target 'Sex' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+  pod 'AFNetworking', '~> 3.1.0'
+  pod 'SDWebImage', '~> 3.8.2'
+  pod 'MJExtension', '~> 3.0.13'
+  pod 'ReactiveCocoa', '~>2.5'
+  # Pods for Sex
+
+end
