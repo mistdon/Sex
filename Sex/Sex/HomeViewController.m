@@ -7,15 +7,19 @@
 //
 
 #import "HomeViewController.h"
-
+#import "HomeListViewModel.h"
 @interface HomeViewController ()
-
+@property (weak, nonatomic) IBOutlet HomeListsTableView *listsTableView;
+@property (nonatomic, strong) HomeListViewModel *listViewModel;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.listViewModel = [[HomeListViewModel alloc] init];
+    [self.listViewModel bindWithTableView:self.listsTableView];
     // Do any additional setup after loading the view.
 }
 
