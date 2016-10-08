@@ -7,8 +7,9 @@
 //
 
 #import "SearchViewController.h"
-
-@interface SearchViewController ()
+#import "DropdownView.h"
+@interface SearchViewController ()<DropDownViewDelegate>
+@property (weak, nonatomic) IBOutlet DropdownView *dropdownView;
 
 @end
 
@@ -23,6 +24,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark - dropdownviewdelegate -
+- (void)selectCategory:(NSString *)category{
+    NSLog(@"category = %@",category);
 }
 
 /*

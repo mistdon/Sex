@@ -174,9 +174,7 @@
 				3BD396C81D9BED1C00768B89 /* AppDelegate.h */,
 				3BD396C91D9BED1C00768B89 /* AppDelegate.m */,
 				3BD396CB1D9BED1C00768B89 /* ViewController.h */,
-				3BD65D601D9CEF22003EE6F3 /* littledog.jpg */,
 				3BD396CC1D9BED1C00768B89 /* ViewController.m */,
-				3BD396CE1D9BED1C00768B89 /* Main.storyboard */,
 				3BD396C51D9BED1C00768B89 /* Supporting Files */,
 			);
 			path = Sex;
@@ -185,6 +183,8 @@
 		3BD396C51D9BED1C00768B89 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3BD396CE1D9BED1C00768B89 /* Main.storyboard */,
+				3BD65D601D9CEF22003EE6F3 /* littledog.jpg */,
 				3BD396D11D9BED1C00768B89 /* Assets.xcassets */,
 				3BD396D31D9BED1C00768B89 /* LaunchScreen.storyboard */,
 				3BD396D61D9BED1C00768B89 /* Info.plist */,

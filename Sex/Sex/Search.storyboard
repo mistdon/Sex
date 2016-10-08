@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
+        <!--Delegate-->
         <scene sceneID="O8t-kB-nvD">
             <objects>
                 <viewController id="V6F-OK-RrR" customClass="SearchViewController" sceneMemberID="viewController">
@@ -24,15 +24,37 @@
                                     <constraint firstAttribute="width" constant="80" id="6kS-FR-vYn"/>
                                     <constraint firstAttribute="height" constant="44" id="acV-c5-EMz"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="V6F-OK-RrR" id="AI8-fD-rv1"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y11-hz-dKL">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Wo-xI-oGU">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="QNw-KP-p8J"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ZkC-ej-DMN" firstAttribute="leading" secondItem="qsH-jS-huZ" secondAttribute="leading" id="2Qf-gd-qK2"/>
+                            <constraint firstItem="Y11-hz-dKL" firstAttribute="bottom" secondItem="ZkC-ej-DMN" secondAttribute="bottom" id="6Bo-wj-aGD"/>
+                            <constraint firstAttribute="trailing" secondItem="2Wo-xI-oGU" secondAttribute="trailing" id="Dau-5u-ScW"/>
+                            <constraint firstItem="Y11-hz-dKL" firstAttribute="leading" secondItem="ZkC-ej-DMN" secondAttribute="trailing" constant="5" id="DhM-gv-xhE"/>
                             <constraint firstItem="ZkC-ej-DMN" firstAttribute="top" secondItem="ljn-rN-ben" secondAttribute="bottom" id="M2H-mP-ojp"/>
+                            <constraint firstItem="Y11-hz-dKL" firstAttribute="top" secondItem="ZkC-ej-DMN" secondAttribute="top" id="PTz-DL-2pc"/>
+                            <constraint firstItem="2Wo-xI-oGU" firstAttribute="leading" secondItem="qsH-jS-huZ" secondAttribute="leading" id="gcl-tR-Nvg"/>
+                            <constraint firstAttribute="trailing" secondItem="Y11-hz-dKL" secondAttribute="trailing" constant="5" id="tWF-OS-8Wk"/>
+                            <constraint firstItem="2Wo-xI-oGU" firstAttribute="top" secondItem="Y11-hz-dKL" secondAttribute="bottom" constant="5" id="wey-JT-vuv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m7U-Ks-dSw"/>
+                    <connections>
+                        <outlet property="dropdownView" destination="ZkC-ej-DMN" id="snd-W9-cio"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Gm-5a-Csw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

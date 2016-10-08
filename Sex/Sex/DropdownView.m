@@ -10,73 +10,65 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Masonry.h>
 #import "DropdownViewModel.h"
+#import <MKDropdownMenu/MKDropdownMenu.h>
 
+@interface DropdownView() <MKDropdownMenuDelegate, MKDropdownMenuDataSource>
 
-@interface DropdownView()
-@property (weak, nonatomic) IBOutlet UIButton *categoryButton;
-@property (nonatomic, strong) UITableView *tableview;
-@property (nonatomic, assign) BOOL expand; //是否展开
+@property (weak, nonatomic) IBOutlet MKDropdownMenu *dropdownMenu;
+@property (nonatomic, assign) NSInteger selectRow;
 @property (nonatomic, strong) DropdownViewModel *viewModel;
-@property (nonatomic, strong) UIButton *maskView;
+@property (nonatomic, strong) NSMutableArray *datas;
+
 @end
 @implementation DropdownView
 
 - (void)bindWithViewModel{
+    self.selectRow = 0;
     self.viewModel = [[DropdownViewModel alloc]  init];
-    @weakify(self);
-    [[self.categoryButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        @strongify(self);
-        self.expand = !self.expand;
-    }];
-}
-- (void)setupSubViews{
-    [self.superview bringSubviewToFront:self];
-    [self insertSubview:self.maskView atIndex:0];
-    @weakify(self);
-    [self.maskView mas_makeConstraints:^(MASConstraintMaker *make) {
-        @strongify(self);
-        make.top.equalTo(self.mas_bottom);
-        make.leading.trailing.equalTo(self.superview);
-        make.bottom.equalTo(self.mas_bottom);
-    }];
-    [[self.maskView rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        @strongify(self);
-        self.expand = !self.expand;
-    }];
-    [[RACObserve(self, expand) distinctUntilChanged] subscribeNext:^(NSNumber *x) {
-        NSLog(@"expand = %d", x.boolValue);
-        if ([x boolValue]) {
-            [self.maskView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.mas_bottom);
-                make.leading.trailing.equalTo(self.superview);
-                make.bottom.equalTo(self.superview);
-            }];
-            [UIView animateWithDuration:1 animations:^{
-                [self.maskView layoutIfNeeded];
-            }];
-        }else{
-            [self.maskView mas_updateConstraints:^(MASConstraintMaker *make) {
-                make.bottom.equalTo(self.mas_bottom);
-            }];
-            
-            [UIView animateWithDuration:1 animations:^{
-                 [self.maskView layoutIfNeeded];;
-            }];
-        };
-    }];
-}
-- (UIButton *)maskView{
-    if (!_maskView) {
-        _maskView = [[UIButton alloc] init];
-//        _maskView.backgroundColor = [UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1];
-        _maskView.backgroundColor = [UIColor greenColor];
-    }
-    return _maskView;
+    self.dropdownMenu.delegate = self;
+    self.dropdownMenu.dataSource = self;
+    self.dropdownMenu.disclosureIndicatorImage = [UIImage imageNamed:@"indicator"];
+    self.datas = [NSMutableArray arrayWithObjects:@"11",@"22",@"33",@"44",@"55",@"66",@"77",nil];
 }
 - (void)didMoveToSuperview{
-    NSLog(@"%s",__FUNCTION__);
-    [self setupSubViews];
     [self bindWithViewModel];
 }
 
+#pragma mark - MKDropdownMenuDelegate - 
+
+- (nullable NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return [[NSAttributedString alloc] initWithString:[self.datas objectAtIndex:row] attributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor], NSFontAttributeName:[UIFont systemFontOfSize:15]}];
+}
+- (BOOL)dropdownMenu:(MKDropdownMenu *)dropdownMenu shouldUseFullRowWidthForComponent:(NSInteger)component{
+    return YES;
+}
+- (CGFloat)dropdownMenu:(MKDropdownMenu *)dropdownMenu rowHeightForComponent:(NSInteger)component{
+    return 30;
+}
+- (void)dropdownMenu:(MKDropdownMenu *)dropdownMenu didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    self.selectRow = row;
+    if (self.delegate &&[self.delegate respondsToSelector:@selector(selectCategory:)]) {
+        [self.delegate selectCategory:[self.datas objectAtIndex:self.selectRow]];
+    }
+    [dropdownMenu closeAllComponentsAnimated:YES];
+}
+- (UIView *)dropdownMenu:(MKDropdownMenu *)dropdownMenu viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    UILabel *label = [[UILabel alloc] init];
+    label.attributedText = [[NSAttributedString alloc] initWithString:[self.datas objectAtIndex:row] attributes:@{NSForegroundColorAttributeName:self.selectRow == row?[UIColor redColor] : [UIColor greenColor], NSFontAttributeName:[UIFont systemFontOfSize:15]}];
+    return label;
+}
+#pragma mark - MKDropdownMenuDatasource -
+- (NSInteger)numberOfComponentsInDropdownMenu:(MKDropdownMenu *)dropdownMenu{
+    return 1;
+}
+- (NSInteger)dropdownMenu:(MKDropdownMenu *)dropdownMenu numberOfRowsInComponent:(NSInteger)component{
+    return self.datas.count;
+}
+- (nullable NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForComponent:(NSInteger)component{
+    NSAttributedString *attribute = [[NSAttributedString alloc] initWithString:@"类别" attributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor], NSFontAttributeName:[UIFont systemFontOfSize:15]}];
+    return attribute;
+}
+- (NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForSelectedComponent:(NSInteger)component{
+    return [[NSAttributedString alloc] initWithString:@"类别" attributes:@{NSForegroundColorAttributeName:[UIColor redColor], NSFontAttributeName:[UIFont systemFontOfSize:15]}];
+}
 @end
