@@ -10,6 +10,17 @@
 		3B57716D1D9CAB0300F2AB45 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B57716C1D9CAB0300F2AB45 /* Login.storyboard */; };
 		3B5771701D9CAB1700F2AB45 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */; };
 		3B5771731D9CB89900F2AB45 /* FastLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5771721D9CB89900F2AB45 /* FastLoginViewModel.m */; };
+		3B7E2ACD1DAA1AD3009FF851 /* HorizontailListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E2ACC1DAA1AD3009FF851 /* HorizontailListView.m */; };
+		3B7E2AD01DAA1AE8009FF851 /* HorizontailListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7E2ACF1DAA1AE8009FF851 /* HorizontailListView.xib */; };
+		3B7E2AD41DAA1FC2009FF851 /* SearchResultListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E2AD31DAA1FC2009FF851 /* SearchResultListView.m */; };
+		3B7E2AD61DAA2472009FF851 /* SearchResultListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7E2AD51DAA2472009FF851 /* SearchResultListView.xib */; };
+		3B7E2ADA1DAA26E9009FF851 /* SearchResultListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E2AD81DAA26E9009FF851 /* SearchResultListCollectionViewCell.m */; };
+		3B7E2ADB1DAA26E9009FF851 /* SearchResultListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7E2AD91DAA26E9009FF851 /* SearchResultListCollectionViewCell.xib */; };
+		3B7E2ADF1DAA2745009FF851 /* ResultItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E2ADD1DAA2745009FF851 /* ResultItemCollectionViewCell.m */; };
+		3B7E2AE01DAA2745009FF851 /* ResultItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7E2ADE1DAA2745009FF851 /* ResultItemCollectionViewCell.xib */; };
+		3B7E2AE31DAA2A3D009FF851 /* SearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E2AE21DAA2A3D009FF851 /* SearchViewModel.m */; };
+		3B9422291DAA4AA600998719 /* SearchOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9422281DAA4AA600998719 /* SearchOptionsView.m */; };
+		3B94222B1DAA4AB800998719 /* SearchOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B94222A1DAA4AB800998719 /* SearchOptionsView.xib */; };
 		3BD396C71D9BED1C00768B89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD396C61D9BED1C00768B89 /* main.m */; };
 		3BD396CA1D9BED1C00768B89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD396C91D9BED1C00768B89 /* AppDelegate.m */; };
 		3BD396CD1D9BED1C00768B89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD396CC1D9BED1C00768B89 /* ViewController.m */; };
@@ -54,6 +65,23 @@
 		3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3B5771711D9CB89900F2AB45 /* FastLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastLoginViewModel.h; sourceTree = "<group>"; };
 		3B5771721D9CB89900F2AB45 /* FastLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastLoginViewModel.m; sourceTree = "<group>"; };
+		3B7E2ACB1DAA1AD3009FF851 /* HorizontailListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontailListView.h; sourceTree = "<group>"; };
+		3B7E2ACC1DAA1AD3009FF851 /* HorizontailListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontailListView.m; sourceTree = "<group>"; };
+		3B7E2ACF1DAA1AE8009FF851 /* HorizontailListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HorizontailListView.xib; sourceTree = "<group>"; };
+		3B7E2AD21DAA1FC2009FF851 /* SearchResultListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultListView.h; sourceTree = "<group>"; };
+		3B7E2AD31DAA1FC2009FF851 /* SearchResultListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultListView.m; sourceTree = "<group>"; };
+		3B7E2AD51DAA2472009FF851 /* SearchResultListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultListView.xib; sourceTree = "<group>"; };
+		3B7E2AD71DAA26E9009FF851 /* SearchResultListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultListCollectionViewCell.h; sourceTree = "<group>"; };
+		3B7E2AD81DAA26E9009FF851 /* SearchResultListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultListCollectionViewCell.m; sourceTree = "<group>"; };
+		3B7E2AD91DAA26E9009FF851 /* SearchResultListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultListCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B7E2ADC1DAA2745009FF851 /* ResultItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultItemCollectionViewCell.h; sourceTree = "<group>"; };
+		3B7E2ADD1DAA2745009FF851 /* ResultItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultItemCollectionViewCell.m; sourceTree = "<group>"; };
+		3B7E2ADE1DAA2745009FF851 /* ResultItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B7E2AE11DAA2A3D009FF851 /* SearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewModel.h; sourceTree = "<group>"; };
+		3B7E2AE21DAA2A3D009FF851 /* SearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewModel.m; sourceTree = "<group>"; };
+		3B9422271DAA4AA600998719 /* SearchOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchOptionsView.h; sourceTree = "<group>"; };
+		3B9422281DAA4AA600998719 /* SearchOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchOptionsView.m; sourceTree = "<group>"; };
+		3B94222A1DAA4AB800998719 /* SearchOptionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchOptionsView.xib; sourceTree = "<group>"; };
 		3BD396C21D9BED1C00768B89 /* Sex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD396C61D9BED1C00768B89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BD396C81D9BED1C00768B89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -146,6 +174,64 @@
 				3B5771721D9CB89900F2AB45 /* FastLoginViewModel.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		3B7E2AC91DAA1AA9009FF851 /* DropdownView */ = {
+			isa = PBXGroup;
+			children = (
+				3BD65D801D9D100C003EE6F3 /* DropdownViewModel.h */,
+				3BD65D811D9D100C003EE6F3 /* DropdownViewModel.m */,
+				3BD65D7B1D9D0715003EE6F3 /* DropdownView.h */,
+				3BD65D7C1D9D0715003EE6F3 /* DropdownView.m */,
+				3BD65D7E1D9D0723003EE6F3 /* DropdownView.xib */,
+			);
+			name = DropdownView;
+			sourceTree = "<group>";
+		};
+		3B7E2ACA1DAA1AB9009FF851 /* HorizontalList */ = {
+			isa = PBXGroup;
+			children = (
+				3B7E2ACB1DAA1AD3009FF851 /* HorizontailListView.h */,
+				3B7E2ACC1DAA1AD3009FF851 /* HorizontailListView.m */,
+				3B7E2ACF1DAA1AE8009FF851 /* HorizontailListView.xib */,
+				3B7E2ACE1DAA1ADF009FF851 /* New Group */,
+			);
+			name = HorizontalList;
+			sourceTree = "<group>";
+		};
+		3B7E2ACE1DAA1ADF009FF851 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		3B7E2AD11DAA1FAB009FF851 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3B7E2AD21DAA1FC2009FF851 /* SearchResultListView.h */,
+				3B7E2AD31DAA1FC2009FF851 /* SearchResultListView.m */,
+				3B7E2AD51DAA2472009FF851 /* SearchResultListView.xib */,
+				3B7E2AD71DAA26E9009FF851 /* SearchResultListCollectionViewCell.h */,
+				3B7E2AD81DAA26E9009FF851 /* SearchResultListCollectionViewCell.m */,
+				3B7E2AD91DAA26E9009FF851 /* SearchResultListCollectionViewCell.xib */,
+				3B7E2ADC1DAA2745009FF851 /* ResultItemCollectionViewCell.h */,
+				3B7E2ADD1DAA2745009FF851 /* ResultItemCollectionViewCell.m */,
+				3B7E2ADE1DAA2745009FF851 /* ResultItemCollectionViewCell.xib */,
+				3B7E2AE11DAA2A3D009FF851 /* SearchViewModel.h */,
+				3B7E2AE21DAA2A3D009FF851 /* SearchViewModel.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		3B9422261DAA4A9200998719 /* SearchOptions */ = {
+			isa = PBXGroup;
+			children = (
+				3B9422271DAA4AA600998719 /* SearchOptionsView.h */,
+				3B9422281DAA4AA600998719 /* SearchOptionsView.m */,
+				3B94222A1DAA4AB800998719 /* SearchOptionsView.xib */,
+			);
+			name = SearchOptions;
 			sourceTree = "<group>";
 		};
 		3BD396B91D9BED1C00768B89 = {
@@ -307,11 +393,10 @@
 		3BD65D7A1D9D06C0003EE6F3 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				3BD65D801D9D100C003EE6F3 /* DropdownViewModel.h */,
-				3BD65D811D9D100C003EE6F3 /* DropdownViewModel.m */,
-				3BD65D7B1D9D0715003EE6F3 /* DropdownView.h */,
-				3BD65D7C1D9D0715003EE6F3 /* DropdownView.m */,
-				3BD65D7E1D9D0723003EE6F3 /* DropdownView.xib */,
+				3B9422261DAA4A9200998719 /* SearchOptions */,
+				3B7E2AD11DAA1FAB009FF851 /* Detail */,
+				3B7E2ACA1DAA1AB9009FF851 /* HorizontalList */,
+				3B7E2AC91DAA1AA9009FF851 /* DropdownView */,
 				3BD3970B1D9C222700768B89 /* SearchViewController.h */,
 				3BD3970C1D9C222700768B89 /* SearchViewController.m */,
 				3BD65D781D9D0621003EE6F3 /* Search.storyboard */,
@@ -390,14 +475,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BD396D51D9BED1C00768B89 /* LaunchScreen.storyboard in Resources */,
+				3B7E2AD61DAA2472009FF851 /* SearchResultListView.xib in Resources */,
+				3B7E2AD01DAA1AE8009FF851 /* HorizontailListView.xib in Resources */,
+				3B94222B1DAA4AB800998719 /* SearchOptionsView.xib in Resources */,
 				3BD396ED1D9BF0E500768B89 /* Lists.storyboard in Resources */,
 				3BD396F21D9BF39F00768B89 /* Me.storyboard in Resources */,
 				3BD396D21D9BED1C00768B89 /* Assets.xcassets in Resources */,
 				3BD65D771D9CFD00003EE6F3 /* HomeListsTableViewHeaderView.xib in Resources */,
 				3BD65D7F1D9D0723003EE6F3 /* DropdownView.xib in Resources */,
 				3BD65D611D9CEF22003EE6F3 /* littledog.jpg in Resources */,
+				3B7E2ADB1DAA26E9009FF851 /* SearchResultListCollectionViewCell.xib in Resources */,
 				3BD396D01D9BED1C00768B89 /* Main.storyboard in Resources */,
 				3BD65D791D9D0621003EE6F3 /* Search.storyboard in Resources */,
+				3B7E2AE01DAA2745009FF851 /* ResultItemCollectionViewCell.xib in Resources */,
 				3BD65D5F1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.xib in Resources */,
 				3B57716D1D9CAB0300F2AB45 /* Login.storyboard in Resources */,
 				3BD396EB1D9BF0DB00768B89 /* Home.storyboard in Resources */,
@@ -464,14 +554,19 @@
 				3BD396FB1D9BF9D500768B89 /* SexChannel.m in Sources */,
 				3BD65D821D9D100C003EE6F3 /* DropdownViewModel.m in Sources */,
 				3BD65D721D9CF91A003EE6F3 /* TableViewCell.m in Sources */,
+				3B9422291DAA4AA600998719 /* SearchOptionsView.m in Sources */,
 				3B5771731D9CB89900F2AB45 /* FastLoginViewModel.m in Sources */,
 				3BD397041D9C071200768B89 /* ListsCollectionViewCell.m in Sources */,
+				3B7E2AD41DAA1FC2009FF851 /* SearchResultListView.m in Sources */,
 				3BD396CD1D9BED1C00768B89 /* ViewController.m in Sources */,
 				3BD396E31D9BF01300768B89 /* TabbarController.m in Sources */,
 				3BD396F01D9BF39400768B89 /* MeViewController.m in Sources */,
+				3B7E2ADA1DAA26E9009FF851 /* SearchResultListCollectionViewCell.m in Sources */,
 				3BD65D7D1D9D0715003EE6F3 /* DropdownView.m in Sources */,
 				3BD3970D1D9C222700768B89 /* SearchViewController.m in Sources */,
 				3BD65D651D9CF229003EE6F3 /* HomeListsView.m in Sources */,
+				3B7E2ADF1DAA2745009FF851 /* ResultItemCollectionViewCell.m in Sources */,
+				3B7E2AE31DAA2A3D009FF851 /* SearchViewModel.m in Sources */,
 				3BD3970A1D9C1FDB00768B89 /* HeaderCollectionViewCell.m in Sources */,
 				3BD396E61D9BF07A00768B89 /* ListsCollectionViewController.m in Sources */,
 				3BD397011D9BFB6A00768B89 /* ListsViewModel.m in Sources */,
@@ -483,6 +578,7 @@
 				3BD396C71D9BED1C00768B89 /* main.m in Sources */,
 				3BD65D541D9CEB00003EE6F3 /* HomeListViewModel.m in Sources */,
 				3BD396E91D9BF09700768B89 /* HomeViewController.m in Sources */,
+				3B7E2ACD1DAA1AD3009FF851 /* HorizontailListView.m in Sources */,
 				3B5771701D9CAB1700F2AB45 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

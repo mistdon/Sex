@@ -12,6 +12,7 @@
 #import "DropdownViewModel.h"
 #import <MKDropdownMenu/MKDropdownMenu.h>
 
+
 @interface DropdownView() <MKDropdownMenuDelegate, MKDropdownMenuDataSource>
 
 @property (weak, nonatomic) IBOutlet MKDropdownMenu *dropdownMenu;
@@ -23,19 +24,23 @@
 @implementation DropdownView
 
 - (void)bindWithViewModel{
-    self.selectRow = 0;
     self.viewModel = [[DropdownViewModel alloc]  init];
     self.dropdownMenu.delegate = self;
     self.dropdownMenu.dataSource = self;
     self.dropdownMenu.disclosureIndicatorImage = [UIImage imageNamed:@"indicator"];
     self.datas = [NSMutableArray arrayWithObjects:@"11",@"22",@"33",@"44",@"55",@"66",@"77",nil];
+    [RACObserve(self, categoryItem) subscribeNext:^(NSString *item) {
+        self.selectRow = [self.datas indexOfObject:self.categoryItem] < self.datas.count?[self.datas indexOfObject:self.categoryItem]: 0;
+        [self refresh];
+    }];
 }
 - (void)didMoveToSuperview{
     [self bindWithViewModel];
 }
-
-#pragma mark - MKDropdownMenuDelegate - 
-
+- (void)refresh{
+    [self.dropdownMenu reloadAllComponents];
+}
+#pragma mark - MKDropdownMenuDelegate -
 - (nullable NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component{
     return [[NSAttributedString alloc] initWithString:[self.datas objectAtIndex:row] attributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor], NSFontAttributeName:[UIFont systemFontOfSize:15]}];
 }
@@ -46,15 +51,12 @@
     return 30;
 }
 - (void)dropdownMenu:(MKDropdownMenu *)dropdownMenu didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    self.selectRow = row;
-    if (self.delegate &&[self.delegate respondsToSelector:@selector(selectCategory:)]) {
-        [self.delegate selectCategory:[self.datas objectAtIndex:self.selectRow]];
-    }
+    self.categoryItem = self.datas[row];
     [dropdownMenu closeAllComponentsAnimated:YES];
 }
 - (UIView *)dropdownMenu:(MKDropdownMenu *)dropdownMenu viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     UILabel *label = [[UILabel alloc] init];
-    label.attributedText = [[NSAttributedString alloc] initWithString:[self.datas objectAtIndex:row] attributes:@{NSForegroundColorAttributeName:self.selectRow == row?[UIColor redColor] : [UIColor greenColor], NSFontAttributeName:[UIFont systemFontOfSize:15]}];
+    label.attributedText = [[NSAttributedString alloc] initWithString:[@"     " stringByAppendingString:[self.datas objectAtIndex:row]] attributes:@{NSForegroundColorAttributeName:self.selectRow == row?[UIColor redColor] : [UIColor greenColor], NSFontAttributeName:[UIFont systemFontOfSize:15]}];
     return label;
 }
 #pragma mark - MKDropdownMenuDatasource -

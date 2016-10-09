@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchViewController : UIViewController
-
+@property (nonatomic, copy) NSString *searchCategory;
+@property (nonatomic, copy) NSString *searchItem;
 @end
