@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +21,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dpq-PQ-KfA" userLabel="bottomView">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31Z-UP-191">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8d-xe-PMd">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="B8d-xe-PMd" secondAttribute="height" multiplier="1:1" id="s4N-kt-k8l"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="loginWithWeibo:" destination="ylE-0a-yyY" eventType="touchUpInside" id="Qpn-Eh-KKv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="778-u9-zrS">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IPr-NY-GUn"/>
+                                        </constraints>
+                                        <state key="normal" title="注册"/>
+                                        <connections>
+                                            <segue destination="iFE-ph-ak5" kind="show" id="tSB-nL-8Uq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MW-dB-I1q">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5MW-dB-I1q" secondAttribute="height" multiplier="1:1" id="lrM-7T-G7A"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="LoginWithWeChat:" destination="ylE-0a-yyY" eventType="touchUpInside" id="IBo-UD-Hfg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="31Z-UP-191" secondAttribute="trailing" id="1E6-qI-hoh"/>
+                                    <constraint firstItem="778-u9-zrS" firstAttribute="top" secondItem="B8d-xe-PMd" secondAttribute="bottom" constant="20" id="2DL-yF-pzg"/>
+                                    <constraint firstItem="5MW-dB-I1q" firstAttribute="top" secondItem="31Z-UP-191" secondAttribute="bottom" constant="20" id="614-QZ-UAS"/>
+                                    <constraint firstItem="778-u9-zrS" firstAttribute="top" secondItem="5MW-dB-I1q" secondAttribute="bottom" constant="20" id="Det-gT-5wC"/>
+                                    <constraint firstItem="5MW-dB-I1q" firstAttribute="centerX" secondItem="Dpq-PQ-KfA" secondAttribute="centerX" constant="-60" id="GkC-5Q-RJn"/>
+                                    <constraint firstItem="B8d-xe-PMd" firstAttribute="top" secondItem="31Z-UP-191" secondAttribute="bottom" constant="20" id="OgI-Kg-4ez"/>
+                                    <constraint firstItem="B8d-xe-PMd" firstAttribute="centerX" secondItem="Dpq-PQ-KfA" secondAttribute="centerX" constant="60" id="TsS-ug-Irz"/>
+                                    <constraint firstItem="31Z-UP-191" firstAttribute="leading" secondItem="Dpq-PQ-KfA" secondAttribute="leading" id="gqv-fC-Nr9"/>
+                                    <constraint firstItem="778-u9-zrS" firstAttribute="centerX" secondItem="Dpq-PQ-KfA" secondAttribute="centerX" id="iIR-cb-GhV"/>
+                                    <constraint firstItem="31Z-UP-191" firstAttribute="top" secondItem="Dpq-PQ-KfA" secondAttribute="top" constant="5" id="kTp-Wa-XGg"/>
+                                    <constraint firstAttribute="bottom" secondItem="778-u9-zrS" secondAttribute="bottom" constant="8" id="ySp-wi-n8w"/>
+                                </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C9Y-on-K8B">
                                 <subviews>
@@ -156,7 +204,25 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1321" y="-45"/>
+            <point key="canvasLocation" x="1320.8" y="-45.42728635682159"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nF9-1F-9a7">
+            <objects>
+                <viewController id="iFE-ph-ak5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ce-ce-Ikj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Twb-TW-uYa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m6n-wo-9Yv">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EX1-jc-sdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="-54"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ovh-d2-UiS">

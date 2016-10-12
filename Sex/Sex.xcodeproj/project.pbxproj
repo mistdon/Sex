@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B2E1FD51DADDCFE0088DF45 /* SexShareSerivce.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2E1FD41DADDCFE0088DF45 /* SexShareSerivce.m */; };
 		3B57716D1D9CAB0300F2AB45 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B57716C1D9CAB0300F2AB45 /* Login.storyboard */; };
 		3B5771701D9CAB1700F2AB45 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */; };
 		3B5771731D9CB89900F2AB45 /* FastLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5771721D9CB89900F2AB45 /* FastLoginViewModel.m */; };
@@ -21,6 +22,21 @@
 		3B7E2AE31DAA2A3D009FF851 /* SearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E2AE21DAA2A3D009FF851 /* SearchViewModel.m */; };
 		3B9422291DAA4AA600998719 /* SearchOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9422281DAA4AA600998719 /* SearchOptionsView.m */; };
 		3B94222B1DAA4AB800998719 /* SearchOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B94222A1DAA4AB800998719 /* SearchOptionsView.xib */; };
+		3BA4B06F1DAB649C002986FB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B06C1DAB649C002986FB /* libWeChatSDK.a */; };
+		3BA4B0711DAB64D1002986FB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B0701DAB64D1002986FB /* SystemConfiguration.framework */; };
+		3BA4B0731DAB6507002986FB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B0721DAB6507002986FB /* CoreTelephony.framework */; };
+		3BA4B0751DAB6513002986FB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B0741DAB6513002986FB /* libsqlite3.0.tbd */; };
+		3BA4B0771DAB6520002986FB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B0761DAB6520002986FB /* libc++.tbd */; };
+		3BA4B07C1DAB6A5F002986FB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B07B1DAB6A5F002986FB /* libz.tbd */; };
+		3BA4B07F1DAB80D3002986FB /* ShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4B07E1DAB80D3002986FB /* ShoppingCartViewController.m */; };
+		3BA4B0811DAB80E1002986FB /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA4B0801DAB80E1002986FB /* ShoppingCart.storyboard */; };
+		3BA4B0851DAB8CAE002986FB /* NumberCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4B0841DAB8CAE002986FB /* NumberCountView.m */; };
+		3BA4B0871DAB8CBF002986FB /* NumberCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BA4B0861DAB8CBF002986FB /* NumberCountView.xib */; };
+		3BA4B08A1DAB91DB002986FB /* ShoppingCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4B0891DAB91DB002986FB /* ShoppingCartTableViewCell.m */; };
+		3BA4B0911DAB9769002986FB /* TotalCostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4B08F1DAB9769002986FB /* TotalCostView.m */; };
+		3BA4B0921DAB9769002986FB /* TotalCostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BA4B0901DAB9769002986FB /* TotalCostView.xib */; };
+		3BA4B0951DAB99EF002986FB /* CostCountViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4B0941DAB99EF002986FB /* CostCountViewModel.m */; };
+		3BA4B09A1DAB9FE2002986FB /* CartPorduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4B0991DAB9FE2002986FB /* CartPorduct.m */; };
 		3BD396C71D9BED1C00768B89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD396C61D9BED1C00768B89 /* main.m */; };
 		3BD396CA1D9BED1C00768B89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD396C91D9BED1C00768B89 /* AppDelegate.m */; };
 		3BD396CD1D9BED1C00768B89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD396CC1D9BED1C00768B89 /* ViewController.m */; };
@@ -60,6 +76,9 @@
 
 /* Begin PBXFileReference section */
 		12A29D6FA6B8E5181050278D /* libPods-Sex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sex.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2E1FD21DADDBE50088DF45 /* SexConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SexConst.h; sourceTree = "<group>"; };
+		3B2E1FD31DADDCFE0088DF45 /* SexShareSerivce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexShareSerivce.h; sourceTree = "<group>"; };
+		3B2E1FD41DADDCFE0088DF45 /* SexShareSerivce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexShareSerivce.m; sourceTree = "<group>"; };
 		3B57716C1D9CAB0300F2AB45 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3B57716E1D9CAB1700F2AB45 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -82,6 +101,30 @@
 		3B9422271DAA4AA600998719 /* SearchOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchOptionsView.h; sourceTree = "<group>"; };
 		3B9422281DAA4AA600998719 /* SearchOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchOptionsView.m; sourceTree = "<group>"; };
 		3B94222A1DAA4AB800998719 /* SearchOptionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchOptionsView.xib; sourceTree = "<group>"; };
+		3BA4B06C1DAB649C002986FB /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		3BA4B06D1DAB649C002986FB /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		3BA4B06E1DAB649C002986FB /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		3BA4B0701DAB64D1002986FB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3BA4B0721DAB6507002986FB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		3BA4B0741DAB6513002986FB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		3BA4B0761DAB6520002986FB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		3BA4B07B1DAB6A5F002986FB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3BA4B07D1DAB80D3002986FB /* ShoppingCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartViewController.h; sourceTree = "<group>"; };
+		3BA4B07E1DAB80D3002986FB /* ShoppingCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartViewController.m; sourceTree = "<group>"; };
+		3BA4B0801DAB80E1002986FB /* ShoppingCart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShoppingCart.storyboard; sourceTree = "<group>"; };
+		3BA4B0831DAB8CAE002986FB /* NumberCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberCountView.h; sourceTree = "<group>"; };
+		3BA4B0841DAB8CAE002986FB /* NumberCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberCountView.m; sourceTree = "<group>"; };
+		3BA4B0861DAB8CBF002986FB /* NumberCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberCountView.xib; sourceTree = "<group>"; };
+		3BA4B0881DAB91DB002986FB /* ShoppingCartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartTableViewCell.h; sourceTree = "<group>"; };
+		3BA4B0891DAB91DB002986FB /* ShoppingCartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartTableViewCell.m; sourceTree = "<group>"; };
+		3BA4B08E1DAB9769002986FB /* TotalCostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalCostView.h; sourceTree = "<group>"; };
+		3BA4B08F1DAB9769002986FB /* TotalCostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalCostView.m; sourceTree = "<group>"; };
+		3BA4B0901DAB9769002986FB /* TotalCostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalCostView.xib; sourceTree = "<group>"; };
+		3BA4B0931DAB99EF002986FB /* CostCountViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CostCountViewModel.h; sourceTree = "<group>"; };
+		3BA4B0941DAB99EF002986FB /* CostCountViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CostCountViewModel.m; sourceTree = "<group>"; };
+		3BA4B0971DAB9AC8002986FB /* SingletonProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonProtocol.h; sourceTree = "<group>"; };
+		3BA4B0981DAB9FE2002986FB /* CartPorduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartPorduct.h; sourceTree = "<group>"; };
+		3BA4B0991DAB9FE2002986FB /* CartPorduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartPorduct.m; sourceTree = "<group>"; };
 		3BD396C21D9BED1C00768B89 /* Sex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD396C61D9BED1C00768B89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BD396C81D9BED1C00768B89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -149,6 +192,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BA4B07C1DAB6A5F002986FB /* libz.tbd in Frameworks */,
+				3BA4B0771DAB6520002986FB /* libc++.tbd in Frameworks */,
+				3BA4B0751DAB6513002986FB /* libsqlite3.0.tbd in Frameworks */,
+				3BA4B0731DAB6507002986FB /* CoreTelephony.framework in Frameworks */,
+				3BA4B0711DAB64D1002986FB /* SystemConfiguration.framework in Frameworks */,
+				3BA4B06F1DAB649C002986FB /* libWeChatSDK.a in Frameworks */,
 				4B2E763CE67401B0130CCE6C /* libPods-Sex.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +208,11 @@
 		3B38AE8FA31A224309851F12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BA4B07B1DAB6A5F002986FB /* libz.tbd */,
+				3BA4B0761DAB6520002986FB /* libc++.tbd */,
+				3BA4B0741DAB6513002986FB /* libsqlite3.0.tbd */,
+				3BA4B0721DAB6507002986FB /* CoreTelephony.framework */,
+				3BA4B0701DAB64D1002986FB /* SystemConfiguration.framework */,
 				12A29D6FA6B8E5181050278D /* libPods-Sex.a */,
 			);
 			name = Frameworks;
@@ -234,6 +288,50 @@
 			name = SearchOptions;
 			sourceTree = "<group>";
 		};
+		3BA4B06A1DAB6466002986FB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3BA4B0961DAB9A8A002986FB /* Signalton */,
+				3BA4B0821DAB8C98002986FB /* NumerCount */,
+				3BA4B06B1DAB6477002986FB /* WeChat */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		3BA4B06B1DAB6477002986FB /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				3BA4B06C1DAB649C002986FB /* libWeChatSDK.a */,
+				3BA4B06D1DAB649C002986FB /* WXApi.h */,
+				3BA4B06E1DAB649C002986FB /* WXApiObject.h */,
+				3B2E1FD31DADDCFE0088DF45 /* SexShareSerivce.h */,
+				3B2E1FD41DADDCFE0088DF45 /* SexShareSerivce.m */,
+			);
+			name = WeChat;
+			sourceTree = "<group>";
+		};
+		3BA4B0821DAB8C98002986FB /* NumerCount */ = {
+			isa = PBXGroup;
+			children = (
+				3BA4B0831DAB8CAE002986FB /* NumberCountView.h */,
+				3BA4B0841DAB8CAE002986FB /* NumberCountView.m */,
+				3BA4B0861DAB8CBF002986FB /* NumberCountView.xib */,
+				3BA4B08E1DAB9769002986FB /* TotalCostView.h */,
+				3BA4B08F1DAB9769002986FB /* TotalCostView.m */,
+				3BA4B0901DAB9769002986FB /* TotalCostView.xib */,
+			);
+			name = NumerCount;
+			sourceTree = "<group>";
+		};
+		3BA4B0961DAB9A8A002986FB /* Signalton */ = {
+			isa = PBXGroup;
+			children = (
+				3BA4B0971DAB9AC8002986FB /* SingletonProtocol.h */,
+				3B2E1FD21DADDBE50088DF45 /* SexConst.h */,
+			);
+			name = Signalton;
+			sourceTree = "<group>";
+		};
 		3BD396B91D9BED1C00768B89 = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +353,7 @@
 		3BD396C41D9BED1C00768B89 /* Sex */ = {
 			isa = PBXGroup;
 			children = (
+				3BA4B06A1DAB6466002986FB /* Components */,
 				3BD396F31D9BF75400768B89 /* Business */,
 				3BD396DC1D9BEF7500768B89 /* Pages */,
 				3BD396C81D9BED1C00768B89 /* AppDelegate.h */,
@@ -323,6 +422,15 @@
 		3BD396DF1D9BEF8F00768B89 /* ShoppingCart */ = {
 			isa = PBXGroup;
 			children = (
+				3BA4B07D1DAB80D3002986FB /* ShoppingCartViewController.h */,
+				3BA4B07E1DAB80D3002986FB /* ShoppingCartViewController.m */,
+				3BA4B0881DAB91DB002986FB /* ShoppingCartTableViewCell.h */,
+				3BA4B0891DAB91DB002986FB /* ShoppingCartTableViewCell.m */,
+				3BA4B0801DAB80E1002986FB /* ShoppingCart.storyboard */,
+				3BA4B0931DAB99EF002986FB /* CostCountViewModel.h */,
+				3BA4B0941DAB99EF002986FB /* CostCountViewModel.m */,
+				3BA4B0981DAB9FE2002986FB /* CartPorduct.h */,
+				3BA4B0991DAB9FE2002986FB /* CartPorduct.m */,
 			);
 			name = ShoppingCart;
 			sourceTree = "<group>";
@@ -447,6 +555,7 @@
 				TargetAttributes = {
 					3BD396C11D9BED1C00768B89 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = S8238R3HUC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -478,14 +587,17 @@
 				3B7E2AD61DAA2472009FF851 /* SearchResultListView.xib in Resources */,
 				3B7E2AD01DAA1AE8009FF851 /* HorizontailListView.xib in Resources */,
 				3B94222B1DAA4AB800998719 /* SearchOptionsView.xib in Resources */,
+				3BA4B0811DAB80E1002986FB /* ShoppingCart.storyboard in Resources */,
 				3BD396ED1D9BF0E500768B89 /* Lists.storyboard in Resources */,
 				3BD396F21D9BF39F00768B89 /* Me.storyboard in Resources */,
 				3BD396D21D9BED1C00768B89 /* Assets.xcassets in Resources */,
 				3BD65D771D9CFD00003EE6F3 /* HomeListsTableViewHeaderView.xib in Resources */,
 				3BD65D7F1D9D0723003EE6F3 /* DropdownView.xib in Resources */,
+				3BA4B0871DAB8CBF002986FB /* NumberCountView.xib in Resources */,
 				3BD65D611D9CEF22003EE6F3 /* littledog.jpg in Resources */,
 				3B7E2ADB1DAA26E9009FF851 /* SearchResultListCollectionViewCell.xib in Resources */,
 				3BD396D01D9BED1C00768B89 /* Main.storyboard in Resources */,
+				3BA4B0921DAB9769002986FB /* TotalCostView.xib in Resources */,
 				3BD65D791D9D0621003EE6F3 /* Search.storyboard in Resources */,
 				3B7E2AE01DAA2745009FF851 /* ResultItemCollectionViewCell.xib in Resources */,
 				3BD65D5F1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.xib in Resources */,
@@ -557,29 +669,36 @@
 				3B9422291DAA4AA600998719 /* SearchOptionsView.m in Sources */,
 				3B5771731D9CB89900F2AB45 /* FastLoginViewModel.m in Sources */,
 				3BD397041D9C071200768B89 /* ListsCollectionViewCell.m in Sources */,
+				3BA4B07F1DAB80D3002986FB /* ShoppingCartViewController.m in Sources */,
 				3B7E2AD41DAA1FC2009FF851 /* SearchResultListView.m in Sources */,
 				3BD396CD1D9BED1C00768B89 /* ViewController.m in Sources */,
 				3BD396E31D9BF01300768B89 /* TabbarController.m in Sources */,
 				3BD396F01D9BF39400768B89 /* MeViewController.m in Sources */,
 				3B7E2ADA1DAA26E9009FF851 /* SearchResultListCollectionViewCell.m in Sources */,
+				3B2E1FD51DADDCFE0088DF45 /* SexShareSerivce.m in Sources */,
 				3BD65D7D1D9D0715003EE6F3 /* DropdownView.m in Sources */,
 				3BD3970D1D9C222700768B89 /* SearchViewController.m in Sources */,
 				3BD65D651D9CF229003EE6F3 /* HomeListsView.m in Sources */,
 				3B7E2ADF1DAA2745009FF851 /* ResultItemCollectionViewCell.m in Sources */,
 				3B7E2AE31DAA2A3D009FF851 /* SearchViewModel.m in Sources */,
+				3BA4B09A1DAB9FE2002986FB /* CartPorduct.m in Sources */,
 				3BD3970A1D9C1FDB00768B89 /* HeaderCollectionViewCell.m in Sources */,
 				3BD396E61D9BF07A00768B89 /* ListsCollectionViewController.m in Sources */,
+				3BA4B0911DAB9769002986FB /* TotalCostView.m in Sources */,
 				3BD397011D9BFB6A00768B89 /* ListsViewModel.m in Sources */,
 				3BD396CA1D9BED1C00768B89 /* AppDelegate.m in Sources */,
+				3BA4B08A1DAB91DB002986FB /* ShoppingCartTableViewCell.m in Sources */,
 				3BD65D5A1D9CECB7003EE6F3 /* HomeListsTableView.m in Sources */,
 				3BD65D751D9CFCDD003EE6F3 /* HomeListsTableViewHeaderView.m in Sources */,
 				3BD396F71D9BF77900768B89 /* RequestService.m in Sources */,
 				3BD65D5E1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.m in Sources */,
+				3BA4B0951DAB99EF002986FB /* CostCountViewModel.m in Sources */,
 				3BD396C71D9BED1C00768B89 /* main.m in Sources */,
 				3BD65D541D9CEB00003EE6F3 /* HomeListViewModel.m in Sources */,
 				3BD396E91D9BF09700768B89 /* HomeViewController.m in Sources */,
 				3B7E2ACD1DAA1AD3009FF851 /* HorizontailListView.m in Sources */,
 				3B5771701D9CAB1700F2AB45 /* LoginViewController.m in Sources */,
+				3BA4B0851DAB8CAE002986FB /* NumberCountView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,8 +817,13 @@
 			baseConfigurationReference = 8374AA3B3C5391D51EDEC42D /* Pods-Sex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S8238R3HUC;
 				INFOPLIST_FILE = Sex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sex",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Shendong.Sex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -710,8 +834,13 @@
 			baseConfigurationReference = 967E9A9D7072BAFB496286A3 /* Pods-Sex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S8238R3HUC;
 				INFOPLIST_FILE = Sex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sex",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Shendong.Sex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
