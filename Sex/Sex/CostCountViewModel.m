@@ -9,41 +9,36 @@
 #import "CostCountViewModel.h"
 #import "CartPorduct.h"
 #import "ShoppingCartTableViewCell.h"
+#import "ShoppingcartAttachmentTableViewCell.h"
+
 
 static NSString *const KCellIdentifier = @"shoppingcartCellIdentifier";
+static NSString *const KAttachmentIdentifier = @"attachmentCellIdentifer";
+static NSString *const KHeaderViewIdentifier = @"shoppingcartHeaderIdentifier";
 
 @interface CostCountViewModel()
 
-@property (nonatomic, strong) NSMutableArray *innerDatas;
 
 @end
 @implementation CostCountViewModel
 
 SingletonInstance(CostCountViewModel)
+
+#pragma mark - lazyload -
 - (instancetype)init{
     if (self = [super init]) {
-        [self configure];
+//        _reloadSubject = [RACSubject subject];
     }
     return self;
 }
-- (void)configure{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self fetchNewData];
-    });
-    [[[RACObserve(self, isSelectedAll) skip:1] distinctUntilChanged] subscribeNext:^(id x) {
-        for (CartPorduct *pro in self.innerDatas) {
-            pro.selected = YES;
-        };
-        [self refresh];
-    }];
-}
-- (NSMutableArray *)innerDatas{
-    if (!_innerDatas) {
-        _innerDatas = [NSMutableArray array];
+- (NSMutableArray *)datasources{
+    if (!_datasources) {
+        _datasources = [NSMutableArray array];
     }
-    return _innerDatas;
+    return _datasources;
 }
-- (void)fetchNewData{
+//默认给的数据
+- (void)initWithDefaultData{
     for (int index =  0 ; index < 5; index ++) {
         CartPorduct *pro  = [[CartPorduct alloc] init];
         pro.price = 100 * index;
@@ -52,65 +47,37 @@ SingletonInstance(CostCountViewModel)
         if (index < 3) {
             pro.selected = NO;
         }
-        [self.innerDatas addObject:pro];
+        [self.datasources addObject:pro];
     }
-    [self.innerDatas enumerateObjectsUsingBlock:^(CartPorduct *product, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (!product.selected) {
-            self.isSelectedAll = NO;
-            *stop = YES;
-        };
-    }];
-    [self refresh];
-    
-}
-
-#pragma mark - refresh -
-- (RACSignal *)reloadData{
-    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        for (CartPorduct *pro in self.innerDatas) {
-            pro.selected = self.isSelectedAll;
-        };
-        [subscriber sendNext:self.innerDatas];
-        [subscriber sendCompleted];
-        return nil;
-    }];
-}
-- (void)refresh{
-    self.datas = [self.innerDatas copy];
-    self.needReloadData = !self.needReloadData;
+    self.reloadSubject = [RACReplaySubject subject];
 }
 #pragma mark - UITableViewdatasource and delegate -
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.datas.count;
+    return self.datasources.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    ShoppingCartTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KCellIdentifier];
-    CartPorduct *product = [self.innerDatas objectAtIndex:indexPath.row];
-    [cell bindWithProduct:product];
-
-    NSArray *combines = @[RACObserve(product, num),RACObserve(product, selected)];
-    [[[RACSignal combineLatest:combines] skip:1] subscribeNext:^(id x) {
-        [self refresh];
-        [self reCalculateNewPrices];
-    }];
-    return cell;
-}
-- (void)reCalculateNewPrices{
-    NSInteger total_num = 0;
-    CGFloat total_price = 0.0;
-    CGFloat total_saveing = 0.0;
-    for (CartPorduct *product in self.innerDatas) {
-        if (product.selected) {
-            total_num += product.num;
-            total_price += product.price * product.num;
-            total_saveing += product.saving * product.num;
-        }
-    }
-    self.num = total_num;
-    self.totalPrice = total_price;
-    self.saving = total_saveing;
     
+    CartPorduct *product = [self.datasources objectAtIndex:indexPath.row];
+    if (product.num >= 0) {
+        ShoppingCartTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KCellIdentifier];
+        [cell bindWithProduct:product];
+        __weak typeof(self)weakself = self;
+        cell.newchange = ^(NSInteger newNum){
+            product.num = newNum;
+            [weakself recalculate];
+        };
+        cell.selectedChange = ^(BOOL selected){
+            product.selected = selected;
+            [weakself recalculate];
+            [weakself judgeSelectedAllState];
+        };
+        return cell;
+    }else{
+        ShoppingcartAttachmentTableViewCell *attach = [tableView dequeueReusableCellWithIdentifier:KAttachmentIdentifier];
+        return attach;
+    }
 }
+#pragma mark - UITableView delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44;
 }
@@ -118,7 +85,65 @@ SingletonInstance(CostCountViewModel)
     return YES;
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.innerDatas removeObjectAtIndex:indexPath.row];
-    [self refresh];
+    [self.datasources removeObjectAtIndex:indexPath.row];
+    [self reloadTableView];
+    [self recalculate];
 }
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return [[[NSBundle mainBundle] loadNibNamed:@"ShoppingcartHeaderView" owner:nil options:nil] firstObject];
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 33.0f;
+}
+
+- (void)getAllDatas{
+    [self initWithDefaultData];
+    if (self.reloadSubject) {
+        [self.reloadSubject sendNext:self.datasources];
+    }
+    [self recalculate];
+    [self reloadTableView];
+}
+- (void)reloadTableView{
+    
+}
+- (void)slecteAllProducts:(BOOL)selected{
+    [self.datasources enumerateObjectsUsingBlock:^(CartPorduct *pro, NSUInteger idx, BOOL * _Nonnull stop) {
+        pro.selected = selected;
+    }];
+    [self reloadTableView];
+    
+}
+//重新计算
+- (void)recalculate{
+    NSInteger temp_num = 0;
+    CGFloat temp_price = 0.0f;
+    CGFloat temp_saving = 0.0f;
+    for (CartPorduct *pro in self.datasources) {
+        if (pro.selected) {
+            temp_num += pro.num;
+            temp_price += pro.num * pro.price;
+            temp_saving += pro.num * pro.saving;
+        }
+    }
+    self.total_num = temp_num;
+    self.total_price = temp_price;
+    self.total_saving = temp_saving;
+}
+- (void)judgeSelectedAllState{
+    [self.datasources enumerateObjectsUsingBlock:^(CartPorduct *pro, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (!pro.selected) {
+            self.isSelectedAll = NO;
+            *stop = YES;
+        };
+        if ((idx = self.datasources.count - 1 && pro.selected == YES)) {
+            self.isSelectedAll = YES;
+        }
+    }];
+}
+
+
+
+
+
 @end

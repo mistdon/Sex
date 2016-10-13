@@ -13,15 +13,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *numLabel;
 @property (weak, nonatomic) IBOutlet UILabel *costLabel;
 @property (weak, nonatomic) IBOutlet UILabel *savingLabel;
-@property (weak, nonatomic) IBOutlet UIButton *calculateButton;
-@property (weak, nonatomic) IBOutlet UIButton *allSelectedButton;
 
 @end
 @implementation TotalCostView
 
 - (void)didMoveToSuperview{
-    RAC(self.numLabel, text) = [RACObserve(self, num) map:^id(id value) {
-        return [NSString stringWithFormat:@"%@",value];
+    @weakify(self);
+    [[[[RACObserve(self, num) distinctUntilChanged] doNext:^(id x) {
+        @strongify(self);
+        self.numLabel.text = [NSString stringWithFormat:@"%@",x];
+    }]map:^id(id value) {
+        return @([value integerValue] > 0);
+    }] subscribeNext:^(id x) {
+        self.calculateButton.enabled = [x boolValue];
     }];
     RAC(self.costLabel, text) = [RACObserve(self, cost) map:^id(id value) {
         return [NSString stringWithFormat:@"¥ %.2f",[value floatValue]];
@@ -29,15 +33,6 @@
     RAC(self.savingLabel, text) = [RACObserve(self, save) map:^id(id value) {
         return [NSString stringWithFormat:@"¥ %.2f",[value floatValue]];
     }];
-    
-    [[self.allSelectedButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        self.allSelectedButton.selected = !self.allSelectedButton.selected;
-        self.selectedAll = self.allSelectedButton.selected;
-    }];
-    
-}
-- (IBAction)calculateButtonClicked:(id)sender {
-    [self calculate];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ShoppingCartViewController.h"
+#import "BillViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 #import "ShoppingCartTableViewCell.h"
@@ -18,6 +19,7 @@
 @property (nonatomic, strong) CostCountViewModel *costcount;
 @property (weak, nonatomic) IBOutlet TotalCostView *totalcostView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *resultArray;
 @end
 
 @implementation ShoppingCartViewController
@@ -25,45 +27,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    //viewmodel
     self.costcount = [CostCountViewModel shareInstance];
+    //tableview
     
     self.tableView.dataSource = self.costcount;
     self.tableView.delegate   = self.costcount;
-    
-    [RACObserve(self.costcount, num) subscribeNext:^(id x) {
-        NSLog(@"total_num = %ld",[x integerValue]);
-    }];
-    [RACObserve(self.costcount, totalPrice) subscribeNext:^(id x) {
-        NSLog(@"totalPrice = %.2f",[x floatValue]);
-    }];
-    [RACObserve(self.costcount, saving) subscribeNext:^(id x) {
-        NSLog(@"saving = %.2f",[x floatValue]);
-    }];
-    
-    RAC(self.totalcostView, num) = RACObserve(self.costcount, num);
-    RAC(self.totalcostView, cost) = RACObserve(self.costcount, totalPrice);
-    RAC(self.totalcostView, save) = RACObserve(self.costcount, saving);
-//    RAC(self.totalcostView, selectedAll) = RACObserve(self.costcount, isSelectedAll);
-    [RACObserve(self.totalcostView, selectedAll) subscribeNext:^(id x) {
+
+    [[self.costcount rac_signalForSelector:@selector(reloadTableView)] subscribeNext:^(id x) {
         NSLog(@"x = %@",x);
-        self.costcount.isSelectedAll = [x boolValue];
-        [[self.costcount reloadData] subscribeNext:^(id x) {
-            [self.tableView reloadData];
-        }];
-        
+        [self.tableView reloadData];
     }];
+    RAC(self.totalcostView, num) = RACObserve(self.costcount, total_num);
+    RAC(self.totalcostView, cost) = RACObserve(self.costcount, total_price);
+    RAC(self.totalcostView, save) = RACObserve(self.costcount, total_saving);
     
-//    [[RACSignal combineLatest:@[RACObserve(self.costcount, num), RACObserve(self.costcount, totalPrice), RACObserve(self.costcount, saving)]] subscribeNext:^(id x) {
-//        NSLog(@"resulr = %@",x);
-//    }];
-    
-    [[self.totalcostView rac_signalForSelector:@selector(calculate)] subscribeNext:^(id x) {
-        NSLog(@"结算");
+    @weakify(self);
+    [[self.totalcostView.allSelectedButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *x) {
+        @strongify(self);
+        x.selected = !x.selected;
+        [self.costcount slecteAllProducts:x.selected];;
     }];
-    
+    [[self.totalcostView.calculateButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        self.resultArray = [self.costcount.datasources filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"selected = YES"]];
+        [self performSegueWithIdentifier:@"showBill" sender:self];
+    }];
+    RAC(self.totalcostView.allSelectedButton,selected) = RACObserve(self.costcount, isSelectedAll);
+    //拉取数据
+    [self.costcount getAllDatas];
 }
-
-
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"showBill"]) {
+        BillViewController *bill  = segue.destinationViewController;
+        bill.bills = self.resultArray;
+    }
+}
 @end

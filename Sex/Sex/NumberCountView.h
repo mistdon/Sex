@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <XXNibBridge/XXNibBridge.h>
 
+typedef void(^numberChange)(NSInteger newNum);
+
 @interface NumberCountView : UIView<XXNibBridge>
 
 @property (nonatomic, assign)IB_DESIGNABLE NSInteger num;
 
-@property (nonatomic, copy) void(^changeNum)(NSInteger num);
+@property (nonatomic, copy) numberChange newchange;
 
 @end

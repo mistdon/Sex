@@ -37,6 +37,14 @@
 		3BA4B0921DAB9769002986FB /* TotalCostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BA4B0901DAB9769002986FB /* TotalCostView.xib */; };
 		3BA4B0951DAB99EF002986FB /* CostCountViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4B0941DAB99EF002986FB /* CostCountViewModel.m */; };
 		3BA4B09A1DAB9FE2002986FB /* CartPorduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4B0991DAB9FE2002986FB /* CartPorduct.m */; };
+		3BD342221DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD342211DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.m */; };
+		3BD342241DAF765C00602F76 /* ShoppingcartHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD342231DAF765C00602F76 /* ShoppingcartHeaderView.xib */; };
+		3BD342271DAF7BBB00602F76 /* BillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD342261DAF7BBB00602F76 /* BillViewController.m */; };
+		3BD3422A1DAF7EF100602F76 /* BillViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD342291DAF7EF100602F76 /* BillViewModel.m */; };
+		3BD3422D1DAF897C00602F76 /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD3422C1DAF897C00602F76 /* Address.storyboard */; };
+		3BD342301DAF89A800602F76 /* AddressesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD3422F1DAF89A800602F76 /* AddressesViewController.m */; };
+		3BD342331DAF89B200602F76 /* CreateAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD342321DAF89B200602F76 /* CreateAddressViewController.m */; };
+		3BD342361DAF8DA900602F76 /* PayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD342351DAF8DA900602F76 /* PayTableViewCell.m */; };
 		3BD396C71D9BED1C00768B89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD396C61D9BED1C00768B89 /* main.m */; };
 		3BD396CA1D9BED1C00768B89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD396C91D9BED1C00768B89 /* AppDelegate.m */; };
 		3BD396CD1D9BED1C00768B89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD396CC1D9BED1C00768B89 /* ViewController.m */; };
@@ -125,6 +133,20 @@
 		3BA4B0971DAB9AC8002986FB /* SingletonProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonProtocol.h; sourceTree = "<group>"; };
 		3BA4B0981DAB9FE2002986FB /* CartPorduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartPorduct.h; sourceTree = "<group>"; };
 		3BA4B0991DAB9FE2002986FB /* CartPorduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartPorduct.m; sourceTree = "<group>"; };
+		3BD342201DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingcartAttachmentTableViewCell.h; sourceTree = "<group>"; };
+		3BD342211DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingcartAttachmentTableViewCell.m; sourceTree = "<group>"; };
+		3BD342231DAF765C00602F76 /* ShoppingcartHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingcartHeaderView.xib; sourceTree = "<group>"; };
+		3BD342251DAF7BBB00602F76 /* BillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillViewController.h; sourceTree = "<group>"; };
+		3BD342261DAF7BBB00602F76 /* BillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillViewController.m; sourceTree = "<group>"; };
+		3BD342281DAF7EF100602F76 /* BillViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillViewModel.h; sourceTree = "<group>"; };
+		3BD342291DAF7EF100602F76 /* BillViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillViewModel.m; sourceTree = "<group>"; };
+		3BD3422C1DAF897C00602F76 /* Address.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
+		3BD3422E1DAF89A800602F76 /* AddressesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressesViewController.h; sourceTree = "<group>"; };
+		3BD3422F1DAF89A800602F76 /* AddressesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressesViewController.m; sourceTree = "<group>"; };
+		3BD342311DAF89B200602F76 /* CreateAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAddressViewController.h; sourceTree = "<group>"; };
+		3BD342321DAF89B200602F76 /* CreateAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAddressViewController.m; sourceTree = "<group>"; };
+		3BD342341DAF8DA900602F76 /* PayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayTableViewCell.h; sourceTree = "<group>"; };
+		3BD342351DAF8DA900602F76 /* PayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayTableViewCell.m; sourceTree = "<group>"; };
 		3BD396C21D9BED1C00768B89 /* Sex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD396C61D9BED1C00768B89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BD396C81D9BED1C00768B89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -332,6 +354,18 @@
 			name = Signalton;
 			sourceTree = "<group>";
 		};
+		3BD3422B1DAF896B00602F76 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				3BD3422C1DAF897C00602F76 /* Address.storyboard */,
+				3BD3422E1DAF89A800602F76 /* AddressesViewController.h */,
+				3BD3422F1DAF89A800602F76 /* AddressesViewController.m */,
+				3BD342311DAF89B200602F76 /* CreateAddressViewController.h */,
+				3BD342321DAF89B200602F76 /* CreateAddressViewController.m */,
+			);
+			name = Address;
+			sourceTree = "<group>";
+		};
 		3BD396B91D9BED1C00768B89 = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +415,7 @@
 		3BD396DC1D9BEF7500768B89 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				3BD3422B1DAF896B00602F76 /* Address */,
 				3BD396E01D9BEFB900768B89 /* Me */,
 				3BD396DF1D9BEF8F00768B89 /* ShoppingCart */,
 				3BD396DE1D9BEF8500768B89 /* Lists */,
@@ -426,11 +461,20 @@
 				3BA4B07E1DAB80D3002986FB /* ShoppingCartViewController.m */,
 				3BA4B0881DAB91DB002986FB /* ShoppingCartTableViewCell.h */,
 				3BA4B0891DAB91DB002986FB /* ShoppingCartTableViewCell.m */,
+				3BD342201DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.h */,
+				3BD342211DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.m */,
+				3BD342231DAF765C00602F76 /* ShoppingcartHeaderView.xib */,
 				3BA4B0801DAB80E1002986FB /* ShoppingCart.storyboard */,
 				3BA4B0931DAB99EF002986FB /* CostCountViewModel.h */,
 				3BA4B0941DAB99EF002986FB /* CostCountViewModel.m */,
 				3BA4B0981DAB9FE2002986FB /* CartPorduct.h */,
 				3BA4B0991DAB9FE2002986FB /* CartPorduct.m */,
+				3BD342251DAF7BBB00602F76 /* BillViewController.h */,
+				3BD342261DAF7BBB00602F76 /* BillViewController.m */,
+				3BD342341DAF8DA900602F76 /* PayTableViewCell.h */,
+				3BD342351DAF8DA900602F76 /* PayTableViewCell.m */,
+				3BD342281DAF7EF100602F76 /* BillViewModel.h */,
+				3BD342291DAF7EF100602F76 /* BillViewModel.m */,
 			);
 			name = ShoppingCart;
 			sourceTree = "<group>";
@@ -583,6 +627,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD342241DAF765C00602F76 /* ShoppingcartHeaderView.xib in Resources */,
 				3BD396D51D9BED1C00768B89 /* LaunchScreen.storyboard in Resources */,
 				3B7E2AD61DAA2472009FF851 /* SearchResultListView.xib in Resources */,
 				3B7E2AD01DAA1AE8009FF851 /* HorizontailListView.xib in Resources */,
@@ -597,6 +642,7 @@
 				3BD65D611D9CEF22003EE6F3 /* littledog.jpg in Resources */,
 				3B7E2ADB1DAA26E9009FF851 /* SearchResultListCollectionViewCell.xib in Resources */,
 				3BD396D01D9BED1C00768B89 /* Main.storyboard in Resources */,
+				3BD3422D1DAF897C00602F76 /* Address.storyboard in Resources */,
 				3BA4B0921DAB9769002986FB /* TotalCostView.xib in Resources */,
 				3BD65D791D9D0621003EE6F3 /* Search.storyboard in Resources */,
 				3B7E2AE01DAA2745009FF851 /* ResultItemCollectionViewCell.xib in Resources */,
@@ -667,9 +713,11 @@
 				3BD65D821D9D100C003EE6F3 /* DropdownViewModel.m in Sources */,
 				3BD65D721D9CF91A003EE6F3 /* TableViewCell.m in Sources */,
 				3B9422291DAA4AA600998719 /* SearchOptionsView.m in Sources */,
+				3BD342361DAF8DA900602F76 /* PayTableViewCell.m in Sources */,
 				3B5771731D9CB89900F2AB45 /* FastLoginViewModel.m in Sources */,
 				3BD397041D9C071200768B89 /* ListsCollectionViewCell.m in Sources */,
 				3BA4B07F1DAB80D3002986FB /* ShoppingCartViewController.m in Sources */,
+				3BD342331DAF89B200602F76 /* CreateAddressViewController.m in Sources */,
 				3B7E2AD41DAA1FC2009FF851 /* SearchResultListView.m in Sources */,
 				3BD396CD1D9BED1C00768B89 /* ViewController.m in Sources */,
 				3BD396E31D9BF01300768B89 /* TabbarController.m in Sources */,
@@ -679,12 +727,14 @@
 				3BD65D7D1D9D0715003EE6F3 /* DropdownView.m in Sources */,
 				3BD3970D1D9C222700768B89 /* SearchViewController.m in Sources */,
 				3BD65D651D9CF229003EE6F3 /* HomeListsView.m in Sources */,
+				3BD342221DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.m in Sources */,
 				3B7E2ADF1DAA2745009FF851 /* ResultItemCollectionViewCell.m in Sources */,
 				3B7E2AE31DAA2A3D009FF851 /* SearchViewModel.m in Sources */,
 				3BA4B09A1DAB9FE2002986FB /* CartPorduct.m in Sources */,
 				3BD3970A1D9C1FDB00768B89 /* HeaderCollectionViewCell.m in Sources */,
 				3BD396E61D9BF07A00768B89 /* ListsCollectionViewController.m in Sources */,
 				3BA4B0911DAB9769002986FB /* TotalCostView.m in Sources */,
+				3BD342271DAF7BBB00602F76 /* BillViewController.m in Sources */,
 				3BD397011D9BFB6A00768B89 /* ListsViewModel.m in Sources */,
 				3BD396CA1D9BED1C00768B89 /* AppDelegate.m in Sources */,
 				3BA4B08A1DAB91DB002986FB /* ShoppingCartTableViewCell.m in Sources */,
@@ -694,10 +744,12 @@
 				3BD65D5E1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.m in Sources */,
 				3BA4B0951DAB99EF002986FB /* CostCountViewModel.m in Sources */,
 				3BD396C71D9BED1C00768B89 /* main.m in Sources */,
+				3BD342301DAF89A800602F76 /* AddressesViewController.m in Sources */,
 				3BD65D541D9CEB00003EE6F3 /* HomeListViewModel.m in Sources */,
 				3BD396E91D9BF09700768B89 /* HomeViewController.m in Sources */,
 				3B7E2ACD1DAA1AD3009FF851 /* HorizontailListView.m in Sources */,
 				3B5771701D9CAB1700F2AB45 /* LoginViewController.m in Sources */,
+				3BD3422A1DAF7EF100602F76 /* BillViewModel.m in Sources */,
 				3BA4B0851DAB8CAE002986FB /* NumberCountView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

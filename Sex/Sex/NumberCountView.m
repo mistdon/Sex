@@ -27,15 +27,15 @@
     }] subscribeNext:^(id x) {
         @strongify(self);
         self.num -= 1;
-        if (self.changeNum) {
-            self.changeNum(self.num);
+        if (self.newchange) {
+            self.newchange(self.num);
         }
     }];
     [[self.increaseButton rac_signalForControlEvents:UIControlEventTouchUpInside]  subscribeNext:^(id x) {
         @strongify(self);
         self.num += 1;
-        if (self.changeNum) {
-            self.changeNum(self.num);
+        if (self.newchange) {
+            self.newchange(self.num);
         }
     }];
 }

@@ -18,9 +18,6 @@
                         <constraint firstAttribute="width" constant="80" id="OYs-ST-nRP"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="calculateButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="c3U-gG-5fK"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzH-uP-gm7">
                     <constraints>
@@ -68,13 +65,13 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="allSelectedButton" destination="TzH-uP-gm7" id="pdD-gl-cST"/>
-                <outlet property="calculateButton" destination="jez-9l-vlN" id="i4G-RA-tbZ"/>
+                <outlet property="allSelectedButton" destination="TzH-uP-gm7" id="B1k-Mi-sNv"/>
+                <outlet property="calculateButton" destination="jez-9l-vlN" id="L0S-vR-66o"/>
                 <outlet property="costLabel" destination="edq-dz-mls" id="uX9-Jc-Agj"/>
                 <outlet property="numLabel" destination="vYx-d0-Di2" id="SWv-8J-MiT"/>
                 <outlet property="savingLabel" destination="S1x-EQ-bQr" id="30n-Bj-YWw"/>
             </connections>
-            <point key="canvasLocation" x="-99" y="-175"/>
+            <point key="canvasLocation" x="-882" y="-219"/>
         </view>
     </objects>
     <resources>

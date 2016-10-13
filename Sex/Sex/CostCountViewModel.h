@@ -13,17 +13,16 @@
 
 @interface CostCountViewModel : NSObject<SingletonProtocol,UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, assign) NSInteger num; 
-@property (nonatomic, assign) CGFloat totalPrice;
-@property (nonatomic, assign) CGFloat saving;
-@property (nonatomic, strong) NSArray *datas;
+@property (nonatomic, strong) NSMutableArray *datasources;
+@property (nonatomic, strong) RACReplaySubject *reloadSubject;
+
+@property (nonatomic, assign) NSInteger total_num;
+@property (nonatomic, assign) CGFloat total_price;
+@property (nonatomic, assign) CGFloat total_saving;
+
 @property (nonatomic, assign) BOOL isSelectedAll;
-@property (nonatomic, assign) BOOL needReloadData;
-- (RACSignal *)fetchAlldatas; // NSArray<CartProduct *> *datas;
 
-- (void)fetchNewData;
-
-- (void)refresh;
-
-- (RACSignal *)reloadData;
+- (void)slecteAllProducts:(BOOL)selected;
+- (void)getAllDatas;
+- (void)reloadTableView;
 @end

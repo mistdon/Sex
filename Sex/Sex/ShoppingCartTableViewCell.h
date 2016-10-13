@@ -8,15 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "CartPorduct.h"
-
-typedef void(^ChangeNum)(NSInteger num);
+#import "NumberCountView.h"
 
 @interface ShoppingCartTableViewCell : UITableViewCell
 
-@property (nonatomic, copy) ChangeNum numberChange;
+@property (nonatomic, copy) numberChange newchange;
+@property (nonatomic, copy) void(^selectedChange)(BOOL selected);
 
 - (void)bindWithProduct:(CartPorduct *)product;
-
-//- (void)productNumChangeCompletion:(void(^)(NSInteger newNum))block;
 
 @end
