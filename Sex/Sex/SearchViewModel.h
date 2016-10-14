@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 typedef NS_ENUM(NSInteger, SearchOptions){
     SearchOptionsAll,
     SearchOptionsPriceHigh,
@@ -20,4 +22,7 @@ typedef NS_ENUM(NSInteger, SearchOptions){
 @property (nonatomic, strong) NSArray *Items;
 @property (nonatomic, copy) NSString *currentItem;
 @property (nonatomic, assign) SearchOptions searchoptions;
+// http://api.qinglvmao.com/category/clist/?cid=3&page=1&pn=10&sort=&by=&umeng=0
+- (RACSignal *)queryCategoryById:(NSUInteger)cid page:(NSUInteger)page sort:(NSString *)sort;
+
 @end

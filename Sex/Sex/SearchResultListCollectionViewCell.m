@@ -10,7 +10,7 @@
 #import "ResultItemCollectionViewCell.h"
 
 @interface SearchResultListCollectionViewCell()
-@property (nonatomic, strong) NSMutableArray *datas;
+@property (nonatomic, strong) NSMutableArray<SexProductItem *> *datas;
 @property (weak, nonatomic) IBOutlet UICollectionView *listCollectionView;
 @end
 @implementation SearchResultListCollectionViewCell
@@ -29,9 +29,14 @@
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     ResultItemCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"keeeys" forIndexPath:indexPath];
+//    [cell bindWithModel:[self.datas objectAtIndex:indexPath.row]];
     return cell;
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake((self.bounds.size.width-30)/2, 100);
+    return CGSizeMake((self.bounds.size.width-30)/2, 250);
+}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(10, 10, 10, 10);
 }
 @end

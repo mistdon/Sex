@@ -15,6 +15,7 @@
 #import "SearchResultListView.h"
 #import "SearchViewModel.h"
 #import "SearchOptionsView.h"
+#import "SexProductItem.h"
 
 @interface SearchViewController ()
 @property (weak, nonatomic) IBOutlet DropdownView *dropdownView;
@@ -47,6 +48,11 @@
 //    self.dropdownView.categoryItem = @"22";
     self.searchResultListView.keys = @[@"111",@"222",@"333",@"44",@"55"];
     
+    [[self.searchViewModel queryCategoryById:0 page:0 sort:@"11"] subscribeNext:^(NSArray<SexProductItem *> *datas) {
+        NSLog(@"x = %@",datas);
+    }error:^(NSError *error) {
+        NSLog(@"error  %");
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

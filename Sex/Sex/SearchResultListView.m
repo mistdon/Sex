@@ -37,7 +37,7 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     SearchResultListCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"keys" forIndexPath:indexPath];
     cell.contentView.backgroundColor = indexPath.row == 0 ? [UIColor greenColor] : [UIColor blueColor];
-    
+//    cell 
     return cell;
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SexProductItem.h"
 @interface ResultItemCollectionViewCell : UICollectionViewCell
+
+- (void)bindWithModel:(SexProductItem *)item;
 
 @end

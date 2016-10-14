@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B213E701DAA672C0044C61A /* SexProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B213E6F1DAA672C0044C61A /* SexProductItem.m */; };
 		3B57716D1D9CAB0300F2AB45 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B57716C1D9CAB0300F2AB45 /* Login.storyboard */; };
 		3B5771701D9CAB1700F2AB45 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */; };
 		3B5771731D9CB89900F2AB45 /* FastLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5771721D9CB89900F2AB45 /* FastLoginViewModel.m */; };
@@ -60,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		12A29D6FA6B8E5181050278D /* libPods-Sex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sex.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B213E6E1DAA672C0044C61A /* SexProductItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexProductItem.h; sourceTree = "<group>"; };
+		3B213E6F1DAA672C0044C61A /* SexProductItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexProductItem.m; sourceTree = "<group>"; };
 		3B57716C1D9CAB0300F2AB45 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3B57716E1D9CAB1700F2AB45 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -363,6 +366,8 @@
 			children = (
 				3BD396F91D9BF9D500768B89 /* SexChannel.h */,
 				3BD396FA1D9BF9D500768B89 /* SexChannel.m */,
+				3B213E6E1DAA672C0044C61A /* SexProductItem.h */,
+				3B213E6F1DAA672C0044C61A /* SexProductItem.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 				3BD396CA1D9BED1C00768B89 /* AppDelegate.m in Sources */,
 				3BD65D5A1D9CECB7003EE6F3 /* HomeListsTableView.m in Sources */,
 				3BD65D751D9CFCDD003EE6F3 /* HomeListsTableViewHeaderView.m in Sources */,
+				3B213E701DAA672C0044C61A /* SexProductItem.m in Sources */,
 				3BD396F71D9BF77900768B89 /* RequestService.m in Sources */,
 				3BD65D5E1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.m in Sources */,
 				3BD396C71D9BED1C00768B89 /* main.m in Sources */,
