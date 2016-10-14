@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PartsTransportProtocol.h"
+
 
 @interface CreateAddressViewController : UIViewController
+
+@property (nonatomic, weak) IBOutlet id<PartsTransportProtocol> delegate;
 
 @end

@@ -14,11 +14,15 @@
 #import "CostCountViewModel.h"
 #import "TotalCostView.h"
 #import "CartPorduct.h"
+#import "EmptyShooppingCart.h"
+
+#import "RequestService.h"
 
 @interface ShoppingCartViewController ()
 @property (nonatomic, strong) CostCountViewModel *costcount;
 @property (weak, nonatomic) IBOutlet TotalCostView *totalcostView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet EmptyShooppingCart *emptyView;
 @property (nonatomic, strong) NSArray *resultArray;
 @end
 
@@ -54,8 +58,18 @@
         [self performSegueWithIdentifier:@"showBill" sender:self];
     }];
     RAC(self.totalcostView.allSelectedButton,selected) = RACObserve(self.costcount, isSelectedAll);
+    
+    [[self.emptyView.goToHomeButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        NSLog(@"去逛逛");
+    }];
     //拉取数据
     [self.costcount getAllDatas];
+    
+    RequestService *service = [[RequestService alloc] init];
+    [[service requretWithUrl:@"home/category" withParameters:nil] subscribeNext:^(id x) {
+        NSLog(@"x = %@",x);
+    }];
+    
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"showBill"]) {

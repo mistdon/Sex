@@ -105,20 +105,28 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PyA-XK-iOG" customClass="EmptyShooppingCart">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="feo-R9-OGJ" secondAttribute="bottom" id="8Vr-3j-I5i"/>
+                            <constraint firstAttribute="bottom" secondItem="PyA-XK-iOG" secondAttribute="bottom" id="8dZ-sy-8hy"/>
+                            <constraint firstItem="PyA-XK-iOG" firstAttribute="leading" secondItem="n0T-Mn-PQy" secondAttribute="leading" id="AqZ-EB-gsz"/>
                             <constraint firstItem="feo-R9-OGJ" firstAttribute="top" secondItem="TwM-uw-WNK" secondAttribute="bottom" id="CGr-gY-1Md"/>
                             <constraint firstAttribute="trailing" secondItem="feo-R9-OGJ" secondAttribute="trailing" id="DDU-YC-geb"/>
                             <constraint firstAttribute="trailing" secondItem="TwM-uw-WNK" secondAttribute="trailing" id="L2I-oK-cbX"/>
                             <constraint firstItem="feo-R9-OGJ" firstAttribute="leading" secondItem="n0T-Mn-PQy" secondAttribute="leading" id="fV6-DT-8Om"/>
+                            <constraint firstAttribute="trailing" secondItem="PyA-XK-iOG" secondAttribute="trailing" id="fvU-1d-n8R"/>
                             <constraint firstItem="TwM-uw-WNK" firstAttribute="leading" secondItem="n0T-Mn-PQy" secondAttribute="leading" id="iw3-IU-Ugv"/>
+                            <constraint firstItem="PyA-XK-iOG" firstAttribute="top" secondItem="n0T-Mn-PQy" secondAttribute="top" id="tWw-px-y5S"/>
                             <constraint firstItem="TwM-uw-WNK" firstAttribute="top" secondItem="n0T-Mn-PQy" secondAttribute="top" id="xbV-gJ-xTn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H8k-4e-y8N"/>
                     <connections>
+                        <outlet property="emptyView" destination="PyA-XK-iOG" id="XNt-PK-THa"/>
                         <outlet property="tableView" destination="TwM-uw-WNK" id="nfE-IE-Vi4"/>
                         <outlet property="totalcostView" destination="feo-R9-OGJ" id="za5-ej-iZf"/>
                         <segue destination="YRO-Z5-qyY" kind="show" identifier="showBill" id="NGz-4j-cbm"/>
@@ -140,11 +148,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="0GS-RJ-hfV">
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0GS-RJ-hfV">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCellIdentifier" id="jow-jS-HnU">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jow-jS-HnU" id="V9p-Ic-78I">
                                             <frame key="frameInset" width="375" height="43"/>
@@ -153,7 +161,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="paywayIdentifier" id="Yo8-hs-cjw" customClass="PayTableViewCell">
-                                        <rect key="frame" x="0.0" y="164" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="136" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yo8-hs-cjw" id="jBL-mU-Vwz">
                                             <frame key="frameInset" width="375" height="43"/>
@@ -199,7 +207,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="transportIdentifier" id="xaU-sO-Gll">
-                                        <rect key="frame" x="0.0" y="208" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="180" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xaU-sO-Gll" id="jUP-pK-PRr">
                                             <frame key="frameInset" width="375" height="43"/>
@@ -207,7 +215,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="billDetailIdentifier" id="1ow-Sf-Qnc">
-                                        <rect key="frame" x="0.0" y="252" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="224" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1ow-Sf-Qnc" id="IBV-6N-9Ez">
                                             <frame key="frameInset" width="375" height="43"/>
@@ -215,7 +223,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="noaddressIdentifer" id="ArM-8O-NAp">
-                                        <rect key="frame" x="0.0" y="296" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="268" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ArM-8O-NAp" id="R5z-fN-9xU">
                                             <frame key="frameInset" width="342" height="43"/>
@@ -239,12 +247,15 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addressIdentifier" id="N9L-JQ-BH7">
-                                        <rect key="frame" x="0.0" y="340" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="312" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N9L-JQ-BH7" id="Tm9-tu-uTu">
                                             <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8jf-bJ-55E" kind="show" id="UdB-lz-kps"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -296,7 +307,15 @@
                 <viewControllerPlaceholder storyboardName="Address" referencedIdentifier="CreateAddressViewController" id="sX3-GQ-Zyy" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vH2-rc-beb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="244"/>
+            <point key="canvasLocation" x="1987" y="238"/>
+        </scene>
+        <!--AddressesViewController-->
+        <scene sceneID="eXF-8r-7WT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Address" referencedIdentifier="AddressesViewController" id="8jf-bJ-55E" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rDd-8B-l8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1950" y="299"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U7c-1b-Leo">

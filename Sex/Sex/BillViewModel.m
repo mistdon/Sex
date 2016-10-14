@@ -19,7 +19,7 @@ static NSString *const KAddressIdentifer = @"addressIdentifier";
 @implementation BillViewModel
 {
     NSArray *datas;
-    
+    BOOL _haveAddress;
 }
 - (instancetype)init{
     if (self = [super init]) {
@@ -32,6 +32,8 @@ static NSString *const KAddressIdentifer = @"addressIdentifier";
     return self;
 }
 - (void)closeBill:(NSArray *)bills{
+    
+    _haveAddress = YES;
     self.payway = @"wechat";
     self.transportway = @"SF";
     if (self.reloadBlock) {
@@ -43,13 +45,16 @@ static NSString *const KAddressIdentifer = @"addressIdentifier";
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KAddressIdentifer];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_haveAddress ? KAddressIdentifer: KNoaddressIdentifer];
         return cell;
-    }else if(indexPath.section == 1 || indexPath.section == 2){
+    }else if (indexPath.section == 1){
+        UITableViewCell *productCell = [tableView dequeueReusableCellWithIdentifier:KProductCellIdentifier];
+        return productCell;
+    }else if(indexPath.section == 2 || indexPath.section == 3){
         PayTableViewCell *paycell = [tableView dequeueReusableCellWithIdentifier:KPaywayIdentifier];
-        paycell.selectedButton.selected = [[datas[indexPath.section] objectAtIndex:indexPath.row] isEqualToString:indexPath.section == 1 ? self.payway : self.transportway];
+        paycell.selectedButton.selected = [[datas[indexPath.section] objectAtIndex:indexPath.row] isEqualToString:indexPath.section == 2 ? self.payway : self.transportway];
         paycell.selecteBlcok = ^(BOOL selected){
-            if (indexPath.section == 1) {
+            if (indexPath.section == 2) {
                 self.payway = [datas[indexPath.section] objectAtIndex:indexPath.row];
             }else{
                 self.transportway = [datas[indexPath.section] objectAtIndex:indexPath.row];
@@ -59,7 +64,7 @@ static NSString *const KAddressIdentifer = @"addressIdentifier";
             }
         };
         return paycell;
-    }else if(indexPath.section == 3){
+    }else if(indexPath.section == 4){
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KBillDetailIdentifier];
         return cell;
     }else{

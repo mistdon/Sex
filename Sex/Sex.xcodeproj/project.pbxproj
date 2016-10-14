@@ -20,6 +20,15 @@
 		3B7E2ADF1DAA2745009FF851 /* ResultItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E2ADD1DAA2745009FF851 /* ResultItemCollectionViewCell.m */; };
 		3B7E2AE01DAA2745009FF851 /* ResultItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7E2ADE1DAA2745009FF851 /* ResultItemCollectionViewCell.xib */; };
 		3B7E2AE31DAA2A3D009FF851 /* SearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E2AE21DAA2A3D009FF851 /* SearchViewModel.m */; };
+		3B84ABBB1DB07BAE00694B71 /* RequestServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84ABBA1DB07BAE00694B71 /* RequestServiceManager.m */; };
+		3B84ABC01DB0A67B00694B71 /* RecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84ABBF1DB0A67B00694B71 /* RecommendView.m */; };
+		3B84ABC21DB0A6E000694B71 /* RecommendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B84ABC11DB0A6E000694B71 /* RecommendView.xib */; };
+		3B84ABC51DB0A70500694B71 /* RecommendViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84ABC41DB0A70500694B71 /* RecommendViewModel.m */; };
+		3B84ABC71DB0A8D500694B71 /* EmptyShooppingCart.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B84ABC61DB0A8D500694B71 /* EmptyShooppingCart.xib */; };
+		3B84ABCA1DB0A98300694B71 /* EmptyShooppingCart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84ABC91DB0A98300694B71 /* EmptyShooppingCart.m */; };
+		3B84ABCF1DB0ADFB00694B71 /* SexCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84ABCD1DB0ADFB00694B71 /* SexCollectionViewCell.m */; };
+		3B84ABD01DB0ADFB00694B71 /* SexCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B84ABCE1DB0ADFB00694B71 /* SexCollectionViewCell.xib */; };
+		3B84ABD41DB0AF7300694B71 /* SexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84ABD31DB0AF7300694B71 /* SexModel.m */; };
 		3B9422291DAA4AA600998719 /* SearchOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9422281DAA4AA600998719 /* SearchOptionsView.m */; };
 		3B94222B1DAA4AB800998719 /* SearchOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B94222A1DAA4AB800998719 /* SearchOptionsView.xib */; };
 		3BA4B06F1DAB649C002986FB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B06C1DAB649C002986FB /* libWeChatSDK.a */; };
@@ -106,6 +115,22 @@
 		3B7E2ADE1DAA2745009FF851 /* ResultItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B7E2AE11DAA2A3D009FF851 /* SearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewModel.h; sourceTree = "<group>"; };
 		3B7E2AE21DAA2A3D009FF851 /* SearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewModel.m; sourceTree = "<group>"; };
+		3B84ABB91DB07BAE00694B71 /* RequestServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestServiceManager.h; sourceTree = "<group>"; };
+		3B84ABBA1DB07BAE00694B71 /* RequestServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestServiceManager.m; sourceTree = "<group>"; };
+		3B84ABBC1DB0865600694B71 /* PartsTransportProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartsTransportProtocol.h; sourceTree = "<group>"; };
+		3B84ABBE1DB0A67B00694B71 /* RecommendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendView.h; sourceTree = "<group>"; };
+		3B84ABBF1DB0A67B00694B71 /* RecommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendView.m; sourceTree = "<group>"; };
+		3B84ABC11DB0A6E000694B71 /* RecommendView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendView.xib; sourceTree = "<group>"; };
+		3B84ABC31DB0A70500694B71 /* RecommendViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewModel.h; sourceTree = "<group>"; };
+		3B84ABC41DB0A70500694B71 /* RecommendViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewModel.m; sourceTree = "<group>"; };
+		3B84ABC61DB0A8D500694B71 /* EmptyShooppingCart.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyShooppingCart.xib; sourceTree = "<group>"; };
+		3B84ABC81DB0A98300694B71 /* EmptyShooppingCart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyShooppingCart.h; sourceTree = "<group>"; };
+		3B84ABC91DB0A98300694B71 /* EmptyShooppingCart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyShooppingCart.m; sourceTree = "<group>"; };
+		3B84ABCC1DB0ADFB00694B71 /* SexCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexCollectionViewCell.h; sourceTree = "<group>"; };
+		3B84ABCD1DB0ADFB00694B71 /* SexCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexCollectionViewCell.m; sourceTree = "<group>"; };
+		3B84ABCE1DB0ADFB00694B71 /* SexCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SexCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B84ABD21DB0AF7300694B71 /* SexModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexModel.h; sourceTree = "<group>"; };
+		3B84ABD31DB0AF7300694B71 /* SexModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexModel.m; sourceTree = "<group>"; };
 		3B9422271DAA4AA600998719 /* SearchOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchOptionsView.h; sourceTree = "<group>"; };
 		3B9422281DAA4AA600998719 /* SearchOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchOptionsView.m; sourceTree = "<group>"; };
 		3B94222A1DAA4AB800998719 /* SearchOptionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchOptionsView.xib; sourceTree = "<group>"; };
@@ -300,6 +325,40 @@
 			name = Detail;
 			sourceTree = "<group>";
 		};
+		3B84ABBD1DB0A66400694B71 /* RecommendView */ = {
+			isa = PBXGroup;
+			children = (
+				3B84ABC81DB0A98300694B71 /* EmptyShooppingCart.h */,
+				3B84ABC91DB0A98300694B71 /* EmptyShooppingCart.m */,
+				3B84ABC61DB0A8D500694B71 /* EmptyShooppingCart.xib */,
+				3B84ABBE1DB0A67B00694B71 /* RecommendView.h */,
+				3B84ABBF1DB0A67B00694B71 /* RecommendView.m */,
+				3B84ABC11DB0A6E000694B71 /* RecommendView.xib */,
+				3B84ABC31DB0A70500694B71 /* RecommendViewModel.h */,
+				3B84ABC41DB0A70500694B71 /* RecommendViewModel.m */,
+			);
+			name = RecommendView;
+			sourceTree = "<group>";
+		};
+		3B84ABCB1DB0ADD500694B71 /* ProductView */ = {
+			isa = PBXGroup;
+			children = (
+				3B84ABCC1DB0ADFB00694B71 /* SexCollectionViewCell.h */,
+				3B84ABCD1DB0ADFB00694B71 /* SexCollectionViewCell.m */,
+				3B84ABCE1DB0ADFB00694B71 /* SexCollectionViewCell.xib */,
+			);
+			name = ProductView;
+			sourceTree = "<group>";
+		};
+		3B84ABD11DB0AF2E00694B71 /* configure */ = {
+			isa = PBXGroup;
+			children = (
+				3B84ABD21DB0AF7300694B71 /* SexModel.h */,
+				3B84ABD31DB0AF7300694B71 /* SexModel.m */,
+			);
+			name = configure;
+			sourceTree = "<group>";
+		};
 		3B9422261DAA4A9200998719 /* SearchOptions */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +372,9 @@
 		3BA4B06A1DAB6466002986FB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3B84ABD11DB0AF2E00694B71 /* configure */,
+				3B84ABCB1DB0ADD500694B71 /* ProductView */,
+				3B84ABBD1DB0A66400694B71 /* RecommendView */,
 				3BA4B0961DAB9A8A002986FB /* Signalton */,
 				3BA4B0821DAB8C98002986FB /* NumerCount */,
 				3BA4B06B1DAB6477002986FB /* WeChat */,
@@ -350,6 +412,7 @@
 			children = (
 				3BA4B0971DAB9AC8002986FB /* SingletonProtocol.h */,
 				3B2E1FD21DADDBE50088DF45 /* SexConst.h */,
+				3B84ABBC1DB0865600694B71 /* PartsTransportProtocol.h */,
 			);
 			name = Signalton;
 			sourceTree = "<group>";
@@ -461,11 +524,11 @@
 				3BA4B07E1DAB80D3002986FB /* ShoppingCartViewController.m */,
 				3BA4B0881DAB91DB002986FB /* ShoppingCartTableViewCell.h */,
 				3BA4B0891DAB91DB002986FB /* ShoppingCartTableViewCell.m */,
-				3BD342201DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.h */,
 				3BD342211DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.m */,
 				3BD342231DAF765C00602F76 /* ShoppingcartHeaderView.xib */,
 				3BA4B0801DAB80E1002986FB /* ShoppingCart.storyboard */,
 				3BA4B0931DAB99EF002986FB /* CostCountViewModel.h */,
+				3BD342201DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.h */,
 				3BA4B0941DAB99EF002986FB /* CostCountViewModel.m */,
 				3BA4B0981DAB9FE2002986FB /* CartPorduct.h */,
 				3BA4B0991DAB9FE2002986FB /* CartPorduct.m */,
@@ -506,6 +569,8 @@
 			children = (
 				3BD396F51D9BF77900768B89 /* RequestService.h */,
 				3BD396F61D9BF77900768B89 /* RequestService.m */,
+				3B84ABB91DB07BAE00694B71 /* RequestServiceManager.h */,
+				3B84ABBA1DB07BAE00694B71 /* RequestServiceManager.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -635,17 +700,20 @@
 				3BA4B0811DAB80E1002986FB /* ShoppingCart.storyboard in Resources */,
 				3BD396ED1D9BF0E500768B89 /* Lists.storyboard in Resources */,
 				3BD396F21D9BF39F00768B89 /* Me.storyboard in Resources */,
+				3B84ABC21DB0A6E000694B71 /* RecommendView.xib in Resources */,
 				3BD396D21D9BED1C00768B89 /* Assets.xcassets in Resources */,
 				3BD65D771D9CFD00003EE6F3 /* HomeListsTableViewHeaderView.xib in Resources */,
 				3BD65D7F1D9D0723003EE6F3 /* DropdownView.xib in Resources */,
 				3BA4B0871DAB8CBF002986FB /* NumberCountView.xib in Resources */,
 				3BD65D611D9CEF22003EE6F3 /* littledog.jpg in Resources */,
 				3B7E2ADB1DAA26E9009FF851 /* SearchResultListCollectionViewCell.xib in Resources */,
+				3B84ABC71DB0A8D500694B71 /* EmptyShooppingCart.xib in Resources */,
 				3BD396D01D9BED1C00768B89 /* Main.storyboard in Resources */,
 				3BD3422D1DAF897C00602F76 /* Address.storyboard in Resources */,
 				3BA4B0921DAB9769002986FB /* TotalCostView.xib in Resources */,
 				3BD65D791D9D0621003EE6F3 /* Search.storyboard in Resources */,
 				3B7E2AE01DAA2745009FF851 /* ResultItemCollectionViewCell.xib in Resources */,
+				3B84ABD01DB0ADFB00694B71 /* SexCollectionViewCell.xib in Resources */,
 				3BD65D5F1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.xib in Resources */,
 				3B57716D1D9CAB0300F2AB45 /* Login.storyboard in Resources */,
 				3BD396EB1D9BF0DB00768B89 /* Home.storyboard in Resources */,
@@ -709,6 +777,7 @@
 			files = (
 				3BD397071D9C109800768B89 /* ListsHeaderCollectionReusableView.m in Sources */,
 				3BD65D4F1D9CEAB2003EE6F3 /* HomeListCollectionView.m in Sources */,
+				3B84ABD41DB0AF7300694B71 /* SexModel.m in Sources */,
 				3BD396FB1D9BF9D500768B89 /* SexChannel.m in Sources */,
 				3BD65D821D9D100C003EE6F3 /* DropdownViewModel.m in Sources */,
 				3BD65D721D9CF91A003EE6F3 /* TableViewCell.m in Sources */,
@@ -724,9 +793,11 @@
 				3BD396F01D9BF39400768B89 /* MeViewController.m in Sources */,
 				3B7E2ADA1DAA26E9009FF851 /* SearchResultListCollectionViewCell.m in Sources */,
 				3B2E1FD51DADDCFE0088DF45 /* SexShareSerivce.m in Sources */,
+				3B84ABBB1DB07BAE00694B71 /* RequestServiceManager.m in Sources */,
 				3BD65D7D1D9D0715003EE6F3 /* DropdownView.m in Sources */,
 				3BD3970D1D9C222700768B89 /* SearchViewController.m in Sources */,
 				3BD65D651D9CF229003EE6F3 /* HomeListsView.m in Sources */,
+				3B84ABC51DB0A70500694B71 /* RecommendViewModel.m in Sources */,
 				3BD342221DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.m in Sources */,
 				3B7E2ADF1DAA2745009FF851 /* ResultItemCollectionViewCell.m in Sources */,
 				3B7E2AE31DAA2A3D009FF851 /* SearchViewModel.m in Sources */,
@@ -745,12 +816,15 @@
 				3BA4B0951DAB99EF002986FB /* CostCountViewModel.m in Sources */,
 				3BD396C71D9BED1C00768B89 /* main.m in Sources */,
 				3BD342301DAF89A800602F76 /* AddressesViewController.m in Sources */,
+				3B84ABC01DB0A67B00694B71 /* RecommendView.m in Sources */,
 				3BD65D541D9CEB00003EE6F3 /* HomeListViewModel.m in Sources */,
 				3BD396E91D9BF09700768B89 /* HomeViewController.m in Sources */,
 				3B7E2ACD1DAA1AD3009FF851 /* HorizontailListView.m in Sources */,
 				3B5771701D9CAB1700F2AB45 /* LoginViewController.m in Sources */,
 				3BD3422A1DAF7EF100602F76 /* BillViewModel.m in Sources */,
 				3BA4B0851DAB8CAE002986FB /* NumberCountView.m in Sources */,
+				3B84ABCF1DB0ADFB00694B71 /* SexCollectionViewCell.m in Sources */,
+				3B84ABCA1DB0A98300694B71 /* EmptyShooppingCart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "CartPorduct.h"
 #import "BillViewModel.h"
+#import "RequestServiceManager.h"
+#import "RequestService.h"
 
 @interface BillViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,6 +23,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[[RequestServiceManager shareInstance] networkChangeSignal] subscribeNext:^(id x) {
+        NSLog(@"x = %@",x);
+    }];
+    
+    RequestService *service = [RequestService new];
+    [[service testRequest] subscribeNext:^(id x) {
+        NSLog(@"x = %@",x);
+    }];
     
     
    

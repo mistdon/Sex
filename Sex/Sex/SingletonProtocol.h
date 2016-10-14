@@ -6,6 +6,14 @@
 //  Copyright © 2016年 Shendong. All rights reserved.
 //
 
+/*
+  单例，实现单例时仅需遵守 SingletonProtocol协议即可
+      采用 +(instance)shareInstance;创建单例
+ 
+ */
+
+
+
 #import <Foundation/Foundation.h>
 
 #define SingletonInstance(classname) \

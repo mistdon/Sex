@@ -13,4 +13,6 @@
 
 - (RACSignal *)requretWithUrl:(NSString *)url withParameters:(NSDictionary *)paramters;
 
+- (RACSignal *)testRequest;
+
 @end
