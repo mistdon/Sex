@@ -23,6 +23,6 @@
 @property (nonatomic, assign) BOOL isSelectedAll;
 
 - (void)slecteAllProducts:(BOOL)selected;
-- (void)getAllDatas;
+- (RACSignal *)getAllDatas;
 - (void)reloadTableView;
 @end

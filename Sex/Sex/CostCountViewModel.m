@@ -10,7 +10,9 @@
 #import "CartPorduct.h"
 #import "ShoppingCartTableViewCell.h"
 #import "ShoppingcartAttachmentTableViewCell.h"
+#import "RequestService.h"
 
+static NSString *const KCartClistUrl = @"http://api.qinglvmao.com/cart/clist/?token=fb630f95f51389a216ffdc472b232781&sign=qHkDakhS8bU8wLSORAegUw%3D%3D";
 
 static NSString *const KCellIdentifier = @"shoppingcartCellIdentifier";
 static NSString *const KAttachmentIdentifier = @"attachmentCellIdentifer";
@@ -42,7 +44,7 @@ SingletonInstance(CostCountViewModel)
     for (int index =  0 ; index < 5; index ++) {
         CartPorduct *pro  = [[CartPorduct alloc] init];
         pro.price = 100 * index;
-        pro.num = index * 2;
+        pro.number = index * 2;
         pro.saving = index * 0.2;
         if (index < 3) {
             pro.selected = NO;
@@ -58,12 +60,12 @@ SingletonInstance(CostCountViewModel)
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     CartPorduct *product = [self.datasources objectAtIndex:indexPath.row];
-    if (product.num >= 0) {
+    if (product.number >= 0) {
         ShoppingCartTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KCellIdentifier];
         [cell bindWithProduct:product];
         __weak typeof(self)weakself = self;
         cell.newchange = ^(NSInteger newNum){
-            product.num = newNum;
+            product.number = newNum;
             [weakself recalculate];
         };
         cell.selectedChange = ^(BOOL selected){
@@ -96,13 +98,26 @@ SingletonInstance(CostCountViewModel)
     return 33.0f;
 }
 
-- (void)getAllDatas{
+- (RACSignal *)getAllDatas{
     [self initWithDefaultData];
     if (self.reloadSubject) {
         [self.reloadSubject sendNext:self.datasources];
     }
     [self recalculate];
     [self reloadTableView];
+    
+    
+    [[[RequestService new] requretWithUrl:KCartClistUrl withParameters:nil] subscribeNext:^(id x) {
+        NSLog(@"request = %@",x);
+    }error:^(NSError *error) {
+        NSLog(@"res.error = %@",error);
+    }];
+    
+    return [[[RequestService new] requretWithUrl:KCartClistUrl withParameters:nil] map:^id(id value) {
+        return self.datasources;
+    }];
+    
+    
 }
 - (void)reloadTableView{
     
@@ -121,9 +136,9 @@ SingletonInstance(CostCountViewModel)
     CGFloat temp_saving = 0.0f;
     for (CartPorduct *pro in self.datasources) {
         if (pro.selected) {
-            temp_num += pro.num;
-            temp_price += pro.num * pro.price;
-            temp_saving += pro.num * pro.saving;
+            temp_num += pro.number;
+            temp_price += pro.number * pro.price;
+            temp_saving += pro.number * pro.saving;
         }
     }
     self.total_num = temp_num;

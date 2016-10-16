@@ -22,8 +22,8 @@
     // Initialization code
 }
 - (void)setProduct:(SexModel *)product{
-    [imageView sd_setImageWithURL:product.image placeholderImage:[UIImage imageNamed:@"littledog.jpg"]];
-    descriptionLabel.text = product.descriptionContent;
+    [imageView sd_setImageWithURL:product.thumb placeholderImage:[UIImage imageNamed:@"littledog.jpg"]];
+    descriptionLabel.text = product.name;
     priceLabel.text = [NSString stringWithFormat:@"¥ %.2lf",product.price];
 }
 @end

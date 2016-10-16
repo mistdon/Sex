@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class RACSignal;
 @interface RecommendViewModel : NSObject
-
+- (RACSignal *)fetchBoughtProducts;
 @end

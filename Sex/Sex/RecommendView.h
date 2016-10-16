@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XXNibBridge/XXNibBridge.h>
 
+@class SexModel;
 @interface RecommendView : UIView<XXNibBridge>
-
+@property (weak, nonatomic) IBOutlet UIButton *toToHallButton;
+@property (nonatomic, copy) void(^slectedRecommend)(SexModel *product);
 @end

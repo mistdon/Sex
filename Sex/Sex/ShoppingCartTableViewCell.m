@@ -29,7 +29,7 @@
 }
 - (void)bindWithProduct:(CartPorduct *)product{
     self.selectedButton.selected = product.selected ;
-    self.numerCountView.num = product.num;
+    self.numerCountView.num = product.number;
     self.priceLabel.text    = [NSString stringWithFormat:@"%2.lf",product.price];
 
     self.numerCountView.newchange = ^(NSInteger newnum){

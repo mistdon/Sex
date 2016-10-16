@@ -14,15 +14,15 @@
 #import "CostCountViewModel.h"
 #import "TotalCostView.h"
 #import "CartPorduct.h"
-#import "EmptyShooppingCart.h"
-
+#import "RecommendView.h"
+#import "SexModel.h"
 #import "RequestService.h"
 
 @interface ShoppingCartViewController ()
 @property (nonatomic, strong) CostCountViewModel *costcount;
 @property (weak, nonatomic) IBOutlet TotalCostView *totalcostView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet EmptyShooppingCart *emptyView;
+@property (weak, nonatomic) IBOutlet RecommendView *emptyView;
 @property (nonatomic, strong) NSArray *resultArray;
 @end
 
@@ -59,15 +59,20 @@
     }];
     RAC(self.totalcostView.allSelectedButton,selected) = RACObserve(self.costcount, isSelectedAll);
     
-    [[self.emptyView.goToHomeButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+    [[self.emptyView.toToHallButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         NSLog(@"去逛逛");
     }];
+    self.emptyView.slectedRecommend = ^(SexModel *model){
+        NSLog(@"name= %@",model.name);
+    };
     //拉取数据
-    [self.costcount getAllDatas];
+    [[self.costcount getAllDatas] subscribeNext:^(id x) {
+        NSLog(@"x = %@",x);
+    }];
     
     RequestService *service = [[RequestService alloc] init];
-    [[service requretWithUrl:@"home/category" withParameters:nil] subscribeNext:^(id x) {
-        NSLog(@"x = %@",x);
+    [[service requretWithUrl:@"cart/clist/?token=fb630f95f51389a216ffdc472b232781&sign=pT%2F%2BpyDf4fotXxWFtACgZA%3D%3D" withParameters:nil] subscribeNext:^(id x) {
+        NSLog(@"text = %@",x);
     }];
     
 }
