@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3B2E1FD51DADDCFE0088DF45 /* SexShareSerivce.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2E1FD41DADDCFE0088DF45 /* SexShareSerivce.m */; };
+		3B3361DA1DB4D47B00D48503 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3361D91DB4D47B00D48503 /* SSKeychain.m */; };
+		3B3361DC1DB4D48800D48503 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3361DB1DB4D48800D48503 /* Security.framework */; };
+		3B3361DF1DB4D5E300D48503 /* UIScrollView+MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3361DE1DB4D5E300D48503 /* UIScrollView+MaskView.m */; };
 		3B57716D1D9CAB0300F2AB45 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B57716C1D9CAB0300F2AB45 /* Login.storyboard */; };
 		3B5771701D9CAB1700F2AB45 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */; };
 		3B5771731D9CB89900F2AB45 /* FastLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5771721D9CB89900F2AB45 /* FastLoginViewModel.m */; };
@@ -96,6 +99,12 @@
 		3B2E1FD21DADDBE50088DF45 /* SexConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SexConst.h; sourceTree = "<group>"; };
 		3B2E1FD31DADDCFE0088DF45 /* SexShareSerivce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexShareSerivce.h; sourceTree = "<group>"; };
 		3B2E1FD41DADDCFE0088DF45 /* SexShareSerivce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexShareSerivce.m; sourceTree = "<group>"; };
+		3B3361D81DB4D47B00D48503 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		3B3361D91DB4D47B00D48503 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		3B3361DB1DB4D48800D48503 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3B3361DD1DB4D5E300D48503 /* UIScrollView+MaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MaskView.h"; sourceTree = "<group>"; };
+		3B3361DE1DB4D5E300D48503 /* UIScrollView+MaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MaskView.m"; sourceTree = "<group>"; };
+		3B3361E01DB4DA2000D48503 /* Sex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sex.entitlements; sourceTree = "<group>"; };
 		3B57716C1D9CAB0300F2AB45 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3B57716E1D9CAB1700F2AB45 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -239,6 +248,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3361DC1DB4D48800D48503 /* Security.framework in Frameworks */,
 				3BA4B07C1DAB6A5F002986FB /* libz.tbd in Frameworks */,
 				3BA4B0771DAB6520002986FB /* libc++.tbd in Frameworks */,
 				3BA4B0751DAB6513002986FB /* libsqlite3.0.tbd in Frameworks */,
@@ -255,6 +265,7 @@
 		3B38AE8FA31A224309851F12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B3361DB1DB4D48800D48503 /* Security.framework */,
 				3BA4B07B1DAB6A5F002986FB /* libz.tbd */,
 				3BA4B0761DAB6520002986FB /* libc++.tbd */,
 				3BA4B0741DAB6513002986FB /* libsqlite3.0.tbd */,
@@ -450,6 +461,7 @@
 		3BD396C41D9BED1C00768B89 /* Sex */ = {
 			isa = PBXGroup;
 			children = (
+				3B3361E01DB4DA2000D48503 /* Sex.entitlements */,
 				3BA4B06A1DAB6466002986FB /* Components */,
 				3BD396F31D9BF75400768B89 /* Business */,
 				3BD396DC1D9BEF7500768B89 /* Pages */,
@@ -457,6 +469,10 @@
 				3BD396C91D9BED1C00768B89 /* AppDelegate.m */,
 				3BD396CB1D9BED1C00768B89 /* ViewController.h */,
 				3BD396CC1D9BED1C00768B89 /* ViewController.m */,
+				3B3361DD1DB4D5E300D48503 /* UIScrollView+MaskView.h */,
+				3B3361DE1DB4D5E300D48503 /* UIScrollView+MaskView.m */,
+				3B3361D81DB4D47B00D48503 /* SSKeychain.h */,
+				3B3361D91DB4D47B00D48503 /* SSKeychain.m */,
 				3BD396C51D9BED1C00768B89 /* Supporting Files */,
 			);
 			path = Sex;
@@ -666,6 +682,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = S8238R3HUC;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -789,7 +810,9 @@
 				3BD342331DAF89B200602F76 /* CreateAddressViewController.m in Sources */,
 				3B7E2AD41DAA1FC2009FF851 /* SearchResultListView.m in Sources */,
 				3BD396CD1D9BED1C00768B89 /* ViewController.m in Sources */,
+				3B3361DA1DB4D47B00D48503 /* SSKeychain.m in Sources */,
 				3BD396E31D9BF01300768B89 /* TabbarController.m in Sources */,
+				3B3361DF1DB4D5E300D48503 /* UIScrollView+MaskView.m in Sources */,
 				3BD396F01D9BF39400768B89 /* MeViewController.m in Sources */,
 				3B7E2ADA1DAA26E9009FF851 /* SearchResultListCollectionViewCell.m in Sources */,
 				3B2E1FD51DADDCFE0088DF45 /* SexShareSerivce.m in Sources */,
@@ -943,6 +966,7 @@
 			baseConfigurationReference = 8374AA3B3C5391D51EDEC42D /* Pods-Sex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sex/Sex.entitlements;
 				DEVELOPMENT_TEAM = S8238R3HUC;
 				INFOPLIST_FILE = Sex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -960,6 +984,7 @@
 			baseConfigurationReference = 967E9A9D7072BAFB496286A3 /* Pods-Sex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sex/Sex.entitlements;
 				DEVELOPMENT_TEAM = S8238R3HUC;
 				INFOPLIST_FILE = Sex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
