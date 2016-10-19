@@ -42,7 +42,11 @@
 		<true/>
 	</dict>
 	<key>UIMainStoryboardFile</key>
+<<<<<<< HEAD
 	<string>Me</string>
+=======
+	<string>Main</string>
+>>>>>>> data
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

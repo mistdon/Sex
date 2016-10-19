@@ -7,6 +7,13 @@
 //
 
 #import "ViewController.h"
+//#import "SSKeychain.h"
+//#import <SAMKeychain/SAMKeychain.h>
+
+static NSString *const KSexServiceName = @"SexServiceUserinfo";
+static NSString *const KAccount = @"15026570263";
+static NSString *const KPassword = @"123456789";
+
 
 @interface ViewController ()
 
@@ -16,14 +23,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+//    [SAMKeychain deletePasswordForService:@"Shendong" account:@"Shendong"];
+////    [SAMKeychain setPassword:KPassword forService:KSexServiceName account:KAccount];
+////    [SAMKeychain deletePasswordForService:@"Shendong" account:@"Shendong"];
+//    NSLog(@"all.counts = %@", [SAMKeychain allAccounts]);
+//    NSLog(@"password = %@",[SAMKeychain passwordForService:KSexServiceName account:KAccount]);
+//    NSLog(@"ps = %@", [SSKeychain passwordForService:KSexServiceName account:KAccount]);
+//    NSLog(@"count = %@",[SAMKeychain accountsForService:KSexServiceName]);
+    
+
+    
+    
+}
+- (void)didReceiveMemoryWarning{
+    NSLog(@"%s",__FUNCTION__);
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

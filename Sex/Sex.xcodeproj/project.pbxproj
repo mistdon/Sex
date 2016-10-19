@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
-		3B213E701DAA672C0044C61A /* SexProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B213E6F1DAA672C0044C61A /* SexProductItem.m */; };
-=======
 		3B20D6241DB151C10058D353 /* Scheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20D6231DB151C10058D353 /* Scheme.m */; };
 		3B20D6261DB2184A0058D353 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20D6251DB2184A0058D353 /* Assets.xcassets */; };
+		3B213E701DAA672C0044C61A /* SexProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B213E6F1DAA672C0044C61A /* SexProductItem.m */; };
 		3B2E1FD51DADDCFE0088DF45 /* SexShareSerivce.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2E1FD41DADDCFE0088DF45 /* SexShareSerivce.m */; };
+		3B3361DA1DB4D47B00D48503 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3361D91DB4D47B00D48503 /* SSKeychain.m */; };
+		3B3361DC1DB4D48800D48503 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3361DB1DB4D48800D48503 /* Security.framework */; };
+		3B3361DF1DB4D5E300D48503 /* UIScrollView+MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3361DE1DB4D5E300D48503 /* UIScrollView+MaskView.m */; };
 		3B39114E1DB224D100F82B4A /* SexUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B39114D1DB224D100F82B4A /* SexUser.m */; };
 		3B3911511DB2261000F82B4A /* MeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3911501DB2261000F82B4A /* MeViewModel.m */; };
 		3B3911551DB328FC00F82B4A /* HYEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3911541DB328FC00F82B4A /* HYEdgeInsetsButton.m */; };
@@ -20,7 +21,6 @@
 		3B39115D1DB3337C00F82B4A /* ConsumerServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B39115C1DB3337C00F82B4A /* ConsumerServiceViewController.m */; };
 		3B3911621DB3393F00F82B4A /* DataBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3911611DB3393F00F82B4A /* DataBaseService.m */; };
 		3B3911661DB3E9E200F82B4A /* UIScrollView+SexRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3911651DB3E9E200F82B4A /* UIScrollView+SexRefresh.m */; };
->>>>>>> shoppingcartlist
 		3B57716D1D9CAB0300F2AB45 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B57716C1D9CAB0300F2AB45 /* Login.storyboard */; };
 		3B5771701D9CAB1700F2AB45 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */; };
 		3B5771731D9CB89900F2AB45 /* FastLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5771721D9CB89900F2AB45 /* FastLoginViewModel.m */; };
@@ -103,16 +103,21 @@
 
 /* Begin PBXFileReference section */
 		12A29D6FA6B8E5181050278D /* libPods-Sex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sex.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-<<<<<<< HEAD
-		3B213E6E1DAA672C0044C61A /* SexProductItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexProductItem.h; sourceTree = "<group>"; };
-		3B213E6F1DAA672C0044C61A /* SexProductItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexProductItem.m; sourceTree = "<group>"; };
-=======
+		364329D8A149E03F33FF2214 /* Pods-Sex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sex.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sex/Pods-Sex.release.xcconfig"; sourceTree = "<group>"; };
 		3B20D6221DB151C10058D353 /* Scheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scheme.h; sourceTree = "<group>"; };
 		3B20D6231DB151C10058D353 /* Scheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scheme.m; sourceTree = "<group>"; };
 		3B20D6251DB2184A0058D353 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B213E6E1DAA672C0044C61A /* SexProductItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexProductItem.h; sourceTree = "<group>"; };
+		3B213E6F1DAA672C0044C61A /* SexProductItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexProductItem.m; sourceTree = "<group>"; };
 		3B2E1FD21DADDBE50088DF45 /* SexConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SexConst.h; sourceTree = "<group>"; };
 		3B2E1FD31DADDCFE0088DF45 /* SexShareSerivce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexShareSerivce.h; sourceTree = "<group>"; };
 		3B2E1FD41DADDCFE0088DF45 /* SexShareSerivce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexShareSerivce.m; sourceTree = "<group>"; };
+		3B3361D81DB4D47B00D48503 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		3B3361D91DB4D47B00D48503 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		3B3361DB1DB4D48800D48503 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3B3361DD1DB4D5E300D48503 /* UIScrollView+MaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MaskView.h"; sourceTree = "<group>"; };
+		3B3361DE1DB4D5E300D48503 /* UIScrollView+MaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MaskView.m"; sourceTree = "<group>"; };
+		3B3361E01DB4DA2000D48503 /* Sex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sex.entitlements; sourceTree = "<group>"; };
 		3B39114C1DB224D100F82B4A /* SexUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexUser.h; sourceTree = "<group>"; };
 		3B39114D1DB224D100F82B4A /* SexUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexUser.m; sourceTree = "<group>"; };
 		3B39114F1DB2261000F82B4A /* MeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewModel.h; sourceTree = "<group>"; };
@@ -127,7 +132,6 @@
 		3B3911611DB3393F00F82B4A /* DataBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseService.m; sourceTree = "<group>"; };
 		3B3911641DB3E9E200F82B4A /* UIScrollView+SexRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SexRefresh.h"; sourceTree = "<group>"; };
 		3B3911651DB3E9E200F82B4A /* UIScrollView+SexRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SexRefresh.m"; sourceTree = "<group>"; };
->>>>>>> shoppingcartlist
 		3B57716C1D9CAB0300F2AB45 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3B57716E1D9CAB1700F2AB45 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -258,8 +262,7 @@
 		3BD65D7E1D9D0723003EE6F3 /* DropdownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropdownView.xib; sourceTree = "<group>"; };
 		3BD65D801D9D100C003EE6F3 /* DropdownViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropdownViewModel.h; sourceTree = "<group>"; };
 		3BD65D811D9D100C003EE6F3 /* DropdownViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropdownViewModel.m; sourceTree = "<group>"; };
-		8374AA3B3C5391D51EDEC42D /* Pods-Sex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sex/Pods-Sex.debug.xcconfig"; sourceTree = "<group>"; };
-		967E9A9D7072BAFB496286A3 /* Pods-Sex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sex.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sex/Pods-Sex.release.xcconfig"; sourceTree = "<group>"; };
+		8141261E58DFA1A79244107C /* Pods-Sex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sex/Pods-Sex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +270,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3361DC1DB4D48800D48503 /* Security.framework in Frameworks */,
 				3BA4B07C1DAB6A5F002986FB /* libz.tbd in Frameworks */,
 				3BA4B0771DAB6520002986FB /* libc++.tbd in Frameworks */,
 				3BA4B0751DAB6513002986FB /* libsqlite3.0.tbd in Frameworks */,
@@ -283,6 +287,7 @@
 		3B38AE8FA31A224309851F12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B3361DB1DB4D48800D48503 /* Security.framework */,
 				3BA4B07B1DAB6A5F002986FB /* libz.tbd */,
 				3BA4B0761DAB6520002986FB /* libc++.tbd */,
 				3BA4B0741DAB6513002986FB /* libsqlite3.0.tbd */,
@@ -518,8 +523,8 @@
 			children = (
 				3BD396C41D9BED1C00768B89 /* Sex */,
 				3BD396C31D9BED1C00768B89 /* Products */,
-				89FE57EFB58F26FFB4AF3D31 /* Pods */,
 				3B38AE8FA31A224309851F12 /* Frameworks */,
+				835C549DEABB8E508DC0AF02 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -534,6 +539,7 @@
 		3BD396C41D9BED1C00768B89 /* Sex */ = {
 			isa = PBXGroup;
 			children = (
+				3B3361E01DB4DA2000D48503 /* Sex.entitlements */,
 				3BA4B06A1DAB6466002986FB /* Components */,
 				3BD396F31D9BF75400768B89 /* Business */,
 				3BD396DC1D9BEF7500768B89 /* Pages */,
@@ -542,6 +548,10 @@
 				3BD396CB1D9BED1C00768B89 /* ViewController.h */,
 				3BD396CE1D9BED1C00768B89 /* Main.storyboard */,
 				3BD396CC1D9BED1C00768B89 /* ViewController.m */,
+				3B3361DD1DB4D5E300D48503 /* UIScrollView+MaskView.h */,
+				3B3361DE1DB4D5E300D48503 /* UIScrollView+MaskView.m */,
+				3B3361D81DB4D47B00D48503 /* SSKeychain.h */,
+				3B3361D91DB4D47B00D48503 /* SSKeychain.m */,
 				3BD396C51D9BED1C00768B89 /* Supporting Files */,
 			);
 			path = Sex;
@@ -712,11 +722,11 @@
 			name = Search;
 			sourceTree = "<group>";
 		};
-		89FE57EFB58F26FFB4AF3D31 /* Pods */ = {
+		835C549DEABB8E508DC0AF02 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8374AA3B3C5391D51EDEC42D /* Pods-Sex.debug.xcconfig */,
-				967E9A9D7072BAFB496286A3 /* Pods-Sex.release.xcconfig */,
+				8141261E58DFA1A79244107C /* Pods-Sex.debug.xcconfig */,
+				364329D8A149E03F33FF2214 /* Pods-Sex.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -728,12 +738,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BD396D91D9BED1C00768B89 /* Build configuration list for PBXNativeTarget "Sex" */;
 			buildPhases = (
-				8A24A4E2BE9AB9767559CF51 /* [CP] Check Pods Manifest.lock */,
+				F09760AA8AFB1943F61DB5C0 /* [CP] Check Pods Manifest.lock */,
 				3BD396BE1D9BED1C00768B89 /* Sources */,
 				3BD396BF1D9BED1C00768B89 /* Frameworks */,
 				3BD396C01D9BED1C00768B89 /* Resources */,
 				2F4B749AF4B366D95664DA96 /* [CP] Embed Pods Frameworks */,
-				71F7AB64C812BDD3B90D3516 /* [CP] Copy Pods Resources */,
+				0FF7A7465C6E5BE73C015B33 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -757,6 +767,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = S8238R3HUC;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -813,6 +828,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0FF7A7465C6E5BE73C015B33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sex/Pods-Sex-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2F4B749AF4B366D95664DA96 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -828,22 +858,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sex/Pods-Sex-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		71F7AB64C812BDD3B90D3516 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sex/Pods-Sex-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8A24A4E2BE9AB9767559CF51 /* [CP] Check Pods Manifest.lock */ = {
+		F09760AA8AFB1943F61DB5C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -881,7 +896,9 @@
 				3B7E2AD41DAA1FC2009FF851 /* SearchResultListView.m in Sources */,
 				3BD396CD1D9BED1C00768B89 /* ViewController.m in Sources */,
 				3B3911511DB2261000F82B4A /* MeViewModel.m in Sources */,
+				3B3361DA1DB4D47B00D48503 /* SSKeychain.m in Sources */,
 				3BD396E31D9BF01300768B89 /* TabbarController.m in Sources */,
+				3B3361DF1DB4D5E300D48503 /* UIScrollView+MaskView.m in Sources */,
 				3BD396F01D9BF39400768B89 /* MeViewController.m in Sources */,
 				3B3911591DB3326B00F82B4A /* MessageTableViewController.m in Sources */,
 				3B7E2ADA1DAA26E9009FF851 /* SearchResultListCollectionViewCell.m in Sources */,
@@ -1038,10 +1055,11 @@
 		};
 		3BD396DA1D9BED1C00768B89 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8374AA3B3C5391D51EDEC42D /* Pods-Sex.debug.xcconfig */;
+			baseConfigurationReference = 8141261E58DFA1A79244107C /* Pods-Sex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Sex/Sex.entitlements;
 				DEVELOPMENT_TEAM = S8238R3HUC;
 				INFOPLIST_FILE = Sex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1056,10 +1074,11 @@
 		};
 		3BD396DB1D9BED1C00768B89 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 967E9A9D7072BAFB496286A3 /* Pods-Sex.release.xcconfig */;
+			baseConfigurationReference = 364329D8A149E03F33FF2214 /* Pods-Sex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Sex/Sex.entitlements;
 				DEVELOPMENT_TEAM = S8238R3HUC;
 				INFOPLIST_FILE = Sex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
