@@ -10,4 +10,6 @@
 
 @interface SearchResultListCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, copy) NSString *identifier;
+
 @end

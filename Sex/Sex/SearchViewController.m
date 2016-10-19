@@ -18,6 +18,7 @@
 #import "SexProductItem.h"
 
 @interface SearchViewController ()
+
 @property (weak, nonatomic) IBOutlet DropdownView *dropdownView;
 @property (weak, nonatomic) IBOutlet HorizontailListView *horizonalListView;
 @property (weak, nonatomic) IBOutlet SearchResultListView *searchResultListView;
@@ -36,6 +37,8 @@
     self.searchViewModel.currentCategory = self.searchCategory;
     self.searchViewModel.currentItem = self.searchItem;
     
+    NSArray *data =  @[@"111",@"222",@"333",@"44",@"55"];
+    
     @weakify(self);
     RAC(self.horizonalListView, category)  = RACObserve(self.dropdownView, categoryItem);
     RACSignal *combines = [RACSignal combineLatest:@[RACObserve(self.dropdownView, categoryItem), RACObserve(self.horizonalListView, currentItem), RACObserve(self.searchOptions, option)] reduce:^id(NSString *category, NSString *item, NSNumber *option){
@@ -45,8 +48,22 @@
         NSLog(@"tupe = %@,%@,%@",tuple.first, tuple.second, tuple.third);
     }];
     
-//    self.dropdownView.categoryItem = @"22";
-    self.searchResultListView.keys = @[@"111",@"222",@"333",@"44",@"55"];
+    self.horizonalListView.datas = data;
+
+    self.horizonalListView.currentPage = ^(NSInteger page){
+        @strongify(self);
+        NSLog(@"111page = %ld",page);
+        [self.searchResultListView scrollToPage:page];;
+    };
+    
+    
+    self.searchResultListView.keys = data;
+    
+    self.searchResultListView.currentPage = ^(NSInteger page){
+        @strongify(self);
+        NSLog(@"page = %ld",page);
+        [self.horizonalListView setCurrentIndex:page];;
+    };
     
     [[self.searchViewModel queryCategoryById:0 page:0 sort:@"11"] subscribeNext:^(NSArray<SexProductItem *> *datas) {
         NSLog(@"x = %@",datas);

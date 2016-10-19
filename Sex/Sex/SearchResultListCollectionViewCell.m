@@ -8,6 +8,7 @@
 
 #import "SearchResultListCollectionViewCell.h"
 #import "ResultItemCollectionViewCell.h"
+#import <MJRefresh/MJRefresh.h>
 
 @interface SearchResultListCollectionViewCell()
 @property (nonatomic, strong) NSMutableArray<SexProductItem *> *datas;
@@ -22,6 +23,15 @@
 }
 - (void)didMoveToSuperview{
     [self.listCollectionView registerNib:[UINib nibWithNibName:@"ResultItemCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"keeeys"];
+    
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        NSLog(@"sss");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.listCollectionView.mj_header endRefreshing];
+        });
+    }];
+    
+    self.listCollectionView.mj_header = header;
     
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

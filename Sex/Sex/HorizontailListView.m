@@ -12,7 +12,6 @@
 @interface HorizontailListView()<HTHorizontalSelectionListDelegate, HTHorizontalSelectionListDataSource>
 
 @property (weak, nonatomic) IBOutlet HTHorizontalSelectionList *listview;
-@property (nonatomic, strong) NSMutableArray *datas;
 @end
 @implementation HorizontailListView
 
@@ -21,10 +20,8 @@
     self.listview.delegate = self;
     self.listview.selectionIndicatorColor = [UIColor redColor];
     self.listview.bottomTrimColor = [UIColor clearColor];
-    self.datas = @[@"111",@"111",@"ddd",@"ssss",@"fdfds",@"dfdsfs",@" daxiangguijinshu"];
 }
 #pragma mark - HTHorizontalSelectionListDataSource Protocol Methods
-
 - (NSInteger)numberOfItemsInSelectionList:(HTHorizontalSelectionList *)selectionList {
     return self.datas.count;
 }
@@ -36,7 +33,12 @@
 #pragma mark - HTHorizontalSelectionListDelegate Protocol Methods
 
 - (void)selectionList:(HTHorizontalSelectionList *)selectionList didSelectButtonWithIndex:(NSInteger)index {
-//    NSLog(@"list : %@",self.datas[index]);
     self.currentItem = self.datas[index];
+    if (self.currentPage) {
+        self.currentPage(index);
+    }
+}
+- (void)setCurrentIndex:(NSInteger)page{
+    [self.listview setSelectedButtonIndex:page animated:YES];
 }
 @end

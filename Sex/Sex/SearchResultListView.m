@@ -11,7 +11,6 @@
 #import "SearchResultListCollectionViewCell.h"
 
 @interface SearchResultListView()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
-//@property (nonatomic, strong) UICollectionView *contentView;
 @property (weak, nonatomic) IBOutlet UICollectionView *contentView;
 @end
 @implementation SearchResultListView
@@ -42,5 +41,14 @@
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     return self.bounds.size;
+}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSInteger page = scrollView.contentOffset.x / scrollView.frame.size.width;
+    if (self.currentPage) {
+        self.currentPage(page);
+    }
+}
+- (void)scrollToPage:(NSUInteger)page{
+    [self.contentView setContentOffset:CGPointMake(self.contentView.frame.size.width * page, 0) animated:YES];
 }
 @end

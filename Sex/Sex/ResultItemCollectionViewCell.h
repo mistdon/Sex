@@ -12,4 +12,7 @@
 
 - (void)bindWithModel:(SexProductItem *)item;
 
+@property (nonatomic, copy) NSString *data;
+
+
 @end
