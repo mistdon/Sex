@@ -39,7 +39,11 @@ DEPENDENCIES:
   - HTHorizontalSelectionList
   - Masonry (~> 1.0.2)
   - MJExtension (~> 3.0.13)
+<<<<<<< HEAD
   - MJRefresh (~> 3.1.12)
+=======
+  - MJRefresh
+>>>>>>> shoppingcartlist
   - MKDropdownMenu (~> 1.3)
   - ReactiveCocoa (~> 2.5)
   - SDWebImage (~> 3.8.2)
@@ -59,6 +63,10 @@ SPEC CHECKSUMS:
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
 
+<<<<<<< HEAD
 PODFILE CHECKSUM: 864deb7a9284af17b3acea90d3666a3778288f8c
+=======
+PODFILE CHECKSUM: 1933b384238f5df8f443271d5bc617fb82da9030
+>>>>>>> shoppingcartlist
 
 COCOAPODS: 1.1.0.rc.3

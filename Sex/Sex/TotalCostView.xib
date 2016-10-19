@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TotalCostView">
+            <rect key="frame" x="0.0" y="0.0" width="471" height="53"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jez-9l-vlN">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="OYs-ST-nRP"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzH-uP-gm7">
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TzH-uP-gm7" secondAttribute="height" multiplier="1:1" id="kv6-H8-Vzy"/>
+                        <constraint firstAttribute="width" constant="30" id="lup-lS-wtR"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="灰圆60"/>
+                    <state key="selected" image="红圆60"/>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ErX-Ok-NeD">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYx-d0-Di2">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edq-dz-mls">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1x-EQ-bQr">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ErX-Ok-NeD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="6Pm-ef-FMM"/>
+                <constraint firstItem="TzH-uP-gm7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="AMm-gD-Bwk"/>
+                <constraint firstItem="ErX-Ok-NeD" firstAttribute="leading" secondItem="TzH-uP-gm7" secondAttribute="trailing" constant="5" id="C6j-L2-Cwf"/>
+                <constraint firstItem="S1x-EQ-bQr" firstAttribute="leading" secondItem="TzH-uP-gm7" secondAttribute="trailing" constant="5" id="GbL-xh-jt6"/>
+                <constraint firstItem="jez-9l-vlN" firstAttribute="leading" secondItem="S1x-EQ-bQr" secondAttribute="trailing" constant="5" id="Gkc-ti-zNi"/>
+                <constraint firstItem="TzH-uP-gm7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QbK-ST-ar6"/>
+                <constraint firstItem="jez-9l-vlN" firstAttribute="leading" secondItem="ErX-Ok-NeD" secondAttribute="trailing" constant="5" id="RQY-vy-4lW"/>
+                <constraint firstItem="S1x-EQ-bQr" firstAttribute="top" secondItem="ErX-Ok-NeD" secondAttribute="bottom" constant="5" id="auA-WC-y8L"/>
+                <constraint firstAttribute="trailing" secondItem="jez-9l-vlN" secondAttribute="trailing" constant="5" id="mlu-sj-FVh"/>
+                <constraint firstAttribute="bottom" secondItem="jez-9l-vlN" secondAttribute="bottom" constant="5" id="pKD-03-XeS"/>
+                <constraint firstItem="jez-9l-vlN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="qfL-ch-CO7"/>
+                <constraint firstAttribute="bottom" secondItem="S1x-EQ-bQr" secondAttribute="bottom" constant="5" id="ubb-qP-JFM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="allSelectedButton" destination="TzH-uP-gm7" id="B1k-Mi-sNv"/>
+                <outlet property="calculateButton" destination="jez-9l-vlN" id="L0S-vR-66o"/>
+                <outlet property="costLabel" destination="edq-dz-mls" id="uX9-Jc-Agj"/>
+                <outlet property="numLabel" destination="vYx-d0-Di2" id="SWv-8J-MiT"/>
+                <outlet property="savingLabel" destination="S1x-EQ-bQr" id="30n-Bj-YWw"/>
+            </connections>
+            <point key="canvasLocation" x="-882" y="-219"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="灰圆60" width="60" height="60"/>
+        <image name="红圆60" width="60" height="60"/>
+    </resources>
+</document>

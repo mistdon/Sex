@@ -6,9 +6,15 @@
 //  Copyright © 2016年 Shendong. All rights reserved.
 //
 
+/*
+ bundid :  Shendong.Sex
+ */
 #import "AppDelegate.h"
+#import "WXApi.h"
+#import "SexShareSerivce.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -17,6 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+   [WXApi registerApp:WeChatAppId withDescription:@"WeChat"];
     return YES;
 }
 
@@ -45,6 +52,21 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    return [WXApi handleOpenURL:url delegate:self];
+}
+- (void)onResp:(BaseResp *)resp{
+    if (resp.errCode != 0 ){
+        NSLog(@"resp.errstring = %@",resp.errStr);
+        return;
+    }
+    SendAuthResp *_resp = (SendAuthResp *)resp;
+    [[[SexShareSerivce shareInstance] fetchAccess_tokenWithCode:_resp.code] subscribeNext:^(id x) {
+        NSLog(@"x = %@",x);
+    }error:^(NSError *error) {
+        NSLog(@"error = %@",error);
+    }];
 }
 
 

@@ -7,8 +7,16 @@
 //
 
 #import "MeViewController.h"
+#import "MeViewModel.h"
+#import "SexUser.h"
+#import <SDWebImage/UIButton+WebCache.h>
 
 @interface MeViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *UserDefaultImageView;
+@property (strong, nonatomic) IBOutlet MeViewModel *meViewModel;
+@property (weak, nonatomic) IBOutlet UIButton *userinfoButton;
+@property (weak, nonatomic) IBOutlet UIButton *jifenButton;
+@property (weak, nonatomic) IBOutlet UIButton *youhuiquanButton;
 
 @end
 
@@ -16,10 +24,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    self.title = @"sss";
+    self.tableView.tableFooterView = [UIView new];
+    self.UserDefaultImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"userDefaultBgImg%d",rand()%3]];
+    [[self.meViewModel fetchLatestUserInfo] subscribeNext:^(SexUser *x) {
+        [self.userinfoButton sd_setImageWithURL:x.thumb forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"headImg_default_nor"]];
+        [self.userinfoButton setTitle:x.name forState:UIControlStateNormal];
+        [self.jifenButton setTitle:[NSString stringWithFormat:@"积分 %ld",x.jifenNum] forState:UIControlStateNormal];
+        [self.youhuiquanButton setTitle:[NSString stringWithFormat:@"优惠券 %ld",x.youhuiquanNum] forState:UIControlStateNormal];
+    }];
+    
+    
 }
-
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
