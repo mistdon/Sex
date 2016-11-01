@@ -18,7 +18,7 @@ static NSString *KBaseurl = @"http://api.qinglvmao.com";
     RACReplaySubject *subject = [RACReplaySubject subject];
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:KBaseurl]];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
-    [manager GET:url parameters:paramters progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:url parameters:paramters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         if (![responseObject isKindOfClass:[NSDictionary class]])return;
         if ([responseObject[@"code"]  integerValue] != 0) {
             [subject sendError:[NSError errorWithDomain:@"Sex" code:[responseObject[@"code"] integerValue]  userInfo:@{@"info":@"Wrong"}]];
@@ -41,7 +41,7 @@ static NSString *const KAppkey = @"7b9e3897a3a5ba97cb39a265011a41ca";
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json",nil];
     NSString *url = @"http://apis.baidu.com/txapi/weixin/wxhot";
     NSDictionary *paramters = @{@"num":@10,@"rand":@1,@"word":@"理财",@"page":@1,@"scr":@""};
-    [manager GET:url parameters:paramters progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:url parameters:paramters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         if (![responseObject isKindOfClass:[NSDictionary class]])return;
         if ([responseObject[@"Code"]  integerValue] != 0) {
             [subject sendError:[NSError errorWithDomain:@"Sex" code:1001 userInfo:@{@"info":@"Wrong"}]];

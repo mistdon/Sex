@@ -25,7 +25,13 @@ SingletonInstance(SexShareSerivce)
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain",nil];
     NSString *url = [NSString stringWithFormat:@"https://api.weixin.qq.com/sns/oauth2/access_token?appid=%@&secret=%40125@&code=%@&grant_type=authorization_code",WeChatAppId, WeChatAppSecret,code];
-    [manager GET:url parameters:nil progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//    [manager GET:url parameters:nil progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        [replay sendNext:responseObject];
+//        [replay sendCompleted];
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        [replay sendError:error];
+//    }];
+    [manager GET:url parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         [replay sendNext:responseObject];
         [replay sendCompleted];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

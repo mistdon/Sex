@@ -68,7 +68,7 @@
     [[self.searchViewModel queryCategoryById:0 page:0 sort:@"11"] subscribeNext:^(NSArray<SexProductItem *> *datas) {
         NSLog(@"x = %@",datas);
     }error:^(NSError *error) {
-        NSLog(@"error  %");
+        NSLog(@"error = %@",error);
     }];
 }
 

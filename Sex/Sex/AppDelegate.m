@@ -13,6 +13,7 @@
 #import "WXApi.h"
 #import "SexShareSerivce.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Aspects/Aspects.h>
 
 @interface AppDelegate ()<WXApiDelegate>
 
@@ -23,7 +24,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-   [WXApi registerApp:WeChatAppId withDescription:@"WeChat"];
+    [WXApi registerApp:WeChatAppId withDescription:@"WeChat"];
+    [self setupTabBarController];
+    [self setupNavigationController];
+
     return YES;
 }
 
@@ -68,6 +72,34 @@
         NSLog(@"error = %@",error);
     }];
 }
-
+- (void)setupTabBarController{
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    UITabBarController *tabbarController = [UITabBarController new];
+    
+    UIViewController *homeVC = [[UIStoryboard storyboardWithName:@"Home" bundle:nil] instantiateInitialViewController];
+    homeVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item0"] selectedImage:[UIImage imageNamed:@"tabBar_item0_1"]];
+    
+    UIViewController *meVC = [[UIStoryboard storyboardWithName:@"Me" bundle:nil] instantiateInitialViewController];
+    meVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item4"] selectedImage:[UIImage imageNamed:@"tabBar_item4_1"]];
+    
+    UIViewController *listVC = [[UIStoryboard storyboardWithName:@"Lists" bundle:nil] instantiateInitialViewController];
+    listVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item2"] selectedImage:[UIImage imageNamed:@"tabBar_item2_1"]];
+    
+    UIViewController *shoppingcartVC = [[UIStoryboard storyboardWithName:@"ShoppingCart" bundle:nil] instantiateInitialViewController];
+    shoppingcartVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item3"] selectedImage:[UIImage imageNamed:@"tabBar_item3_1"]];
+    
+    tabbarController.viewControllers = @[homeVC,listVC,shoppingcartVC,meVC];
+    [tabbarController.tabBar setTranslucent:NO];
+    self.window.rootViewController = tabbarController;
+    [self.window makeKeyAndVisible];
+    
+}
+- (void)setupNavigationController{
+    NSError *error1 = nil;
+    [UINavigationController aspect_hookSelector:@selector(pushViewController:animated:) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> info, UIViewController *viewController, BOOL animated){
+        viewController.hidesBottomBarWhenPushed = YES;
+    }error:&error1];
+}
 
 @end

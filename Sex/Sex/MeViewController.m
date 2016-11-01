@@ -32,6 +32,10 @@
         [self.jifenButton setTitle:[NSString stringWithFormat:@"积分 %ld",x.jifenNum] forState:UIControlStateNormal];
         [self.youhuiquanButton setTitle:[NSString stringWithFormat:@"优惠券 %ld",x.youhuiquanNum] forState:UIControlStateNormal];
     }];
+//    self.hidesBottomBarWhenPushed = YES;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self.navigationController pushViewController:[UIViewController new] animated:YES];
+//    });
     
     
 }

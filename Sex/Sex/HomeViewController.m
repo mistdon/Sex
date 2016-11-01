@@ -7,6 +7,8 @@
 //
 
 #import "HomeViewController.h"
+
+#import "UIScrollView+MaskView.h"
 #import "HomeListViewModel.h"
 @interface HomeViewController ()
 @property (weak, nonatomic) IBOutlet HomeListsTableView *listsTableView;

@@ -15,9 +15,9 @@
 #import "ListsCollectionViewCell.h"
 #import "ListsHeaderCollectionReusableView.h"
 #import "HeaderCollectionViewCell.h"
+#import "DirectSearchTableViewController.h"
 
-
-@interface ListsCollectionViewController ()<UICollectionViewDelegateFlowLayout>
+@interface ListsCollectionViewController ()<UICollectionViewDelegateFlowLayout, UISearchBarDelegate>
 //@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
 @property (nonatomic, strong) NSMutableArray *datasources;
 @end
@@ -38,9 +38,9 @@ static NSString * const reuseIdentifier = @"Cell";
         NSLog(@"error = %@",error);
     }];
     
-    
-    
-    // Do any additional setup after loading the view.
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(20, 0, [UIScreen mainScreen].bounds.size.width - 40 , 44)];
+    searchBar.delegate = self;
+    self.navigationItem.titleView = searchBar;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -137,4 +137,11 @@ static NSString * const reuseIdentifier = @"Cell";
     return CGSizeMake(([UIScreen mainScreen].bounds.size.width)/ 3.0, ([UIScreen mainScreen].bounds.size.width/ 3.0) * 1.1);
 }
 
+#pragma mark - searchbar delegate - 
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+    [searchBar resignFirstResponder];
+    UIViewController *searchvc = [[UIStoryboard storyboardWithName:@"Search" bundle:nil] instantiateViewControllerWithIdentifier:@"DirectSearchTableViewController"];
+    [self.navigationController pushViewController:searchvc animated:YES];
+    
+}
 @end

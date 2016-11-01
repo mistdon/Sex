@@ -5,15 +5,16 @@ target 'Sex' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
     inhibit_all_warnings! 
  # use_frameworks!
-    pod 'MKDropdownMenu'
+    pod 'MKDropdownMenu', '~> 1.3'
     pod 'HTHorizontalSelectionList'
-    pod 'AFNetworking'
+    pod 'AFNetworking', '~>2.5'
     pod 'ReactiveCocoa', '~>2.5'
     pod 'MJRefresh'
     pod 'SDWebImage'
     pod 'Masonry'
     pod 'MJExtension'
     pod 'XXNibBridge'
+    pod 'Aspects', '~> 1.4.1'
   # Pods for Sex
 
 end
