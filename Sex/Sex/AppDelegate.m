@@ -18,7 +18,7 @@
 #import "SexConfiguration.h"
 
 #import "SDPagingViewController.h"
-
+#import "TestViewController.h"
 @interface AppDelegate ()<WXApiDelegate>
 
 @end
@@ -89,8 +89,10 @@
 //    UIViewController *homeVC = [[UIStoryboard storyboardWithName:@"Home" bundle:nil] instantiateInitialViewController];
 //    homeVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item0"] selectedImage:[UIImage imageNamed:@"tabBar_item0_1"]];
     
-    SDPagingViewController *pag = [[SDPagingViewController alloc] init];
-    UINavigationController *homeVC = [[UINavigationController alloc] initWithRootViewController:pag];
+//    TestViewController *pag = [[TestViewController alloc] init];
+//    UINavigationController *homeVC = [[UINavigationController alloc] initWithRootViewController:pag];
+    UIViewController *homeVC = [[UIStoryboard storyboardWithName:@"Test" bundle:nil] instantiateInitialViewController];
+    
     UIViewController *meVC = [[UIStoryboard storyboardWithName:@"Me" bundle:nil] instantiateInitialViewController];
     meVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item4"] selectedImage:[UIImage imageNamed:@"tabBar_item4_1"]];
     

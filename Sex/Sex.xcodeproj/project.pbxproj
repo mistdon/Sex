@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1F48531DCB15ED0059FF8C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F48521DCB15ED0059FF8C /* TestViewController.m */; };
+		3B1F48551DCB26D90059FF8C /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1F48541DCB26D90059FF8C /* Test.storyboard */; };
 		3B20D6241DB151C10058D353 /* Scheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20D6231DB151C10058D353 /* Scheme.m */; };
 		3B20D6261DB2184A0058D353 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20D6251DB2184A0058D353 /* Assets.xcassets */; };
 		3B213E701DAA672C0044C61A /* SexProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B213E6F1DAA672C0044C61A /* SexProductItem.m */; };
@@ -110,6 +112,9 @@
 /* Begin PBXFileReference section */
 		12A29D6FA6B8E5181050278D /* libPods-Sex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sex.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		364329D8A149E03F33FF2214 /* Pods-Sex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sex.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sex/Pods-Sex.release.xcconfig"; sourceTree = "<group>"; };
+		3B1F48511DCB15ED0059FF8C /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		3B1F48521DCB15ED0059FF8C /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		3B1F48541DCB26D90059FF8C /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		3B20D6221DB151C10058D353 /* Scheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scheme.h; sourceTree = "<group>"; };
 		3B20D6231DB151C10058D353 /* Scheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scheme.m; sourceTree = "<group>"; };
 		3B20D6251DB2184A0058D353 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -756,6 +761,9 @@
 				3BFA0D671DC899E900B8BA2A /* UIView+SDExtension.m */,
 				3BFA0D791DC9BBD400B8BA2A /* SDPagingViewController.h */,
 				3BFA0D7A1DC9BBD400B8BA2A /* SDPagingViewController.m */,
+				3B1F48511DCB15ED0059FF8C /* TestViewController.h */,
+				3B1F48521DCB15ED0059FF8C /* TestViewController.m */,
+				3B1F48541DCB26D90059FF8C /* Test.storyboard */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -845,6 +853,7 @@
 				3BD396ED1D9BF0E500768B89 /* Lists.storyboard in Resources */,
 				3BD396F21D9BF39F00768B89 /* Me.storyboard in Resources */,
 				3B84ABC21DB0A6E000694B71 /* RecommendView.xib in Resources */,
+				3B1F48551DCB26D90059FF8C /* Test.storyboard in Resources */,
 				3BD65D771D9CFD00003EE6F3 /* HomeListsTableViewHeaderView.xib in Resources */,
 				3B20D6261DB2184A0058D353 /* Assets.xcassets in Resources */,
 				3BD65D7F1D9D0723003EE6F3 /* DropdownView.xib in Resources */,
@@ -977,6 +986,7 @@
 				3BD65D541D9CEB00003EE6F3 /* HomeListViewModel.m in Sources */,
 				3BD396E91D9BF09700768B89 /* HomeViewController.m in Sources */,
 				3B3911621DB3393F00F82B4A /* DataBaseService.m in Sources */,
+				3B1F48531DCB15ED0059FF8C /* TestViewController.m in Sources */,
 				3B7E2ACD1DAA1AD3009FF851 /* HorizontailListView.m in Sources */,
 				3B5771701D9CAB1700F2AB45 /* LoginViewController.m in Sources */,
 				3BD3422A1DAF7EF100602F76 /* BillViewModel.m in Sources */,
@@ -1103,7 +1113,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8141261E58DFA1A79244107C /* Pods-Sex.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sex/Sex.entitlements;
 				DEVELOPMENT_TEAM = S8238R3HUC;
 				INFOPLIST_FILE = "Sex/Supporting Files/Info.plist";
@@ -1122,7 +1131,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 364329D8A149E03F33FF2214 /* Pods-Sex.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sex/Sex.entitlements;
 				DEVELOPMENT_TEAM = S8238R3HUC;
 				INFOPLIST_FILE = "Sex/Supporting Files/Info.plist";
