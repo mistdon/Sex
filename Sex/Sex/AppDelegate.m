@@ -14,6 +14,10 @@
 #import "SexShareSerivce.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Aspects/Aspects.h>
+#import "IPv6Tester.h"
+#import "SexConfiguration.h"
+
+#import "SDPagingViewController.h"
 
 @interface AppDelegate ()<WXApiDelegate>
 
@@ -27,7 +31,12 @@
     [WXApi registerApp:WeChatAppId withDescription:@"WeChat"];
     [self setupTabBarController];
     [self setupNavigationController];
-
+    // [self IPv6AutomaticTest];
+    
+    [SexConfiguration setDefaultConfiguration];
+    
+    
+    
     return YES;
 }
 
@@ -77,9 +86,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     UITabBarController *tabbarController = [UITabBarController new];
     
-    UIViewController *homeVC = [[UIStoryboard storyboardWithName:@"Home" bundle:nil] instantiateInitialViewController];
-    homeVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item0"] selectedImage:[UIImage imageNamed:@"tabBar_item0_1"]];
+//    UIViewController *homeVC = [[UIStoryboard storyboardWithName:@"Home" bundle:nil] instantiateInitialViewController];
+//    homeVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item0"] selectedImage:[UIImage imageNamed:@"tabBar_item0_1"]];
     
+    SDPagingViewController *pag = [[SDPagingViewController alloc] init];
+    UINavigationController *homeVC = [[UINavigationController alloc] initWithRootViewController:pag];
     UIViewController *meVC = [[UIStoryboard storyboardWithName:@"Me" bundle:nil] instantiateInitialViewController];
     meVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item4"] selectedImage:[UIImage imageNamed:@"tabBar_item4_1"]];
     
@@ -101,5 +112,8 @@
         viewController.hidesBottomBarWhenPushed = YES;
     }error:&error1];
 }
-
+- (void)IPv6AutomaticTest{
+    IPv6Tester *tester = [[IPv6Tester alloc] init];
+    [tester test];
+}
 @end

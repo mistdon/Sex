@@ -42,7 +42,6 @@
 		3B84ABD41DB0AF7300694B71 /* SexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84ABD31DB0AF7300694B71 /* SexModel.m */; };
 		3B9422291DAA4AA600998719 /* SearchOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9422281DAA4AA600998719 /* SearchOptionsView.m */; };
 		3B94222B1DAA4AB800998719 /* SearchOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B94222A1DAA4AB800998719 /* SearchOptionsView.xib */; };
-		3BA4B06F1DAB649C002986FB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B06C1DAB649C002986FB /* libWeChatSDK.a */; };
 		3BA4B0711DAB64D1002986FB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B0701DAB64D1002986FB /* SystemConfiguration.framework */; };
 		3BA4B0731DAB6507002986FB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B0721DAB6507002986FB /* CoreTelephony.framework */; };
 		3BA4B0751DAB6513002986FB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B0741DAB6513002986FB /* libsqlite3.0.tbd */; };
@@ -101,6 +100,10 @@
 		3BFA0D621DC88EBA00B8BA2A /* HistorySearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA0D611DC88EBA00B8BA2A /* HistorySearchTableViewController.m */; };
 		3BFA0D681DC899E900B8BA2A /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA0D671DC899E900B8BA2A /* UIView+SDExtension.m */; };
 		3BFA0D711DC8A10B00B8BA2A /* DirectSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA0D701DC8A10B00B8BA2A /* DirectSearchTableViewController.m */; };
+		3BFA0D741DC9944B00B8BA2A /* IPv6Tester.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA0D731DC9944B00B8BA2A /* IPv6Tester.m */; };
+		3BFA0D771DC9B5E700B8BA2A /* SexConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA0D761DC9B5E700B8BA2A /* SexConfiguration.m */; };
+		3BFA0D781DC9B8C300B8BA2A /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B06C1DAB649C002986FB /* libWeChatSDK.a */; };
+		3BFA0D7B1DC9BBD400B8BA2A /* SDPagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA0D7A1DC9BBD400B8BA2A /* SDPagingViewController.m */; };
 		4B2E763CE67401B0130CCE6C /* libPods-Sex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A29D6FA6B8E5181050278D /* libPods-Sex.a */; };
 /* End PBXBuildFile section */
 
@@ -271,6 +274,12 @@
 		3BFA0D671DC899E900B8BA2A /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		3BFA0D6F1DC8A10B00B8BA2A /* DirectSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectSearchTableViewController.h; sourceTree = "<group>"; };
 		3BFA0D701DC8A10B00B8BA2A /* DirectSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectSearchTableViewController.m; sourceTree = "<group>"; };
+		3BFA0D721DC9944B00B8BA2A /* IPv6Tester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPv6Tester.h; sourceTree = "<group>"; };
+		3BFA0D731DC9944B00B8BA2A /* IPv6Tester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPv6Tester.m; sourceTree = "<group>"; };
+		3BFA0D751DC9B5E700B8BA2A /* SexConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexConfiguration.h; sourceTree = "<group>"; };
+		3BFA0D761DC9B5E700B8BA2A /* SexConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexConfiguration.m; sourceTree = "<group>"; };
+		3BFA0D791DC9BBD400B8BA2A /* SDPagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPagingViewController.h; sourceTree = "<group>"; };
+		3BFA0D7A1DC9BBD400B8BA2A /* SDPagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPagingViewController.m; sourceTree = "<group>"; };
 		8141261E58DFA1A79244107C /* Pods-Sex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sex/Pods-Sex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,13 +288,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BFA0D781DC9B8C300B8BA2A /* libWeChatSDK.a in Frameworks */,
 				3B3361DC1DB4D48800D48503 /* Security.framework in Frameworks */,
 				3BA4B07C1DAB6A5F002986FB /* libz.tbd in Frameworks */,
 				3BA4B0771DAB6520002986FB /* libc++.tbd in Frameworks */,
 				3BA4B0751DAB6513002986FB /* libsqlite3.0.tbd in Frameworks */,
 				3BA4B0731DAB6507002986FB /* CoreTelephony.framework in Frameworks */,
 				3BA4B0711DAB64D1002986FB /* SystemConfiguration.framework in Frameworks */,
-				3BA4B06F1DAB649C002986FB /* libWeChatSDK.a in Frameworks */,
 				4B2E763CE67401B0130CCE6C /* libPods-Sex.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,12 +319,16 @@
 		3B3911521DB328EC00F82B4A /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				3B3911531DB328FC00F82B4A /* HYEdgeInsetsButton.h */,
-				3B3911541DB328FC00F82B4A /* HYEdgeInsetsButton.m */,
 				3BFA0D6F1DC8A10B00B8BA2A /* DirectSearchTableViewController.h */,
 				3BFA0D701DC8A10B00B8BA2A /* DirectSearchTableViewController.m */,
+				3B3911531DB328FC00F82B4A /* HYEdgeInsetsButton.h */,
+				3B3911541DB328FC00F82B4A /* HYEdgeInsetsButton.m */,
+				3BFA0D721DC9944B00B8BA2A /* IPv6Tester.h */,
+				3BFA0D731DC9944B00B8BA2A /* IPv6Tester.m */,
+				3BFA0D751DC9B5E700B8BA2A /* SexConfiguration.h */,
+				3BFA0D761DC9B5E700B8BA2A /* SexConfiguration.m */,
 			);
-			name = ThirdParty;
+			path = ThirdParty;
 			sourceTree = "<group>";
 		};
 		3B3911561DB3325800F82B4A /* Messages */ = {
@@ -324,14 +337,14 @@
 				3B3911571DB3326B00F82B4A /* MessageTableViewController.h */,
 				3B3911581DB3326B00F82B4A /* MessageTableViewController.m */,
 			);
-			name = Messages;
+			path = Messages;
 			sourceTree = "<group>";
 		};
 		3B39115A1DB3333700F82B4A /* Setting */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Setting;
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		3B39115E1DB3338100F82B4A /* ConsumerService */ = {
@@ -340,7 +353,7 @@
 				3B39115B1DB3337C00F82B4A /* ConsumerServiceViewController.h */,
 				3B39115C1DB3337C00F82B4A /* ConsumerServiceViewController.m */,
 			);
-			name = ConsumerService;
+			path = ConsumerService;
 			sourceTree = "<group>";
 		};
 		3B39115F1DB3391D00F82B4A /* DataBaseService */ = {
@@ -349,7 +362,7 @@
 				3B3911601DB3393F00F82B4A /* DataBaseService.h */,
 				3B3911611DB3393F00F82B4A /* DataBaseService.m */,
 			);
-			name = DataBaseService;
+			path = DataBaseService;
 			sourceTree = "<group>";
 		};
 		3B3911631DB3E9B800F82B4A /* SexRefresh */ = {
@@ -358,67 +371,67 @@
 				3B3911641DB3E9E200F82B4A /* UIScrollView+SexRefresh.h */,
 				3B3911651DB3E9E200F82B4A /* UIScrollView+SexRefresh.m */,
 			);
-			name = SexRefresh;
+			path = SexRefresh;
 			sourceTree = "<group>";
 		};
 		3B57716B1D9CAAF600F2AB45 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				3B5771711D9CB89900F2AB45 /* FastLoginViewModel.h */,
+				3B5771721D9CB89900F2AB45 /* FastLoginViewModel.m */,
 				3B57716C1D9CAB0300F2AB45 /* Login.storyboard */,
 				3B57716E1D9CAB1700F2AB45 /* LoginViewController.h */,
 				3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */,
-				3B5771711D9CB89900F2AB45 /* FastLoginViewModel.h */,
-				3B5771721D9CB89900F2AB45 /* FastLoginViewModel.m */,
 			);
-			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		3B7E2AC91DAA1AA9009FF851 /* DropdownView */ = {
 			isa = PBXGroup;
 			children = (
-				3BD65D801D9D100C003EE6F3 /* DropdownViewModel.h */,
-				3BD65D811D9D100C003EE6F3 /* DropdownViewModel.m */,
 				3BD65D7B1D9D0715003EE6F3 /* DropdownView.h */,
 				3BD65D7C1D9D0715003EE6F3 /* DropdownView.m */,
 				3BD65D7E1D9D0723003EE6F3 /* DropdownView.xib */,
+				3BD65D801D9D100C003EE6F3 /* DropdownViewModel.h */,
+				3BD65D811D9D100C003EE6F3 /* DropdownViewModel.m */,
 			);
-			name = DropdownView;
+			path = DropdownView;
 			sourceTree = "<group>";
 		};
 		3B7E2ACA1DAA1AB9009FF851 /* HorizontalList */ = {
 			isa = PBXGroup;
 			children = (
+				3B7E2ACE1DAA1ADF009FF851 /* New Group */,
 				3B7E2ACB1DAA1AD3009FF851 /* HorizontailListView.h */,
 				3B7E2ACC1DAA1AD3009FF851 /* HorizontailListView.m */,
 				3B7E2ACF1DAA1AE8009FF851 /* HorizontailListView.xib */,
-				3B7E2ACE1DAA1ADF009FF851 /* New Group */,
 			);
-			name = HorizontalList;
+			path = HorizontalList;
 			sourceTree = "<group>";
 		};
 		3B7E2ACE1DAA1ADF009FF851 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "New Group";
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		3B7E2AD11DAA1FAB009FF851 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				3B7E2AD21DAA1FC2009FF851 /* SearchResultListView.h */,
-				3B7E2AD31DAA1FC2009FF851 /* SearchResultListView.m */,
-				3B7E2AD51DAA2472009FF851 /* SearchResultListView.xib */,
-				3B7E2AD71DAA26E9009FF851 /* SearchResultListCollectionViewCell.h */,
-				3B7E2AD81DAA26E9009FF851 /* SearchResultListCollectionViewCell.m */,
-				3B7E2AD91DAA26E9009FF851 /* SearchResultListCollectionViewCell.xib */,
 				3B7E2ADC1DAA2745009FF851 /* ResultItemCollectionViewCell.h */,
 				3B7E2ADD1DAA2745009FF851 /* ResultItemCollectionViewCell.m */,
 				3B7E2ADE1DAA2745009FF851 /* ResultItemCollectionViewCell.xib */,
+				3B7E2AD71DAA26E9009FF851 /* SearchResultListCollectionViewCell.h */,
+				3B7E2AD81DAA26E9009FF851 /* SearchResultListCollectionViewCell.m */,
+				3B7E2AD91DAA26E9009FF851 /* SearchResultListCollectionViewCell.xib */,
+				3B7E2AD21DAA1FC2009FF851 /* SearchResultListView.h */,
+				3B7E2AD31DAA1FC2009FF851 /* SearchResultListView.m */,
+				3B7E2AD51DAA2472009FF851 /* SearchResultListView.xib */,
 				3B7E2AE11DAA2A3D009FF851 /* SearchViewModel.h */,
 				3B7E2AE21DAA2A3D009FF851 /* SearchViewModel.m */,
 			);
-			name = Detail;
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		3B84ABBD1DB0A66400694B71 /* RecommendView */ = {
@@ -430,7 +443,7 @@
 				3B84ABC31DB0A70500694B71 /* RecommendViewModel.h */,
 				3B84ABC41DB0A70500694B71 /* RecommendViewModel.m */,
 			);
-			name = RecommendView;
+			path = RecommendView;
 			sourceTree = "<group>";
 		};
 		3B84ABCB1DB0ADD500694B71 /* ProductView */ = {
@@ -440,20 +453,20 @@
 				3B84ABCD1DB0ADFB00694B71 /* SexCollectionViewCell.m */,
 				3B84ABCE1DB0ADFB00694B71 /* SexCollectionViewCell.xib */,
 			);
-			name = ProductView;
+			path = ProductView;
 			sourceTree = "<group>";
 		};
 		3B84ABD11DB0AF2E00694B71 /* configure */ = {
 			isa = PBXGroup;
 			children = (
+				3B20D6221DB151C10058D353 /* Scheme.h */,
+				3B20D6231DB151C10058D353 /* Scheme.m */,
 				3B84ABD21DB0AF7300694B71 /* SexModel.h */,
 				3B84ABD31DB0AF7300694B71 /* SexModel.m */,
 				3B39114C1DB224D100F82B4A /* SexUser.h */,
 				3B39114D1DB224D100F82B4A /* SexUser.m */,
-				3B20D6221DB151C10058D353 /* Scheme.h */,
-				3B20D6231DB151C10058D353 /* Scheme.m */,
 			);
-			name = configure;
+			path = configure;
 			sourceTree = "<group>";
 		};
 		3B9422261DAA4A9200998719 /* SearchOptions */ = {
@@ -463,36 +476,36 @@
 				3B9422281DAA4AA600998719 /* SearchOptionsView.m */,
 				3B94222A1DAA4AB800998719 /* SearchOptionsView.xib */,
 			);
-			name = SearchOptions;
+			path = SearchOptions;
 			sourceTree = "<group>";
 		};
 		3BA4B06A1DAB6466002986FB /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				3BFA0D651DC899CD00B8BA2A /* Category */,
-				3B3911631DB3E9B800F82B4A /* SexRefresh */,
 				3B39115F1DB3391D00F82B4A /* DataBaseService */,
-				3B3911521DB328EC00F82B4A /* ThirdParty */,
-				3B84ABD11DB0AF2E00694B71 /* configure */,
+				3BA4B0821DAB8C98002986FB /* NumerCount */,
 				3B84ABCB1DB0ADD500694B71 /* ProductView */,
 				3B84ABBD1DB0A66400694B71 /* RecommendView */,
+				3B3911631DB3E9B800F82B4A /* SexRefresh */,
 				3BA4B0961DAB9A8A002986FB /* Signalton */,
-				3BA4B0821DAB8C98002986FB /* NumerCount */,
+				3B3911521DB328EC00F82B4A /* ThirdParty */,
 				3BA4B06B1DAB6477002986FB /* WeChat */,
+				3B84ABD11DB0AF2E00694B71 /* configure */,
 			);
-			name = Components;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		3BA4B06B1DAB6477002986FB /* WeChat */ = {
 			isa = PBXGroup;
 			children = (
-				3BA4B06C1DAB649C002986FB /* libWeChatSDK.a */,
-				3BA4B06D1DAB649C002986FB /* WXApi.h */,
-				3BA4B06E1DAB649C002986FB /* WXApiObject.h */,
 				3B2E1FD31DADDCFE0088DF45 /* SexShareSerivce.h */,
 				3B2E1FD41DADDCFE0088DF45 /* SexShareSerivce.m */,
+				3BA4B06D1DAB649C002986FB /* WXApi.h */,
+				3BA4B06E1DAB649C002986FB /* WXApiObject.h */,
+				3BA4B06C1DAB649C002986FB /* libWeChatSDK.a */,
 			);
-			name = WeChat;
+			path = WeChat;
 			sourceTree = "<group>";
 		};
 		3BA4B0821DAB8C98002986FB /* NumerCount */ = {
@@ -505,17 +518,17 @@
 				3BA4B08F1DAB9769002986FB /* TotalCostView.m */,
 				3BA4B0901DAB9769002986FB /* TotalCostView.xib */,
 			);
-			name = NumerCount;
+			path = NumerCount;
 			sourceTree = "<group>";
 		};
 		3BA4B0961DAB9A8A002986FB /* Signalton */ = {
 			isa = PBXGroup;
 			children = (
-				3BA4B0971DAB9AC8002986FB /* SingletonProtocol.h */,
-				3B2E1FD21DADDBE50088DF45 /* SexConst.h */,
 				3B84ABBC1DB0865600694B71 /* PartsTransportProtocol.h */,
+				3B2E1FD21DADDBE50088DF45 /* SexConst.h */,
+				3BA4B0971DAB9AC8002986FB /* SingletonProtocol.h */,
 			);
-			name = Signalton;
+			path = Signalton;
 			sourceTree = "<group>";
 		};
 		3BD3422B1DAF896B00602F76 /* Address */ = {
@@ -527,16 +540,16 @@
 				3BD342311DAF89B200602F76 /* CreateAddressViewController.h */,
 				3BD342321DAF89B200602F76 /* CreateAddressViewController.m */,
 			);
-			name = Address;
+			path = Address;
 			sourceTree = "<group>";
 		};
 		3BD396B91D9BED1C00768B89 = {
 			isa = PBXGroup;
 			children = (
-				3BD396C41D9BED1C00768B89 /* Sex */,
-				3BD396C31D9BED1C00768B89 /* Products */,
 				3B38AE8FA31A224309851F12 /* Frameworks */,
 				835C549DEABB8E508DC0AF02 /* Pods */,
+				3BD396C31D9BED1C00768B89 /* Products */,
+				3BD396C41D9BED1C00768B89 /* Sex */,
 			);
 			sourceTree = "<group>";
 		};
@@ -551,20 +564,20 @@
 		3BD396C41D9BED1C00768B89 /* Sex */ = {
 			isa = PBXGroup;
 			children = (
-				3B3361E01DB4DA2000D48503 /* Sex.entitlements */,
-				3BA4B06A1DAB6466002986FB /* Components */,
 				3BD396F31D9BF75400768B89 /* Business */,
+				3BA4B06A1DAB6466002986FB /* Components */,
 				3BD396DC1D9BEF7500768B89 /* Pages */,
+				3BD396C51D9BED1C00768B89 /* Supporting Files */,
 				3BD396C81D9BED1C00768B89 /* AppDelegate.h */,
 				3BD396C91D9BED1C00768B89 /* AppDelegate.m */,
-				3BD396CB1D9BED1C00768B89 /* ViewController.h */,
 				3BD396CE1D9BED1C00768B89 /* Main.storyboard */,
-				3BD396CC1D9BED1C00768B89 /* ViewController.m */,
-				3B3361DD1DB4D5E300D48503 /* UIScrollView+MaskView.h */,
-				3B3361DE1DB4D5E300D48503 /* UIScrollView+MaskView.m */,
 				3B3361D81DB4D47B00D48503 /* SSKeychain.h */,
 				3B3361D91DB4D47B00D48503 /* SSKeychain.m */,
-				3BD396C51D9BED1C00768B89 /* Supporting Files */,
+				3B3361E01DB4DA2000D48503 /* Sex.entitlements */,
+				3B3361DD1DB4D5E300D48503 /* UIScrollView+MaskView.h */,
+				3B3361DE1DB4D5E300D48503 /* UIScrollView+MaskView.m */,
+				3BD396CB1D9BED1C00768B89 /* ViewController.h */,
+				3BD396CC1D9BED1C00768B89 /* ViewController.m */,
 			);
 			path = Sex;
 			sourceTree = "<group>";
@@ -572,109 +585,109 @@
 		3BD396C51D9BED1C00768B89 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3BD65D601D9CEF22003EE6F3 /* littledog.jpg */,
 				3B20D6251DB2184A0058D353 /* Assets.xcassets */,
-				3BD396D31D9BED1C00768B89 /* LaunchScreen.storyboard */,
 				3BD396D61D9BED1C00768B89 /* Info.plist */,
+				3BD396D31D9BED1C00768B89 /* LaunchScreen.storyboard */,
+				3BD65D601D9CEF22003EE6F3 /* littledog.jpg */,
 				3BD396C61D9BED1C00768B89 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		3BD396DC1D9BEF7500768B89 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
 				3BD3422B1DAF896B00602F76 /* Address */,
+				3BD396DD1D9BEF7C00768B89 /* Home */,
+				3BD396DE1D9BEF8500768B89 /* Lists */,
 				3BD396E01D9BEFB900768B89 /* Me */,
 				3BD396DF1D9BEF8F00768B89 /* ShoppingCart */,
-				3BD396DE1D9BEF8500768B89 /* Lists */,
-				3BD396DD1D9BEF7C00768B89 /* Home */,
 			);
-			name = Pages;
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		3BD396DD1D9BEF7C00768B89 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3BD396E11D9BF01300768B89 /* TabbarController.h */,
-				3BD396E21D9BF01300768B89 /* TabbarController.m */,
+				3BD396EA1D9BF0DB00768B89 /* Home.storyboard */,
 				3BD396E71D9BF09700768B89 /* HomeViewController.h */,
 				3BD396E81D9BF09700768B89 /* HomeViewController.m */,
-				3BD396EA1D9BF0DB00768B89 /* Home.storyboard */,
+				3BD396E11D9BF01300768B89 /* TabbarController.h */,
+				3BD396E21D9BF01300768B89 /* TabbarController.m */,
 			);
-			name = Home;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		3BD396DE1D9BEF8500768B89 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				3BD396E41D9BF07A00768B89 /* ListsCollectionViewController.h */,
-				3BD396E51D9BF07A00768B89 /* ListsCollectionViewController.m */,
-				3BFA0D601DC88EBA00B8BA2A /* HistorySearchTableViewController.h */,
-				3BFA0D611DC88EBA00B8BA2A /* HistorySearchTableViewController.m */,
-				3BD397021D9C071200768B89 /* ListsCollectionViewCell.h */,
-				3BD397031D9C071200768B89 /* ListsCollectionViewCell.m */,
 				3BD397081D9C1FDB00768B89 /* HeaderCollectionViewCell.h */,
 				3BD397091D9C1FDB00768B89 /* HeaderCollectionViewCell.m */,
+				3BFA0D601DC88EBA00B8BA2A /* HistorySearchTableViewController.h */,
+				3BFA0D611DC88EBA00B8BA2A /* HistorySearchTableViewController.m */,
+				3BD396EC1D9BF0E500768B89 /* Lists.storyboard */,
+				3BD397021D9C071200768B89 /* ListsCollectionViewCell.h */,
+				3BD397031D9C071200768B89 /* ListsCollectionViewCell.m */,
+				3BD396E41D9BF07A00768B89 /* ListsCollectionViewController.h */,
+				3BD396E51D9BF07A00768B89 /* ListsCollectionViewController.m */,
 				3BD397051D9C109800768B89 /* ListsHeaderCollectionReusableView.h */,
 				3BD397061D9C109800768B89 /* ListsHeaderCollectionReusableView.m */,
 				3BD396FF1D9BFB6A00768B89 /* ListsViewModel.h */,
 				3BD397001D9BFB6A00768B89 /* ListsViewModel.m */,
-				3BD396EC1D9BF0E500768B89 /* Lists.storyboard */,
 			);
-			name = Lists;
+			path = Lists;
 			sourceTree = "<group>";
 		};
 		3BD396DF1D9BEF8F00768B89 /* ShoppingCart */ = {
 			isa = PBXGroup;
 			children = (
-				3BA4B07D1DAB80D3002986FB /* ShoppingCartViewController.h */,
-				3BA4B07E1DAB80D3002986FB /* ShoppingCartViewController.m */,
+				3BD342251DAF7BBB00602F76 /* BillViewController.h */,
+				3BD342261DAF7BBB00602F76 /* BillViewController.m */,
+				3BD342281DAF7EF100602F76 /* BillViewModel.h */,
+				3BD342291DAF7EF100602F76 /* BillViewModel.m */,
+				3BA4B0981DAB9FE2002986FB /* CartPorduct.h */,
+				3BA4B0991DAB9FE2002986FB /* CartPorduct.m */,
+				3BA4B0931DAB99EF002986FB /* CostCountViewModel.h */,
+				3BA4B0941DAB99EF002986FB /* CostCountViewModel.m */,
+				3BD342341DAF8DA900602F76 /* PayTableViewCell.h */,
+				3BD342351DAF8DA900602F76 /* PayTableViewCell.m */,
+				3BA4B0801DAB80E1002986FB /* ShoppingCart.storyboard */,
 				3BA4B0881DAB91DB002986FB /* ShoppingCartTableViewCell.h */,
 				3BA4B0891DAB91DB002986FB /* ShoppingCartTableViewCell.m */,
+				3BA4B07D1DAB80D3002986FB /* ShoppingCartViewController.h */,
+				3BA4B07E1DAB80D3002986FB /* ShoppingCartViewController.m */,
 				3BD342201DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.h */,
 				3BD342211DAF732100602F76 /* ShoppingcartAttachmentTableViewCell.m */,
 				3BD342231DAF765C00602F76 /* ShoppingcartHeaderView.xib */,
-				3BA4B0801DAB80E1002986FB /* ShoppingCart.storyboard */,
-				3BA4B0931DAB99EF002986FB /* CostCountViewModel.h */,
-				3BA4B0941DAB99EF002986FB /* CostCountViewModel.m */,
-				3BA4B0981DAB9FE2002986FB /* CartPorduct.h */,
-				3BA4B0991DAB9FE2002986FB /* CartPorduct.m */,
-				3BD342251DAF7BBB00602F76 /* BillViewController.h */,
-				3BD342261DAF7BBB00602F76 /* BillViewController.m */,
-				3BD342341DAF8DA900602F76 /* PayTableViewCell.h */,
-				3BD342351DAF8DA900602F76 /* PayTableViewCell.m */,
-				3BD342281DAF7EF100602F76 /* BillViewModel.h */,
-				3BD342291DAF7EF100602F76 /* BillViewModel.m */,
 			);
-			name = ShoppingCart;
+			path = ShoppingCart;
 			sourceTree = "<group>";
 		};
 		3BD396E01D9BEFB900768B89 /* Me */ = {
 			isa = PBXGroup;
 			children = (
 				3B39115E1DB3338100F82B4A /* ConsumerService */,
-				3B39115A1DB3333700F82B4A /* Setting */,
 				3B3911561DB3325800F82B4A /* Messages */,
+				3B39115A1DB3333700F82B4A /* Setting */,
+				3BD396F11D9BF39F00768B89 /* Me.storyboard */,
 				3BD396EE1D9BF39400768B89 /* MeViewController.h */,
 				3BD396EF1D9BF39400768B89 /* MeViewController.m */,
 				3B39114F1DB2261000F82B4A /* MeViewModel.h */,
 				3B3911501DB2261000F82B4A /* MeViewModel.m */,
-				3BD396F11D9BF39F00768B89 /* Me.storyboard */,
 			);
-			name = Me;
+			path = Me;
 			sourceTree = "<group>";
 		};
 		3BD396F31D9BF75400768B89 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				3BD65D7A1D9D06C0003EE6F3 /* Search */,
 				3BD65D4C1D9CEA21003EE6F3 /* CollectionView */,
 				3B57716B1D9CAAF600F2AB45 /* Login */,
 				3BD396F81D9BF9C400768B89 /* Model */,
+				3BD65D7A1D9D06C0003EE6F3 /* Search */,
 				3BD396F41D9BF76100768B89 /* Service */,
 			);
-			name = Business;
+			path = Business;
 			sourceTree = "<group>";
 		};
 		3BD396F41D9BF76100768B89 /* Service */ = {
@@ -685,7 +698,7 @@
 				3B84ABB91DB07BAE00694B71 /* RequestServiceManager.h */,
 				3B84ABBA1DB07BAE00694B71 /* RequestServiceManager.m */,
 			);
-			name = Service;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		3BD396F81D9BF9C400768B89 /* Model */ = {
@@ -696,44 +709,44 @@
 				3B213E6E1DAA672C0044C61A /* SexProductItem.h */,
 				3B213E6F1DAA672C0044C61A /* SexProductItem.m */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3BD65D4C1D9CEA21003EE6F3 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				3BD65D631D9CF229003EE6F3 /* HomeListsView.h */,
-				3BD65D641D9CF229003EE6F3 /* HomeListsView.m */,
+				3BD65D5B1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.h */,
+				3BD65D5C1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.m */,
+				3BD65D5D1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.xib */,
 				3BD65D4D1D9CEAB2003EE6F3 /* HomeListCollectionView.h */,
 				3BD65D4E1D9CEAB2003EE6F3 /* HomeListCollectionView.m */,
 				3BD65D521D9CEB00003EE6F3 /* HomeListViewModel.h */,
 				3BD65D531D9CEB00003EE6F3 /* HomeListViewModel.m */,
 				3BD65D581D9CECB7003EE6F3 /* HomeListsTableView.h */,
 				3BD65D591D9CECB7003EE6F3 /* HomeListsTableView.m */,
-				3BD65D5B1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.h */,
-				3BD65D5C1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.m */,
-				3BD65D5D1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.xib */,
 				3BD65D731D9CFCDD003EE6F3 /* HomeListsTableViewHeaderView.h */,
 				3BD65D741D9CFCDD003EE6F3 /* HomeListsTableViewHeaderView.m */,
 				3BD65D761D9CFD00003EE6F3 /* HomeListsTableViewHeaderView.xib */,
+				3BD65D631D9CF229003EE6F3 /* HomeListsView.h */,
+				3BD65D641D9CF229003EE6F3 /* HomeListsView.m */,
 				3BD65D701D9CF91A003EE6F3 /* TableViewCell.h */,
 				3BD65D711D9CF91A003EE6F3 /* TableViewCell.m */,
 			);
-			name = CollectionView;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		3BD65D7A1D9D06C0003EE6F3 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				3B9422261DAA4A9200998719 /* SearchOptions */,
 				3B7E2AD11DAA1FAB009FF851 /* Detail */,
-				3B7E2ACA1DAA1AB9009FF851 /* HorizontalList */,
 				3B7E2AC91DAA1AA9009FF851 /* DropdownView */,
+				3B7E2ACA1DAA1AB9009FF851 /* HorizontalList */,
+				3B9422261DAA4A9200998719 /* SearchOptions */,
+				3BD65D781D9D0621003EE6F3 /* Search.storyboard */,
 				3BD3970B1D9C222700768B89 /* SearchViewController.h */,
 				3BD3970C1D9C222700768B89 /* SearchViewController.m */,
-				3BD65D781D9D0621003EE6F3 /* Search.storyboard */,
 			);
-			name = Search;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		3BFA0D651DC899CD00B8BA2A /* Category */ = {
@@ -741,8 +754,10 @@
 			children = (
 				3BFA0D661DC899E900B8BA2A /* UIView+SDExtension.h */,
 				3BFA0D671DC899E900B8BA2A /* UIView+SDExtension.m */,
+				3BFA0D791DC9BBD400B8BA2A /* SDPagingViewController.h */,
+				3BFA0D7A1DC9BBD400B8BA2A /* SDPagingViewController.m */,
 			);
-			name = Category;
+			path = Category;
 			sourceTree = "<group>";
 		};
 		835C549DEABB8E508DC0AF02 /* Pods */ = {
@@ -916,6 +931,7 @@
 				3BD397041D9C071200768B89 /* ListsCollectionViewCell.m in Sources */,
 				3B3911661DB3E9E200F82B4A /* UIScrollView+SexRefresh.m in Sources */,
 				3BA4B07F1DAB80D3002986FB /* ShoppingCartViewController.m in Sources */,
+				3BFA0D7B1DC9BBD400B8BA2A /* SDPagingViewController.m in Sources */,
 				3BD342331DAF89B200602F76 /* CreateAddressViewController.m in Sources */,
 				3B7E2AD41DAA1FC2009FF851 /* SearchResultListView.m in Sources */,
 				3BD396CD1D9BED1C00768B89 /* ViewController.m in Sources */,
@@ -938,6 +954,7 @@
 				3B7E2ADF1DAA2745009FF851 /* ResultItemCollectionViewCell.m in Sources */,
 				3B7E2AE31DAA2A3D009FF851 /* SearchViewModel.m in Sources */,
 				3BA4B09A1DAB9FE2002986FB /* CartPorduct.m in Sources */,
+				3BFA0D741DC9944B00B8BA2A /* IPv6Tester.m in Sources */,
 				3BD3970A1D9C1FDB00768B89 /* HeaderCollectionViewCell.m in Sources */,
 				3BD396E61D9BF07A00768B89 /* ListsCollectionViewController.m in Sources */,
 				3BA4B0911DAB9769002986FB /* TotalCostView.m in Sources */,
@@ -948,6 +965,7 @@
 				3BD65D5A1D9CECB7003EE6F3 /* HomeListsTableView.m in Sources */,
 				3BD65D751D9CFCDD003EE6F3 /* HomeListsTableViewHeaderView.m in Sources */,
 				3B213E701DAA672C0044C61A /* SexProductItem.m in Sources */,
+				3BFA0D771DC9B5E700B8BA2A /* SexConfiguration.m in Sources */,
 				3BD396F71D9BF77900768B89 /* RequestService.m in Sources */,
 				3B39114E1DB224D100F82B4A /* SexUser.m in Sources */,
 				3BD65D5E1D9CEE31003EE6F3 /* HomeListAriticleTableViewCell.m in Sources */,
@@ -978,6 +996,7 @@
 				3BD396CF1D9BED1C00768B89 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		3BD396D31D9BED1C00768B89 /* LaunchScreen.storyboard */ = {
@@ -986,6 +1005,7 @@
 				3BD396D41D9BED1C00768B89 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1084,14 +1104,14 @@
 			baseConfigurationReference = 8141261E58DFA1A79244107C /* Pods-Sex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Sex/Sex.entitlements;
 				DEVELOPMENT_TEAM = S8238R3HUC;
-				INFOPLIST_FILE = Sex/Info.plist;
+				INFOPLIST_FILE = "Sex/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sex",
+					"$(PROJECT_DIR)/Sex/Components/WeChat",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Shendong.Sex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1103,14 +1123,14 @@
 			baseConfigurationReference = 364329D8A149E03F33FF2214 /* Pods-Sex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Sex/Sex.entitlements;
 				DEVELOPMENT_TEAM = S8238R3HUC;
-				INFOPLIST_FILE = Sex/Info.plist;
+				INFOPLIST_FILE = "Sex/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sex",
+					"$(PROJECT_DIR)/Sex/Components/WeChat",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Shendong.Sex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
