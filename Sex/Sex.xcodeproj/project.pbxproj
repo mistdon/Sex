@@ -26,6 +26,7 @@
 		3B57716D1D9CAB0300F2AB45 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B57716C1D9CAB0300F2AB45 /* Login.storyboard */; };
 		3B5771701D9CAB1700F2AB45 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */; };
 		3B5771731D9CB89900F2AB45 /* FastLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5771721D9CB89900F2AB45 /* FastLoginViewModel.m */; };
+		3B5871271DD082C9004A34A8 /* LaunchGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5871261DD082C9004A34A8 /* LaunchGuideView.m */; };
 		3B7E2ACD1DAA1AD3009FF851 /* HorizontailListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E2ACC1DAA1AD3009FF851 /* HorizontailListView.m */; };
 		3B7E2AD01DAA1AE8009FF851 /* HorizontailListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7E2ACF1DAA1AE8009FF851 /* HorizontailListView.xib */; };
 		3B7E2AD41DAA1FC2009FF851 /* SearchResultListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E2AD31DAA1FC2009FF851 /* SearchResultListView.m */; };
@@ -148,6 +149,8 @@
 		3B57716F1D9CAB1700F2AB45 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3B5771711D9CB89900F2AB45 /* FastLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastLoginViewModel.h; sourceTree = "<group>"; };
 		3B5771721D9CB89900F2AB45 /* FastLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastLoginViewModel.m; sourceTree = "<group>"; };
+		3B5871251DD082C9004A34A8 /* LaunchGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchGuideView.h; sourceTree = "<group>"; };
+		3B5871261DD082C9004A34A8 /* LaunchGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchGuideView.m; sourceTree = "<group>"; };
 		3B7E2ACB1DAA1AD3009FF851 /* HorizontailListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontailListView.h; sourceTree = "<group>"; };
 		3B7E2ACC1DAA1AD3009FF851 /* HorizontailListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontailListView.m; sourceTree = "<group>"; };
 		3B7E2ACF1DAA1AE8009FF851 /* HorizontailListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HorizontailListView.xib; sourceTree = "<group>"; };
@@ -391,6 +394,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		3B5871241DD082AE004A34A8 /* GuideView */ = {
+			isa = PBXGroup;
+			children = (
+				3B5871251DD082C9004A34A8 /* LaunchGuideView.h */,
+				3B5871261DD082C9004A34A8 /* LaunchGuideView.m */,
+			);
+			name = GuideView;
+			sourceTree = "<group>";
+		};
 		3B7E2AC91DAA1AA9009FF851 /* DropdownView */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +499,7 @@
 		3BA4B06A1DAB6466002986FB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3B5871241DD082AE004A34A8 /* GuideView */,
 				3BFA0D651DC899CD00B8BA2A /* Category */,
 				3B39115F1DB3391D00F82B4A /* DataBaseService */,
 				3BA4B0821DAB8C98002986FB /* NumerCount */,
@@ -927,6 +940,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5871271DD082C9004A34A8 /* LaunchGuideView.m in Sources */,
 				3BD397071D9C109800768B89 /* ListsHeaderCollectionReusableView.m in Sources */,
 				3BD65D4F1D9CEAB2003EE6F3 /* HomeListCollectionView.m in Sources */,
 				3B84ABD41DB0AF7300694B71 /* SexModel.m in Sources */,
@@ -1113,6 +1127,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8141261E58DFA1A79244107C /* Pods-Sex.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Sex/Sex.entitlements;
 				DEVELOPMENT_TEAM = S8238R3HUC;
 				INFOPLIST_FILE = "Sex/Supporting Files/Info.plist";
@@ -1131,6 +1147,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 364329D8A149E03F33FF2214 /* Pods-Sex.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Sex/Sex.entitlements;
 				DEVELOPMENT_TEAM = S8238R3HUC;
 				INFOPLIST_FILE = "Sex/Supporting Files/Info.plist";

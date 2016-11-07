@@ -19,6 +19,9 @@
 
 #import "SDPagingViewController.h"
 #import "TestViewController.h"
+
+#import "LaunchGuideView.h"
+
 @interface AppDelegate ()<WXApiDelegate>
 
 @end
@@ -36,6 +39,9 @@
     [SexConfiguration setDefaultConfiguration];
     
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[LaunchGuideView new] showMain];
+    });
     
     return YES;
 }

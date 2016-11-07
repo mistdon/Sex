@@ -11,7 +11,8 @@
 #ifndef SexConst_h
 #define SexConst_h
 
-
+#define  KScreen_Width  [UIScreen mainScreen].bounds.size.width
+#define  KScreen_Height [UIScreen mainScreen].bounds.size.height
 
 //extern NSString *
 
