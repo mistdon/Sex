@@ -22,6 +22,10 @@ static NSInteger const KLaunchImagePage = 3;
 static LaunchGuideView *guideView;
 
 - (void)showMain{
+    
+    
+    
+    
     scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, KScreen_Width , KScreen_Height)];
     scrollview.pagingEnabled = YES;
     scrollview.bounces = NO;
