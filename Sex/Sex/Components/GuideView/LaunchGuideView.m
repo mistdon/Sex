@@ -10,23 +10,16 @@
 #import <Masonry/Masonry.h>
 #import "SexConst.h"
 
-
-
 static NSInteger const KLaunchImagePage = 3;
+
 @interface LaunchGuideView()<UIScrollViewDelegate>
+
 @end
+
 @implementation LaunchGuideView
-{
-    UIScrollView *scrollview;
-}
-static LaunchGuideView *guideView;
 
 - (void)showMain{
-    
-    
-    
-    
-    scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, KScreen_Width , KScreen_Height)];
+    UIScrollView *scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, KScreen_Width , KScreen_Height)];
     scrollview.pagingEnabled = YES;
     scrollview.bounces = NO;
     scrollview.showsHorizontalScrollIndicator = NO;
@@ -37,19 +30,14 @@ static LaunchGuideView *guideView;
     }
     scrollview.contentSize = CGSizeMake(KScreen_Width * (KLaunchImagePage + 1), KScreen_Height);
     scrollview.delegate = self;
-    [[UIApplication sharedApplication].keyWindow addSubview:scrollview];
+    [self addSubview:scrollview];
+    self.frame = scrollview.frame;
+    [[UIApplication sharedApplication].keyWindow addSubview:self];
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSLog(@"sss");
-}
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     CGFloat offsetX = scrollView.contentOffset.x;
-    if (offsetX - (KLaunchImagePage * KScreen_Width) < 20) {
-        if (guideView) {
-            [guideView removeFromSuperview];
-        }
+    if (offsetX - (KLaunchImagePage* KScreen_Width)  == 0) {
+        [self removeFromSuperview];
     }
 }
-
-
 @end

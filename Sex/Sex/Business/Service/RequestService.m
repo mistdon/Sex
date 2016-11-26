@@ -10,6 +10,13 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <AFNetworking/AFNetworking.h>
 
+
+
+NSString *const KQuerylunbo = @"http://api.qinglvmao.com/index/lunbo";
+
+NSString *const KSearch = @"http://api.qinglvmao.com/category/clist/?cid=3&page=1&pn=10&sort=&by=&umeng=0";
+
+
 static NSString *KBaseurl = @"http://api.qinglvmao.com";
 
 @implementation RequestService

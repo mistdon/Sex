@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <XXNibBridge/XXNibBridge.h>
-
+#import "SexChannel.h"
 
 @interface HorizontailListView : UIView<XXNibBridge>
-@property (nonatomic, strong) NSArray *datas;
+@property (nonatomic, strong) NSArray<__kindof SexProduct*> *datas;
 @property (nonatomic, copy) NSString *category;
-@property (nonatomic, copy) NSString *currentItem;
+@property (nonatomic, strong) SexProduct *currentItem;
 
 @property (nonatomic, copy) void(^currentPage)(NSInteger page);
 

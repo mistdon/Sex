@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <XXNibBridge/XXNibBridge.h>
 
+typedef NS_ENUM(NSInteger, SearchOption){
+    SearchOptionAll = 1,
+    SearchOptionSales,
+    SearchOptionLatest,
+    SearchOptionPriiceAsc,
+    SearchOptionPriceDesc,
+};
+
+
 @interface SearchOptionsView : UIView<XXNibBridge>
-@property (nonatomic,assign) NSNumber *option;
+@property (nonatomic,assign) SearchOption option;
 @end

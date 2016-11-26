@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <XXNibBridge/XXNibBridge.h>
+#import "SexChannel.h"
 
 @interface DropdownView : UIView<XXNibBridge>
 
-@property (nonatomic, copy) NSString *categoryItem;
+@property (nonatomic, strong) SexChannel *currentChannel;
+
+@property (nonatomic, strong) NSArray<__kindof SexChannel *> *datas;
+
 @end

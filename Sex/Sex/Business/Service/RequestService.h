@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
+
+extern NSString *const KQuerylunbo;
+extern NSString *const KSearch;
+
 @class RACSignal;
 @interface RequestService : NSObject
 

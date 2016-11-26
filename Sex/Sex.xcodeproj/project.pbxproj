@@ -43,6 +43,7 @@
 		3B84ABCF1DB0ADFB00694B71 /* SexCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84ABCD1DB0ADFB00694B71 /* SexCollectionViewCell.m */; };
 		3B84ABD01DB0ADFB00694B71 /* SexCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B84ABCE1DB0ADFB00694B71 /* SexCollectionViewCell.xib */; };
 		3B84ABD41DB0AF7300694B71 /* SexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84ABD31DB0AF7300694B71 /* SexModel.m */; };
+		3B8C36D31DD0CCFF00845907 /* UIColor+scheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C36D21DD0CCFF00845907 /* UIColor+scheme.m */; };
 		3B9422291DAA4AA600998719 /* SearchOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9422281DAA4AA600998719 /* SearchOptionsView.m */; };
 		3B94222B1DAA4AB800998719 /* SearchOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B94222A1DAA4AB800998719 /* SearchOptionsView.xib */; };
 		3BA4B0711DAB64D1002986FB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4B0701DAB64D1002986FB /* SystemConfiguration.framework */; };
@@ -178,6 +179,8 @@
 		3B84ABCE1DB0ADFB00694B71 /* SexCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SexCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B84ABD21DB0AF7300694B71 /* SexModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexModel.h; sourceTree = "<group>"; };
 		3B84ABD31DB0AF7300694B71 /* SexModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexModel.m; sourceTree = "<group>"; };
+		3B8C36D11DD0CCFF00845907 /* UIColor+scheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+scheme.h"; sourceTree = "<group>"; };
+		3B8C36D21DD0CCFF00845907 /* UIColor+scheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+scheme.m"; sourceTree = "<group>"; };
 		3B9422271DAA4AA600998719 /* SearchOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchOptionsView.h; sourceTree = "<group>"; };
 		3B9422281DAA4AA600998719 /* SearchOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchOptionsView.m; sourceTree = "<group>"; };
 		3B94222A1DAA4AB800998719 /* SearchOptionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchOptionsView.xib; sourceTree = "<group>"; };
@@ -400,7 +403,7 @@
 				3B5871251DD082C9004A34A8 /* LaunchGuideView.h */,
 				3B5871261DD082C9004A34A8 /* LaunchGuideView.m */,
 			);
-			name = GuideView;
+			path = GuideView;
 			sourceTree = "<group>";
 		};
 		3B7E2AC91DAA1AA9009FF851 /* DropdownView */ = {
@@ -499,9 +502,9 @@
 		3BA4B06A1DAB6466002986FB /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3B5871241DD082AE004A34A8 /* GuideView */,
 				3BFA0D651DC899CD00B8BA2A /* Category */,
 				3B39115F1DB3391D00F82B4A /* DataBaseService */,
+				3B5871241DD082AE004A34A8 /* GuideView */,
 				3BA4B0821DAB8C98002986FB /* NumerCount */,
 				3B84ABCB1DB0ADD500694B71 /* ProductView */,
 				3B84ABBD1DB0A66400694B71 /* RecommendView */,
@@ -770,13 +773,15 @@
 		3BFA0D651DC899CD00B8BA2A /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				3BFA0D661DC899E900B8BA2A /* UIView+SDExtension.h */,
-				3BFA0D671DC899E900B8BA2A /* UIView+SDExtension.m */,
 				3BFA0D791DC9BBD400B8BA2A /* SDPagingViewController.h */,
 				3BFA0D7A1DC9BBD400B8BA2A /* SDPagingViewController.m */,
+				3B1F48541DCB26D90059FF8C /* Test.storyboard */,
 				3B1F48511DCB15ED0059FF8C /* TestViewController.h */,
 				3B1F48521DCB15ED0059FF8C /* TestViewController.m */,
-				3B1F48541DCB26D90059FF8C /* Test.storyboard */,
+				3B8C36D11DD0CCFF00845907 /* UIColor+scheme.h */,
+				3B8C36D21DD0CCFF00845907 /* UIColor+scheme.m */,
+				3BFA0D661DC899E900B8BA2A /* UIView+SDExtension.h */,
+				3BFA0D671DC899E900B8BA2A /* UIView+SDExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -930,7 +935,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -986,6 +991,7 @@
 				3BD396CA1D9BED1C00768B89 /* AppDelegate.m in Sources */,
 				3BA4B08A1DAB91DB002986FB /* ShoppingCartTableViewCell.m in Sources */,
 				3BD65D5A1D9CECB7003EE6F3 /* HomeListsTableView.m in Sources */,
+				3B8C36D31DD0CCFF00845907 /* UIColor+scheme.m in Sources */,
 				3BD65D751D9CFCDD003EE6F3 /* HomeListsTableViewHeaderView.m in Sources */,
 				3B213E701DAA672C0044C61A /* SexProductItem.m in Sources */,
 				3BFA0D771DC9B5E700B8BA2A /* SexConfiguration.m in Sources */,

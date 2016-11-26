@@ -16,6 +16,7 @@ target 'Sex' do
     pod 'MJExtension'
     pod 'XXNibBridge'
     pod 'Aspects', '~> 1.4.1'
+    pod 'SDCycleScrollView', '~> 1.65'
   # Pods for Sex
 
 end

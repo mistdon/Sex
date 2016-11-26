@@ -9,6 +9,7 @@
 #import "ListsCollectionViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <MJRefresh/MJRefresh.h>
 
 #import "ListsViewModel.h"
 #import "SexChannel.h"
@@ -16,9 +17,11 @@
 #import "ListsHeaderCollectionReusableView.h"
 #import "HeaderCollectionViewCell.h"
 #import "DirectSearchTableViewController.h"
+#import "UIScrollView+SexRefresh.h"
+
+#import "UIColor+scheme.h"
 
 @interface ListsCollectionViewController ()<UICollectionViewDelegateFlowLayout, UISearchBarDelegate>
-//@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
 @property (nonatomic, strong) NSMutableArray *datasources;
 @end
 
@@ -30,24 +33,61 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     
     self.datasources = [NSMutableArray array];
+    
+    [self setupTitleView];
+    [self setupRefresh];
+    [self queryNewData];
+    [self setEmptyViewWithOutNetwork];
+}
+- (void)setEmptyViewWithOutNetwork{
+    
+}
+- (void)queryNewData{
     ListsViewModel *viewModel = [[ListsViewModel alloc] init];
     [[viewModel queryLists] subscribeNext:^(NSArray *x) {
+        [self.datasources removeAllObjects];
         [self.datasources addObjectsFromArray:x];
         [self.collectionView reloadData];
     }error:^(NSError *error) {
         NSLog(@"error = %@",error);
     }];
-    
+}
+- (void)setupTitleView{
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(20, 0, [UIScreen mainScreen].bounds.size.width - 40 , 44)];
     searchBar.delegate = self;
+    searchBar.placeholder = @"请输入您要搜索的商品名称";
+    UITextField *textField = [searchBar valueForKey:@"_searchField"];
+    textField.backgroundColor = RGB(232, 233, 232);
+    textField.textAlignment = NSTextAlignmentLeft;
     self.navigationItem.titleView = searchBar;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupRefresh{
+    
+    @weakify(self);
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
+        @strongify(self);
+        [self queryNewData];
+        [self.collectionView.mj_header endRefreshing];
+    }];
+    NSMutableArray *array  = [NSMutableArray array];
+    for (int index = 1; index < 10; index++) {
+        [array addObject:[UIImage imageNamed:[NSString stringWithFormat:@"ic_ani_loaing_%d",index]]];
+    }
+    NSArray *pullingImages = array;
+    [header setImages:pullingImages forState:MJRefreshStateIdle];
+    // Set the refreshing state of animated images
+    NSMutableArray *array1  = [NSMutableArray array];
+    for (int index = 10; index < 29; index++) {
+        [array1 addObject:[UIImage imageNamed:[NSString stringWithFormat:@"ic_ani_loaing_%d",index]]];
+    }
+    NSArray *refreshingImages = array1;
+    [header setImages:refreshingImages forState:MJRefreshStateRefreshing];
+    // Set header
+    header.lastUpdatedTimeLabel.hidden = YES;
+    header.stateLabel.hidden = YES;
+    self.collectionView.mj_header = header;
+    
 }
-
 /*
 #pragma mark - Navigation
 
@@ -104,6 +144,21 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDelegate>
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     return section == 0 ? CGSizeZero:CGSizeMake([UIScreen mainScreen].bounds.size.width, 100);
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UIViewController *search = [[UIStoryboard storyboardWithName:@"Search" bundle:nil] instantiateViewControllerWithIdentifier:@"SearchViewController"];
+    if (indexPath.section == 0) {
+        SexChannel *channel = self.datasources[indexPath.row];
+        NSInteger cid = channel.value;
+        [search setValue:@(cid) forKey:@"cid"];
+    }else{
+        SexChannel *channel  = self.datasources[indexPath.section - 1];
+        SexProduct *product = channel.data[indexPath.row];
+        NSInteger cid = product.value;
+        [search setValue:@(cid) forKey:@"cid"];
+    }
+    [search setValue:self.datasources forKey:@"categorys"];
+    [self.navigationController pushViewController:search animated:YES];
 }
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

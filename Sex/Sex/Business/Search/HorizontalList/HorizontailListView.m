@@ -8,6 +8,7 @@
 
 #import "HorizontailListView.h"
 #import <HTHorizontalSelectionList/HTHorizontalSelectionList.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface HorizontailListView()<HTHorizontalSelectionListDelegate, HTHorizontalSelectionListDataSource>
 
@@ -20,6 +21,11 @@
     self.listview.delegate = self;
     self.listview.selectionIndicatorColor = [UIColor redColor];
     self.listview.bottomTrimColor = [UIColor clearColor];
+    @weakify(self);
+    [RACObserve(self, datas) subscribeNext:^(id x) {
+        @strongify(self);
+        [self.listview reloadData];
+    }];
 }
 #pragma mark - HTHorizontalSelectionListDataSource Protocol Methods
 - (NSInteger)numberOfItemsInSelectionList:(HTHorizontalSelectionList *)selectionList {
@@ -27,7 +33,7 @@
 }
 
 - (NSString *)selectionList:(HTHorizontalSelectionList *)selectionList titleForItemWithIndex:(NSInteger)index {
-    return self.datas[index];
+    return self.datas[index].goodsName;
 }
 
 #pragma mark - HTHorizontalSelectionListDelegate Protocol Methods

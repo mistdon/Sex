@@ -17,14 +17,24 @@
 @implementation SearchOptionsView{
     NSUInteger selected;
 }
-- (void)awakeFromNib{
-    [super awakeFromNib];
-    selected = 0;
-}
 - (void)didMoveToSuperview{
+    self.allButton.selected = YES;
+    selected = 1;
+    self.option = 1;
 
+    
+    
 }
 - (IBAction)TapAction:(UIButton *)sender {
+    if (sender.tag == 1004 ) {
+        if (self.option != 4) {
+            [sender setImage:[self priceImageWithTag:1] forState:UIControlStateSelected];
+        }else{
+            [sender setImage:[self priceImageWithTag:2] forState:UIControlStateSelected];
+            self.option = 5;
+            return;
+        }
+    }
     if (sender.tag - 1000 == selected)return;
     for (UIButton *old in self.subviews[0].subviews) {
         if (old.tag - 1000 == selected) {
@@ -33,8 +43,25 @@
         }
     }
     selected = sender.tag - 1000;
-    self.option = [NSNumber numberWithUnsignedInteger:selected];
+    self.option = selected;
     sender.selected = YES;
 }
-
+- (UIImage *)priceImageWithTag:(NSInteger)tag{
+    if (tag < 0 || tag > 2)return nil;
+    NSString *name = nil;
+    switch (tag) {
+        case 0:
+            name = @"price_normal";
+            break;
+        case 1:
+            name = @"price_asc";
+            break;
+        case 2:
+            name = @"price_desc";
+            break;
+        default:
+            break;
+    }
+    return [UIImage imageNamed:name];
+}
 @end

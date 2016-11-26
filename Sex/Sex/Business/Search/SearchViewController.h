@@ -11,4 +11,8 @@
 @interface SearchViewController : UIViewController
 @property (nonatomic, copy) NSString *searchCategory;
 @property (nonatomic, copy) NSString *searchItem;
+
+@property (nonatomic, assign) NSInteger cid;
+@property (nonatomic, strong) NSArray *categorys;
+
 @end

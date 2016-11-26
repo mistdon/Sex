@@ -39,9 +39,9 @@
     [SexConfiguration setDefaultConfiguration];
     
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[LaunchGuideView new] showMain];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [[LaunchGuideView new] showMain];
+//    });
     
     return YES;
 }
@@ -92,21 +92,17 @@
     self.window.backgroundColor = [UIColor whiteColor];
     UITabBarController *tabbarController = [UITabBarController new];
     
-//    UIViewController *homeVC = [[UIStoryboard storyboardWithName:@"Home" bundle:nil] instantiateInitialViewController];
-//    homeVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item0"] selectedImage:[UIImage imageNamed:@"tabBar_item0_1"]];
-    
-//    TestViewController *pag = [[TestViewController alloc] init];
-//    UINavigationController *homeVC = [[UINavigationController alloc] initWithRootViewController:pag];
-    UIViewController *homeVC = [[UIStoryboard storyboardWithName:@"Test" bundle:nil] instantiateInitialViewController];
+    UIViewController *homeVC = [[UIStoryboard storyboardWithName:@"Home" bundle:nil] instantiateInitialViewController];
+    homeVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"shouye_normal"] selectedImage:[UIImage imageNamed:@"shouye_selected"]];
     
     UIViewController *meVC = [[UIStoryboard storyboardWithName:@"Me" bundle:nil] instantiateInitialViewController];
-    meVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item4"] selectedImage:[UIImage imageNamed:@"tabBar_item4_1"]];
+    meVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"分类" image:[UIImage imageNamed:@"fenlei_normal"] selectedImage:[UIImage imageNamed:@"fenlei_selected"]];
     
     UIViewController *listVC = [[UIStoryboard storyboardWithName:@"Lists" bundle:nil] instantiateInitialViewController];
-    listVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item2"] selectedImage:[UIImage imageNamed:@"tabBar_item2_1"]];
+    listVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"购物车" image:[UIImage imageNamed:@"gouwuche_normal"] selectedImage:[UIImage imageNamed:@"gouwuche_selected"]];
     
     UIViewController *shoppingcartVC = [[UIStoryboard storyboardWithName:@"ShoppingCart" bundle:nil] instantiateInitialViewController];
-    shoppingcartVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"tabBar_item3"] selectedImage:[UIImage imageNamed:@"tabBar_item3_1"]];
+    shoppingcartVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:[UIImage imageNamed:@"wode_normal"] selectedImage:[UIImage imageNamed:@"wode_selected"]];
     
     tabbarController.viewControllers = @[homeVC,listVC,shoppingcartVC,meVC];
     [tabbarController.tabBar setTranslucent:NO];
